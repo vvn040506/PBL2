@@ -8,8 +8,8 @@ template <typename T>
 class Node {
 private:
     T data;
-    Node* prev;
-    Node* next;
+    Node<T>* prev;
+    Node<T>* next;
 public:
     Node(T val);
     T getdata() const;
