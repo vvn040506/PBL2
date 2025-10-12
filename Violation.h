@@ -1,16 +1,23 @@
 //Vi phạm
+#pragma once
+#include<iostream>
+#include<string>
+#include"Mylist.h"
+using namespace std;
 class Violation{
     private:
-        string name; // lỗi vi phạm
-        string date; // ngày vi phạm
-        double fine; // mức phạt tiền
+        int id_loi;
+        string loiViPham; // lỗi vi phạm
+        int mucPhat; // mức phạt tiền
     public:
-        Violation(); 
+        Mylist<Violation> list;
+        Violation(const int&, const string&, const int&); 
+        ~Violation();
         void display();
-        string getName();
-        string getDate();
-        double getFine();
-        void setName(string);
-        void setFine(double);
-        void setDate(string);
+        int getID();
+        string getLoiViPham() ;
+        int getMucPhat();
+        void setLoiViPham(const string&);
+        void setMucPhat(const double&);
+        friend void readDSLoi(Mylist<Violation> &, const string&);
 };
