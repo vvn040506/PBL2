@@ -69,7 +69,6 @@ void Motor::docFileMucPhat(const string& tenFile){
 }
 void Motor::themLoi(const string& loiVP, const string& ngayVP){
     dsLoi.push_back(Pair(loiVP, ngayVP));
-    cout << "motor.bienSo = "<< this->bienSo << " ";
 
     if (this->danhSachMucPhat.begin() == nullptr) return;
     int tienPhat = 0;
@@ -80,7 +79,7 @@ void Motor::themLoi(const string& loiVP, const string& ngayVP){
         }
     }
     
-    cout << "Tien phat cua " << loiVP << " la: " << fixed << setprecision(0) << tienPhat << endl;
+    //cout << "Tien phat cua " << loiVP << " la: " << fixed << setprecision(0) << tienPhat << endl;
     tongTienPhat += tienPhat;
     
 }
