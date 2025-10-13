@@ -13,8 +13,21 @@ Xe::Xe(string &tp, string &bs){
     thanhPho = tp;
     bienSo = bs;
 }
+Xe::Xe(const Xe& other) {
+    this->bienSo = other.bienSo;
+    this->thanhPho = other.thanhPho;
+}
+Xe& Xe::operator = (const Xe& other){
+    this->bienSo = other.bienSo;
+    this->thanhPho = other.thanhPho;
+    return *(this);
+}
 Xe::~Xe(){
-    cout << "Da hoan tat dong phat";
+   // cout << "Da hoan tat dong phat";
+}
+
+string& Xe::getbienSo() {
+    return bienSo;
 }
 
 void Xe::docFileMaVung(const string& filename) {
@@ -58,8 +71,7 @@ string Xe::getTP() const{
     return thanhPho;
 }
 
-Xe& Xe::operator = (Xe& other){
-    this->bienSo = other.bienSo;
-    this->thanhPho = other.thanhPho;
-    return *(this);
+
+void setbienSo(){
+
 }

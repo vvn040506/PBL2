@@ -21,7 +21,7 @@ int main() {
     HashTable<Person> dsNguoi(10);
     NhapTTNguoiVPMoi(dsNguoi);
     Person *p = &getByCCCD("048206005231", dsNguoi);
-    Mylist<Xe*> dsXe;
+    Mylist<Xe*> dsXe;   
     Motor *myMotor = new Motor();
     myMotor->docFileMaVung("mavung.txt");
     cin >> *myMotor;
@@ -40,4 +40,4 @@ int main() {
     system("pause");
     return 0;
 }
-// g++ main.cpp Violation.cpp Xe.cpp Motor.cpp -o main.exe
+// g++ main.cpp Violation.cpp Xe.cpp Motor.cpp -o main.exe*/

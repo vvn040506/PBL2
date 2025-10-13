@@ -1,6 +1,6 @@
 #include"Motor.h"
 #include<iostream>
-#include<string.h>
+#include<limits>
 #include<fstream>    
 #include<string>
 #include<iomanip>
@@ -11,8 +11,9 @@ Motor::Motor(){
     thanhPho = " ";
     bienSo = " ";
 }
+Motor::Motor(const Motor& other) : Xe(other),dsLoi(other.dsLoi),danhSachMucPhat(other.danhSachMucPhat){}
 Motor::~Motor(){
-    cout << "Da hoan tat dong phat";
+    //if (tongTienPhat == 0) cout << "Da hoan tat dong phat";
 }
 int &Motor::gettongTienPhat(){
     return tongTienPhat;
@@ -29,18 +30,19 @@ void Motor::dongPhat(const string& loiVP, const string& ngayVP){
     int tienPhat = 0;
     for(Node<Violation>* x = danhSachMucPhat.begin(); x != danhSachMucPhat.end(); x = x->getnext()){
         if(loiVP == x->getdata().getLoiViPham()){
-            tienPhat = stoi(x->getdata().getLoiViPham());
-        }
+            tienPhat = x->getdata().getMucPhat(); 
+        break;}
     }
     dsLoi.erase(Pair(loiVP, ngayVP));
     tongTienPhat -= tienPhat;
-    if(tongTienPhat == 0) cout << "Hoan tat dong phat" << endl;
+    //if(tongTienPhat == 0) cout << "Hoan tat dong phat" << endl;
 }
 
 void Motor::docFileMucPhat(const string& tenFile){
     ifstream fs(tenFile);
     if(!fs.is_open()){
         cout << "Khong the mo file " << tenFile << endl;
+        return;
     }
     string line;
     while (getline(fs, line)) {
@@ -61,15 +63,18 @@ void Motor::docFileMucPhat(const string& tenFile){
         int mucPhat = stoi(mucPhatStr);
 
         Violation p(id, tenLoi, mucPhat);
-        Motor::danhSachMucPhat.push_back(p);
+        this->danhSachMucPhat.push_back(p);
     }
     fs.close();
 }
 void Motor::themLoi(const string& loiVP, const string& ngayVP){
     dsLoi.push_back(Pair(loiVP, ngayVP));
+    cout << "motor.bienSo = "<< this->bienSo << " ";
+
+    if (this->danhSachMucPhat.begin() == nullptr) return;
     int tienPhat = 0;
     
-    for(Node<Violation>* x = danhSachMucPhat.begin(); x != danhSachMucPhat.end(); x = x->getnext()){
+    for(Node<Violation>* x = this->danhSachMucPhat.begin(); x != this->danhSachMucPhat.end(); x = x->getnext()){
         if(loiVP == x->getdata().getLoiViPham()){
             tienPhat = x->getdata().getMucPhat();
         }
@@ -77,6 +82,7 @@ void Motor::themLoi(const string& loiVP, const string& ngayVP){
     
     cout << "Tien phat cua " << loiVP << " la: " << fixed << setprecision(0) << tienPhat << endl;
     tongTienPhat += tienPhat;
+    
 }
 
 istream& operator >> (istream& in, Motor& motor){
@@ -95,7 +101,8 @@ istream& operator >> (istream& in, Motor& motor){
     
     cout << "Nhap bien so: "; 
     in >> motor.bienSo;
-    
+    in.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
     motor.bienSo = ma + motor.bienSo;  
     if(motor.bienSo.length() >= 7) {
         motor.bienSo.insert(2, "A");

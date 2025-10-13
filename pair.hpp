@@ -13,6 +13,15 @@ struct Pair {
         os << "(" << p.key << ", " << p.value << ")";
         return os;
     }
+    bool operator==(const Pair& other) const {
+        return key == other.key && value == other.value;
+    }
+    Pair& operator=(const Pair& other) {
+        if (this == &other) return *this;
+        key = other.key;
+        value = other.value;
+        return *this;
+    }
 };
 
 #endif

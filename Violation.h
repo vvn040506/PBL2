@@ -10,8 +10,8 @@ class Violation{
         string loiViPham; // lỗi vi phạm
         int mucPhat; // mức phạt tiền
     public:
-        Mylist<Violation> list;
-        Violation(const int&, const string&, const int&); 
+        Violation();
+        Violation(const int&, const string&, const int&);
         ~Violation();
         void display();
         int getID();
@@ -20,4 +20,5 @@ class Violation{
         void setLoiViPham(const string&);
         void setMucPhat(const double&);
         friend void readDSLoi(Mylist<Violation> &, const string&);
+        Violation& operator=(const Violation& other);
 };

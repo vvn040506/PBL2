@@ -54,6 +54,7 @@ public:
     Node<T>* end();
     bool operator==(const Mylist<T>& other) const;
     bool operator!=(const Mylist<T>& other) const;
+    Mylist<T>& operator=(const Mylist<T>& other);
 };
 
 template <typename T>
@@ -159,26 +160,29 @@ void Mylist<T>::insert(T value, int index) {
 }
 
 template <typename T>
-void Mylist<T>::insert(Node<T>* position, T value) {
-    if (position == nullptr) {
+void Mylist<T>::insert(Node<T>* index, T value) {
+    if (index == nullptr) {
         cout << "Node chi dinh khong hop le!" << endl;
         return;
     }
 
-    Node<T>* node = new Node<T>(value);
-
-    if (position == tail) { 
-        position->next = node;
-        node->prev = position;
-        tail = node;
-    } else {
-        node->next = position->next;
-        node->prev = position;
-        position->next->prev = node;
-        position->next = node;
+     if (index == head) {
+        push_front(value);
+        return;
     }
-    n++;
+    if (index == tail) {
+        push_back(value);
+        return;
+    }
+
+    Node<T>* newnode = new Node<T>(value);
+    
+    newnode->next = index->next;
+    index->next->prev = newnode;
+    newnode->prev = index ->prev;
+    index->prev->next = newnode;
 }
+
 
 template <typename T>
 void Mylist<T>::pop_back() {
@@ -279,6 +283,27 @@ bool Mylist<T>::operator==(const Mylist<T>& other) const {
 template <typename T>
 bool Mylist<T>::operator!=(const Mylist<T>& other) const {
     return !(*this == other);
+}
+
+template <typename T>
+Mylist<T>& Mylist<T>::operator=(const Mylist<T>& other) {
+    if (this == &other) return *this; 
+    
+    while (head) {
+        Node<T>* temp = head;
+        head = head->next;
+        delete temp;
+    }
+    head = tail = nullptr;
+    n = 0;
+    
+    Node<T>* current = other.head;
+    while (current != nullptr) {
+        this->push_back(current->getdata());
+        current = current->getnext();
+    }
+    
+    return *this;
 }
 
 #endif
