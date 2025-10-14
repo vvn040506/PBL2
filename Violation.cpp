@@ -2,10 +2,14 @@
 #include<fstream>
 #include"Violation.h"
 using namespace std;
+
+Violation::Violation() : id_loi(0), loiViPham(""), mucPhat(0) {}
+
 Violation::Violation(const int& id, const string& loi, const int& tien)
     : id_loi(id), loiViPham(loi), mucPhat(tien){} 
 
 Violation::~Violation() {}
+
 void Violation::display(){
     cout << "Loi vi pham: " << loiViPham<< " - " << " muc phat tien" << mucPhat << endl;
 }
@@ -59,4 +63,13 @@ void readDSLoi(Mylist<Violation>& list, const string& filename) {
             list.push_back(p);
     }
     fs.close();
+}
+Violation& Violation::operator=(const Violation& other) {
+    if (this == &other) return *this;
+    
+    this->id_loi = other.id_loi;
+    this->loiViPham = other.loiViPham;
+    this->mucPhat = other.mucPhat;
+    
+    return *this;
 }

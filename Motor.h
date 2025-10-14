@@ -9,6 +9,7 @@ class Motor: public Xe{
         static int tongTienPhat;
     public:
         Motor();
+        Motor(const Motor& other);
         ~Motor();
         Mylist<Pair> dsLoi;
         Mylist<Violation> danhSachMucPhat;

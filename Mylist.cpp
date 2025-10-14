@@ -91,25 +91,27 @@ void Mylist<T>::insert(T value, int index) {
 }
 
 template <typename T>
-void Mylist<T>::insert(Node<T>* position, T value) {
-    if (position == nullptr) {
+void Mylist<T>::insert(Node<T>* index, T value) {
+    if (index == nullptr) {
         cout << "Node chi dinh khong hop le!" << endl;
         return;
     }
 
-    Node<T>* node = new Node<T>(value);
-
-    if (position == tail) { 
-        position->next = node;
-        node->prev = position;
-        tail = node;
-    } else {
-        node->next = position->next;
-        node->prev = position;
-        position->next->prev = node;
-        position->next = node;
+     if (index == head) {
+        push_front(value);
+        return;
     }
-    n++;
+    if (index == tail) {
+        push_back(value);
+        return;
+    }
+
+    Node<T>* newnode = new Node<T>(value);
+    
+    newnode->next = index->next;
+    index->next->prev = newnode;
+    newnode->prev = index ->prev;
+    index->prev->next = newnode;
 }
 
 template <typename T>
