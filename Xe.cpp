@@ -9,25 +9,8 @@ Mylist<Pair> Xe::dsMaVung;
 Xe::Xe(){
     thanhPho = bienSo = " ";
 }
-Xe::Xe(string &tp, string &bs){
-    thanhPho = tp;
-    bienSo = bs;
-}
-Xe::Xe(const Xe& other) {
-    this->bienSo = other.bienSo;
-    this->thanhPho = other.thanhPho;
-}
-Xe& Xe::operator = (const Xe& other){
-    this->bienSo = other.bienSo;
-    this->thanhPho = other.thanhPho;
-    return *(this);
-}
+Xe::Xe(string &tp, string& ls, string &bs) : thanhPho(tp), loaiXe(ls), bienSo(bs) {}
 Xe::~Xe(){
-   // cout << "Da hoan tat dong phat";
-}
-
-string& Xe::getbienSo() {
-    return bienSo;
 }
 
 void Xe::docFileMaVung(const string& filename) {
@@ -71,7 +54,24 @@ string Xe::getTP() const{
     return thanhPho;
 }
 
+string Xe::getLS() const{
+    return loaiXe;
+}
 
-void setbienSo(){
+Xe& Xe::operator = (const Xe& other){
+    this->bienSo = other.bienSo;
+    this->thanhPho = other.thanhPho;
+    return *(this);
+}
 
+void Xe::setBienSo(const string& bs) {
+    bienSo = bs;
+}
+
+void Xe::setThanhPho(const string& tp) {
+    thanhPho = tp;
+}
+
+void Xe::truyenDSVP(const string& tenfile){
+    
 }
