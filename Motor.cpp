@@ -12,7 +12,7 @@ Motor::Motor(){
     bienSo = " ";
 }
 Motor::~Motor(){
-    cout << "Da hoan tat dong phat";
+    // cout << "Da hoan tat dong phat" << endl;
 }
 int &Motor::gettongTienPhat(){
     return tongTienPhat;
@@ -65,7 +65,7 @@ void Motor::docFileMucPhat(const string& tenFile){
     }
     fs.close();
 }
-void Motor::themLoi(const string& loiVP, const string& ngayVP){
+void Motor::themLoi(const string& loiVP, const string& ngayVP, const string& idpolice){
     dsLoi.push_back(Pair(loiVP, ngayVP));
     int tienPhat = 0;
     
@@ -77,6 +77,7 @@ void Motor::themLoi(const string& loiVP, const string& ngayVP){
     
     cout << "Tien phat cua " << loiVP << " la: " << fixed << setprecision(0) << tienPhat << endl;
     tongTienPhat += tienPhat;
+    Police::addPoliceWork(idpolice, this->bienSo, ngayVP);
 }
 
 istream& operator >> (istream& in, Motor& motor){
