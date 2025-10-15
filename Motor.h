@@ -1,5 +1,7 @@
+#pragma once
 #include"Xe.h" 
 #include"Mylist.h"
+#include"Police.h"
 #include<iostream>
 #include<string>
 #include"pair.hpp"
@@ -9,14 +11,13 @@ class Motor: public Xe{
         static int tongTienPhat;
     public:
         Motor();
-        Motor(const Motor& other);
         ~Motor();
         Mylist<Pair> dsLoi;
         Mylist<Violation> danhSachMucPhat;
 
         int& gettongTienPhat();
 
-        void themLoi(const string&, const string&) override;
+        void themLoi(const string&, const string&, const string&) override;
         void dongPhat(const string&, const string&) override;
         void docFileMucPhat(const string&) override;
         void display() override;
