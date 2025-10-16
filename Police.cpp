@@ -1,5 +1,6 @@
 #include<iostream>
 #include"Police.h"
+
 using namespace std;
 HashTable<Pair>* Police::dsPolice = new HashTable<Pair>(1000);
 Police::Police(){ id_police = " "; }
@@ -26,3 +27,34 @@ Mylist<Pair> Police::getPoliceWork(const string& id){
             }
             return Mylist<Pair>();
         }
+
+void Police::themloiXe(vehicleshash* Hash,const string& bienSo,const string& loiVP ,const string& ngayVP){
+    Xe* X = Hash->find(bienSo);
+
+    if (!X) {
+        cout <<"bien so xe khong ton tai " <<endl;
+        return;
+    }
+    
+    X->themLoi(loiVP, ngayVP);
+    cout << "Da them loi" <<endl;
+}
+
+void Police :: xoaloiXe(vehicleshash* Hash,const string& bienSo,const string& ngayVP ,const string& loiVP){
+    Xe* X = Hash->find(bienSo);
+
+    if (!X) {
+        cout <<"bien so xe khong ton tai " <<endl;
+        return;
+    }
+    X->dongPhat(loiVP,ngayVP);
+    cout <<"Da xoa loi thanh cong"<<endl;
+}
+
+void Police :: menu(){
+    cout << "1.Truy van loi xe theo bien so " <<endl;
+    cout << "2.Truy van loi xe theo cccd " <<endl;
+    cout << "3.Them loi xe " <<endl;
+    cout << "4.Xoa loi xe" <<endl;
+    cout << "5.Thoat"<< endl;
+}

@@ -7,7 +7,7 @@
 #include <fstream>
 using namespace std;
 
-class Motor;
+class Xe;
 
 class vehicleshash{
 private:
@@ -15,7 +15,7 @@ private:
     int size2;
     int size3;
 public:
-    Mylist<Motor> ***table;
+    Mylist<Xe> ***table;
     int get1() const { return size1; }
     int get2() const { return size2; }
     int get3() const { return size3; }
@@ -28,8 +28,8 @@ public:
     int Hash_province(const string& plate);
     int Hash_type(const string& plate);
     
-    void insertToHash(const Motor& a);
-    Motor* find(const string& a);
+    void insertToHash(const Xe& a);
+    Xe* find(const string& a);
 };
 
 // Khai báo các hàm non-member

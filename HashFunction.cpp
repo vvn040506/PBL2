@@ -1,26 +1,27 @@
 #include "HashFunction.h"
-#include "Motor.h"
+#include "Xe.h"
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
 #include <ctime>
+#include "Motor.h"
 using namespace std;
 
 vehicleshash::vehicleshash() : size1(100), size2(100), size3(100) {
-    table = new Mylist<Motor>**[size1];
+    table = new Mylist<Xe>**[size1];
     for (int i = 0; i < size1; ++i) {
-        table[i] = new Mylist<Motor>*[size2];
+        table[i] = new Mylist<Xe>*[size2];
         for (int j = 0; j < size2; ++j)
-            table[i][j] = new Mylist<Motor>[size3];
+            table[i][j] = new Mylist<Xe>[size3];
     }
 }
 
 vehicleshash::vehicleshash(int size1, int size2, int size3) : size1(size1), size2(size2), size3(size3){
-    table = new Mylist<Motor>**[size1];
+    table = new Mylist<Xe>**[size1];
     for (int i = 0; i < size1; ++i) {
-        table[i] = new Mylist<Motor>*[size2];
+        table[i] = new Mylist<Xe>*[size2];
         for (int j = 0; j < size2; ++j)
-            table[i][j] = new Mylist<Motor>[size3];
+            table[i][j] = new Mylist<Xe>[size3];
     }
 }
 
@@ -79,7 +80,7 @@ int vehicleshash::Hash_type(const string& plate){
     return num % size2;
 }
 
-void vehicleshash::insertToHash(const Motor& a){
+void vehicleshash::insertToHash(const Xe& a){
     int p = Hash_province(a.getbienSo());
     int t = Hash_type(a.getbienSo());
     int n = Hash_number(a.getbienSo());
@@ -87,12 +88,12 @@ void vehicleshash::insertToHash(const Motor& a){
     table[p][t][n].push_back(a);
 }
 
-Motor* vehicleshash::find(const string& a){
+Xe* vehicleshash::find(const string& a){
     int p = Hash_province(a);
     int t = Hash_type(a);
     int n = Hash_number(a);
 
-    Node<Motor>* current = table[p][t][n].begin();
+    Node<Xe>* current = table[p][t][n].begin();
 
     while (current != nullptr){
         if (current->getdata().getbienSo() == a)
@@ -131,7 +132,7 @@ void saveToFile(vehicleshash& hash, const string& filename) {
     for (int i = 0; i < hash.get1(); ++i) {
         for (int j = 0; j < hash.get2(); ++j) {
             for (int k = 0; k < hash.get3(); ++k) {
-                Node<Motor>* current = hash.table[i][j][k].begin();
+                Node<Xe>* current = hash.table[i][j][k].begin();
                 while (current != nullptr) {
                     out << current->getdata().getbienSo() << endl;
                     // Lưu danh sách lỗi nếu cần

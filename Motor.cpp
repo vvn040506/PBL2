@@ -65,20 +65,7 @@ void Motor::docFileMucPhat(const string& tenFile){
     }
     fs.close();
 }
-void Motor::themLoi(const string& loiVP, const string& ngayVP, const string& idpolice){
-    dsLoi.push_back(Pair(loiVP, ngayVP));
-    int tienPhat = 0;
-    
-    for(Node<Violation>* x = danhSachMucPhat.begin(); x != danhSachMucPhat.end(); x = x->getnext()){
-        if(loiVP == x->getdata().getLoiViPham()){
-            tienPhat = x->getdata().getMucPhat();
-        }
-    }
-    
-    cout << "Tien phat cua " << loiVP << " la: " << fixed << setprecision(0) << tienPhat << endl;
-    tongTienPhat += tienPhat;
-    Police::addPoliceWork(idpolice, this->bienSo, ngayVP);
-}
+
 
 istream& operator >> (istream& in, Motor& motor){
     cout << "Nhap Thanh pho/ Tinh cua xe dang ky: "; 

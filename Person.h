@@ -9,7 +9,7 @@
 #include <fstream>
 using namespace std;
 
-class Motor;
+class Xe;
 
 template<typename T> class HashTable;
 
@@ -45,9 +45,11 @@ public:
     void setXe(vehicleshash& xe);
     vehicleshash& getXe();
     vehicleshash* getXePtr();
+    virtual void menu();
     
-    static void phanTichBienSo(const string& bienSo, Motor& motor);
+    static void phanTichBienSo(const string& bienSo, Xe& Xe);
     static void docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi);
+
 };
 
 #endif

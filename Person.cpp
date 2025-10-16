@@ -43,7 +43,7 @@ ostream& operator<<(ostream& os, const Person& p) {
         for (int j = 0; j < p.hash_xe.get2(); ++j) {
             for (int k = 0; k < p.hash_xe.get3(); ++k) {
                 
-                Node<Motor>* current = p.hash_xe.table[i][j][k].begin();
+                Node<Xe>* current = p.hash_xe.table[i][j][k].begin();
                 while (current != nullptr) {
                     os << "  - ";
                     current->getdata().display();  
@@ -75,7 +75,7 @@ vehicleshash* Person::getXePtr(){
     return &hash_xe;
 }
 
-void Person::phanTichBienSo(const string& bienSo, Motor& motor) {
+void Person::phanTichBienSo(const string& bienSo, Xe& Xe) {
     size_t dash1 = bienSo.find('-');
     size_t dash2 = bienSo.find('-', dash1 + 1);
     
@@ -83,11 +83,11 @@ void Person::phanTichBienSo(const string& bienSo, Motor& motor) {
         string maTP = bienSo.substr(0, dash1);
         string loaiXe = bienSo.substr(dash1 + 1, dash2 - dash1 - 1);
         
-        motor.setBienSo(bienSo);
+        Xe.setBienSo(bienSo);
         
         for (Node<Pair>* x = Xe::dsMaVung.begin(); x != nullptr; x = x->getnext()) {
             if (x->getdata().value == maTP) {
-                motor.setThanhPho(x->getdata().key);
+                Xe.setThanhPho(x->getdata().key);
                 break;
             }
         }

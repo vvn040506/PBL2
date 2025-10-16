@@ -16,6 +16,8 @@ class Xe{
         Xe(string&, string&, string&); 
         ~Xe();
         static Mylist<Pair> dsMaVung;
+        Mylist<Pair> dsLoi;
+        Mylist<Violation> danhSachMucPhat;
         
         string getbienSo() const;
         string getTP() const;
@@ -23,11 +25,11 @@ class Xe{
         // int& gettongTienPhat();
         // void dongPhat() const;
         static void docFileMaVung(const string&);
-        virtual void themLoi(const string&, const string&, const string&) = 0;
-        virtual void dongPhat(const string&, const string&) = 0;
-        virtual void docFileMucPhat(const string&) = 0;
+        virtual void themLoi(const string&, const string&) ;
+        virtual void dongPhat(const string&, const string&) ;
+        virtual void docFileMucPhat(const string&);
         Xe& operator = (const Xe& other);
-        virtual void display() = 0;
+        virtual void display();
 
         void setBienSo(const string&);
         void setThanhPho(const string&);

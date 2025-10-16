@@ -3,6 +3,8 @@
 #include<vector>
 #include<fstream>
 #include<sstream>
+#include<ctime>
+#include<iomanip>
 using namespace std;
 int Xe::tongTienPhat = 0;
 Mylist<Pair> Xe::dsMaVung;
@@ -74,4 +76,18 @@ void Xe::setThanhPho(const string& tp) {
 
 void Xe::truyenDSVP(const string& tenfile){
     
+}
+
+void Xe::themLoi(const string& loiVP, const string& ngayVP){
+    dsLoi.push_back(Pair(loiVP, ngayVP));
+    int tienPhat = 0;
+    
+    for(Node<Violation>* x = danhSachMucPhat.begin(); x != danhSachMucPhat.end(); x = x->getnext()){
+        if(loiVP == x->getdata().getLoiViPham()){
+            tienPhat = x->getdata().getMucPhat();
+        }
+    }
+    
+    cout << "Tien phat cua " << loiVP << " la: " << fixed << setprecision(0) << tienPhat << endl;
+    tongTienPhat += tienPhat;
 }
