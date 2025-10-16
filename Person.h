@@ -1,60 +1,53 @@
 #ifndef PERSON_H
 #define PERSON_H
-#include"Xe.h"
-#include"Mylist.h"
+
+#include"HashFunction.h"
 #include <iostream>
 #include <string>
+#include <limits.h>
+#include <sstream>
+#include <fstream>
 using namespace std;
+
+class Motor;
+
+template<typename T> class HashTable;
 
 class Person {
 private:
     string cccd;
     string ten;
-    Mylist<Xe*> *myXe;
-public:
-    Person() : cccd(""), ten("") {
-        myXe = new Mylist<Xe*>;
-    }
-    Person(const string &cccd, const string &ten) : cccd(cccd), ten(ten){
-    }
+    string diachi;
+    string sdt;
+    vehicleshash hash_xe;
 
+public:
+    Person();
+    Person(const string &cccd, const string &ten, const string& sdt, const string& d);
+    
     string getCCCD() const { return cccd; }
     string getTen() const { return ten; }
+    string getDiaChi() const { return diachi; }
+    string getSdt() const { return sdt; }
 
     void setCCCD(const string& newCCCD) { cccd = newCCCD; }
     void setTen(const string& newTen) { ten = newTen; }
+    void setDiaChi(const string& diaChi) { diachi = diaChi; }
+    void setSdt(const string& s) { sdt = s; } 
 
-    bool operator==(const Person& other) const {
-        return this->cccd == other.cccd;
-    }
+    bool operator==(const Person& other) const;
+    bool operator!=(const Person& other) const;
 
-    bool operator!=(const Person& other) const {
-        return this->cccd != other.cccd;
-    }
+    friend istream& operator >> (istream& in, Person& p);
+    friend ostream& operator<<(ostream& os, const Person& p);
 
-    friend istream& operator >> (istream& in, Person& p){
-        cout << "Nhap cccd: "; in >> p.cccd;
-        cout << "Nhap ten nguoi vp: "; 
-        in.ignore();
-        getline(in, p.ten);
-        return in;
-    }
-
-    friend ostream& operator << (ostream& os, const Person& p) {
-        os << "[CCCD: " << p.cccd << ", Ten: " << p.ten << "]" << endl;
-        for(Node<Xe*> *x = p.myXe->begin(); x != p.myXe->end(); x = x->getnext()){
-            Xe *temp = x->getdata();
-            temp->display();
-        }
-        return os;
-    }
-    void setXe(Mylist<Xe*>& xe){
-        myXe = new Mylist<Xe*>(xe);
-    }
-
-    Mylist<Xe*>* getXe(){
-        return myXe;
-    }
+    void nhapTT();
+    void setXe(vehicleshash& xe);
+    vehicleshash& getXe();
+    vehicleshash* getXePtr();
+    
+    static void phanTichBienSo(const string& bienSo, Motor& motor);
+    static void docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi);
 };
 
 #endif
