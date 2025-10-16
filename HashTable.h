@@ -1,32 +1,43 @@
 #ifndef HASHTABLE_H
 #define HASHTABLE_H
-#include"Mylist.h"
-#include"Person.h"
-#include<iostream>
+
+#include "Mylist.h"
+#include"Person.h"//
+#include <iostream>
+#include <stdexcept>
 using namespace std;
+
+// Forward declaration
+
 
 template <typename T>
 class HashTable{
-    private:
-        Mylist<T> *buckets;
-        unsigned int capacity;
-        unsigned int size;
-    public:
-        HashTable(const unsigned int&);
-        ~HashTable();
-        int hash_function(const string&);
-        void insert(const string&, const T&);
-        Node<T> search(const T&);
-        void show();
-        void show(const string&);
-        friend void searchByCCCD(const string& cccd, HashTable<Person>& ds);
-        friend Person& getByCCCD(const string& cccd, HashTable<Person>& ds);
+private:
+    unsigned int capacity;
+    unsigned int size;
+public:
+    Mylist<T> *buckets;
+    HashTable(const unsigned int&);
+    ~HashTable();
+    unsigned int getCapacity();
+    int hash_function(const string&);
+    void insert(const string&, const T&);
+    Node<T>* search(const T&);  
+    void show();
+    void show(const string&);
 };
+
+// Template implementations
+template <typename T>
+unsigned int HashTable<T>::getCapacity(){
+    return capacity;
+}
 
 template <typename T>
 HashTable<T>::HashTable(const unsigned int& capacity){
     buckets = new Mylist<T>[capacity];
     this->capacity = capacity;
+    this->size = 0;
 }
 
 template <typename T>
@@ -43,12 +54,13 @@ template <typename T>
 void HashTable<T>::insert(const string& key, const T& value){
     int pos = hash_function(key);
     buckets[pos].push_back(value);
+    size++;
 }
 
 template <typename T>
-Node<T> HashTable<T>::search(const T& key){
+Node<T>* HashTable<T>::search(const T& key){  
     int pos = hash_function(key);
-    return *(buckets[pos]->getNodeByValue(key)); 
+    return buckets[pos].getNodeByValue(key); 
 }
 
 template <typename T>
@@ -62,32 +74,16 @@ void HashTable<T>::show(){
 template <typename T>
 void HashTable<T>::show(const string& key){
     int pos = hash_function(key);
-    Node<T> *temp = buckets[pos].getNodeByValue();
-    cout << temp->getdata() << endl;
+    Node<T> *temp = buckets[pos].getNodeByValue(key); 
+    if(temp != nullptr) {
+        cout << "Found at position: " << pos << endl;
+    } else {
+        cout << "Khong tim thay" << endl;
+    }
 }
 
-void searchByCCCD(const string& cccd, HashTable<Person>& ds){
-    int pos = ds.hash_function(cccd);
-    
-    for(Node<Person> *x = ds.buckets[pos].begin(); x != ds.buckets[pos].end(); x = x->getnext()) {
-        if(x->getdata().getCCCD() == cccd){
-            cout << x->getdata();
-            return;  
-        }
-    }
-    
-    cout << "khong tim thay cccd " << cccd << endl;
-}
+// Chuyển các hàm non-template sang file .cpp
+void searchByCCCD(const string& cccd, HashTable<Person>& ds);
+Person& getByCCCD(const string& cccd, HashTable<Person>& ds);
 
-Person& getByCCCD(const string& cccd, HashTable<Person>& ds){
-    int pos = ds.hash_function(cccd);
-    
-    for(Node<Person> *x = ds.buckets[pos].begin(); x != ds.buckets[pos].end(); x = x->getnext()) {
-        if(x->getdata().getCCCD() == cccd){
-            return x->refgetdata();
-        }
-    }
-    
-    throw runtime_error("Khong tim thay cccd " + cccd);
-}
 #endif
