@@ -24,7 +24,7 @@ class Police: public Person{
         static void addPoliceWork(const string& id_police, const string& bienso, const string& ngay);
         static Mylist<Pair> getPoliceWork(const string& id);
         
-        void menu() override;
+        void menu();
         void themloiXe(vehicleshash* Hash,const string& bienSo,const string& ngayVP ,const string& loiVP);
         void xoaloiXe(vehicleshash* Hash,const string& bienSo,const string& ngayVP ,const string& loiVP);
         

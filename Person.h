@@ -19,13 +19,19 @@ private:
     string ten;
     string diachi;
     string sdt;
-    vehicleshash hash_xe;
+    vehicleshash* hash_xe;
 
 public:
     Person();
+    virtual ~Person(){
+        if (hash_xe != nullptr) {
+        delete hash_xe;
+    }
+    }
     Person(const string &cccd, const string &ten, const string& sdt, const string& d);
     
     string getCCCD() const { return cccd; }
+    string& getCCCD() { return cccd; }
     string getTen() const { return ten; }
     string getDiaChi() const { return diachi; }
     string getSdt() const { return sdt; }
@@ -42,10 +48,9 @@ public:
     friend ostream& operator<<(ostream& os, const Person& p);
 
     void nhapTT();
-    void setXe(vehicleshash& xe);
-    vehicleshash& getXe();
-    vehicleshash* getXePtr();
-    virtual void menu();
+    void setXe(vehicleshash* xe);
+    vehicleshash* getXe();
+    void menu();
     
     static void phanTichBienSo(const string& bienSo, Xe& Xe);
     static void docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi);

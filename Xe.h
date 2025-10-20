@@ -10,10 +10,11 @@ class Xe{
         string loaiXe;
         string bienSo;
         // bool daDongPhat;
-        static int tongTienPhat;
+        static int tongTienPhat ;
+        int soLoi;
     public:
         Xe();
-        Xe(string&, string&, string&); 
+        Xe(string&, string&, string&,int); 
         ~Xe();
         static Mylist<Pair> dsMaVung;
         Mylist<Pair> dsLoi;
@@ -22,17 +23,20 @@ class Xe{
         string getbienSo() const;
         string getTP() const;
         string getLS() const;
+        int getsoLoi();
         // int& gettongTienPhat();
         // void dongPhat() const;
         static void docFileMaVung(const string&);
-        virtual void themLoi(const string&, const string&) ;
-        virtual void dongPhat(const string&, const string&) ;
-        virtual void docFileMucPhat(const string&);
+        void themLoi(const string&, const string&) ;
+        void dongPhat(const string&, const string&) ;
+        void docFileMucPhat(const string&);
         Xe& operator = (const Xe& other);
         virtual void display();
-
-        void setBienSo(const string&);
+        virtual void truyxuatLoi();
+        
         void setThanhPho(const string&);
-
+        void setBienSo(const string&);
+        void setloaiXe(const string&);
+        int& gettongTienPhat();
         void truyenDSVP(const string&);
 };

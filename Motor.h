@@ -7,19 +7,14 @@
 using namespace std;
 class Motor: public Xe{
     private:
-        static int tongTienPhat;
+        static long long tongTienPhat;
     public:
         Motor();
         ~Motor();
-        Mylist<Pair> dsLoi;
-        Mylist<Violation> danhSachMucPhat;
-
-        int& gettongTienPhat();
-
-        void themLoi(const string&, const string&, const string&) override;
-        void dongPhat(const string&, const string&) override;
-        void docFileMucPhat(const string&) override;
+        
+        long long& gettongTienPhat();
         void display() override;
+        void truyxuatLoi() override;
 
 
         friend istream& operator >> (istream&, Motor&);

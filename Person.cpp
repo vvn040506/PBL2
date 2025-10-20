@@ -10,10 +10,14 @@
 using namespace std;
 
 // Constructor implementations
-Person::Person() : cccd(""), ten(""), hash_xe(34, 100, 1000) {}
+Person::Person() : cccd(""), ten(""){
+    hash_xe = new vehicleshash(10, 10, 100);
+}
 
 Person::Person(const string &cccd, const string &ten, const string& sdt, const string& d) 
-    : cccd(cccd), ten(ten), sdt(sdt), diachi(d), hash_xe(100, 100, 1000) { 
+    : cccd(cccd), ten(ten), sdt(sdt), diachi(d) { 
+            hash_xe = new vehicleshash(10, 10, 100);
+
 }
 
 // Operator implementations
@@ -39,14 +43,14 @@ ostream& operator<<(ostream& os, const Person& p) {
     os << "[CCCD: " << p.cccd << ", Ten: " << p.ten << ", Sdt: " << p.sdt << ", Dia chi: " << p.diachi << "]" << endl;
     os << "Danh sach xe vi pham:" << endl;
     
-    for (int i = 0; i < p.hash_xe.get1(); ++i) {
-        for (int j = 0; j < p.hash_xe.get2(); ++j) {
-            for (int k = 0; k < p.hash_xe.get3(); ++k) {
+    for (int i = 0; i < p.hash_xe->get1(); ++i) {
+        for (int j = 0; j < p.hash_xe->get2(); ++j) {
+            for (int k = 0; k < p.hash_xe->get3(); ++k) {
                 
-                Node<Xe>* current = p.hash_xe.table[i][j][k].begin();
+                Node<Xe*>* current = p.hash_xe->table[i][j][k].begin();
                 while (current != nullptr) {
                     os << "  - ";
-                    current->getdata().display();  
+                    current->getdata()->display();  
                     current = current->getnext();
                 }
             }
@@ -55,7 +59,6 @@ ostream& operator<<(ostream& os, const Person& p) {
     return os;
 }
 
-// Method implementations
 void Person::nhapTT(){
     cout << "Nhap cccd: "; cin >> cccd;
     cout << "Nhap ten nguoi vp: "; 
@@ -63,16 +66,15 @@ void Person::nhapTT(){
     getline(cin, ten);
 }
 
-void Person::setXe(vehicleshash& xe){
+void Person::setXe(vehicleshash* xe){
+    if (hash_xe != nullptr) {
+        delete hash_xe;
+    }
     hash_xe = xe; 
 }
 
-vehicleshash& Person::getXe(){
+vehicleshash* Person::getXe(){
     return hash_xe;
-}
-
-vehicleshash* Person::getXePtr(){
-    return &hash_xe;
 }
 
 void Person::phanTichBienSo(const string& bienSo, Xe& Xe) {
@@ -195,7 +197,7 @@ void Person::docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi)
                 Motor m;
                 m.setBienSo(x->getdata().value);
                 phanTichBienSo(x->getdata().value, m);
-                pnew.getXe().insertToHash(m);
+                pnew.getXe()->insertToHash(&m);
             }
         }
 
@@ -205,4 +207,18 @@ void Person::docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi)
 
     cout << "\n=== KET THUC DOC FILE ===" << endl;
     fs.close();
+}
+
+Person& getByCCCD(const string& cccd, HashTable<Person>& ds) {
+    int pos = ds.hash_function(cccd);
+    
+    Node<Person>* x = ds.buckets[pos].begin();
+    while (x != nullptr) {
+        if (x->getdata().getCCCD() == cccd) {
+            return x->refgetdata();
+        }
+        x = x->getnext();
+    }
+    
+    throw runtime_error("Khong tim thay CCCD " + cccd);
 }
