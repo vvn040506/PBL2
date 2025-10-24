@@ -114,6 +114,7 @@ void vehicleshash::insertToHash(Xe* a){
         
         long long tienPhat = 0;
         Node<Violation>* v = a->danhSachMucPhat.begin();
+
         while (v != nullptr) {
             if (v->getdata().getLoiViPham() == tenLoi) {
                 tienPhat = v->getdata().getMucPhat();
@@ -121,6 +122,8 @@ void vehicleshash::insertToHash(Xe* a){
             }
             v = v->getnext();
         }
+        
+        
         
         cachedtienPhat += tienPhat; 
         

@@ -11,6 +11,7 @@ long long Car::tongTienPhat = 0;
 Car::Car(){
     thanhPho = " ";
     bienSo = " ";
+    loaiXe = "Car";
 }
 Car::~Car(){
 

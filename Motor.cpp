@@ -10,6 +10,7 @@ long long Motor::tongTienPhat = 0;
 Motor::Motor(){
     thanhPho = " ";
     bienSo = " ";
+    loaiXe = "Motor";
 }
 Motor::~Motor(){
     // cout << "Da hoan tat dong phat" << endl;
@@ -38,7 +39,7 @@ istream& operator >> (istream& in, Motor& motor){
         }
     }
     
-    cout << "Nhap loai xe: "; getline(in, motor.loaiXe);
+    cout << "Nhap ki hieu loai xe: "; getline(in, motor.loaiXe);
 
     cout << "Nhap bien so: "; 
     getline(in, motor.bienSo);

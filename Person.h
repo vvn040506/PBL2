@@ -2,6 +2,7 @@
 #define PERSON_H
 
 #include"HashFunction.h"
+#include"HashTable.h"
 #include <iostream>
 #include <string>
 #include <limits.h>
@@ -20,6 +21,7 @@ private:
     string diachi;
     string sdt;
     vehicleshash* hash_xe;
+    HashTable<Person>* hash_nguoi;
 
 public:
     Person();
@@ -28,6 +30,7 @@ public:
         delete hash_xe;
     }
     }
+    Person(const Person& other);
     Person(const string &cccd, const string &ten, const string& sdt, const string& d);
     
     string getCCCD() const { return cccd; }
@@ -41,6 +44,7 @@ public:
     void setDiaChi(const string& diaChi) { diachi = diaChi; }
     void setSdt(const string& s) { sdt = s; } 
 
+    Person& operator=(const Person& other);
     bool operator==(const Person& other) const;
     bool operator!=(const Person& other) const;
 
@@ -50,11 +54,14 @@ public:
     void nhapTT();
     void setXe(vehicleshash* xe);
     vehicleshash* getXe();
-    void menu();
+    void timXe(vehicleshash* hash);
     
     static void phanTichBienSo(const string& bienSo, Xe& Xe);
     static void docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi);
+    void truyvanCCCD(HashTable<Person>* hash);
 
 };
+
+
 
 #endif

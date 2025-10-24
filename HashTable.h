@@ -2,13 +2,14 @@
 #define HASHTABLE_H
 
 #include "Mylist.h"
-#include"Person.h"//
+#include "Person.h"
 #include <iostream>
 #include <stdexcept>
 using namespace std;
 
 // Forward declaration
 
+class Person;
 
 template <typename T>
 class HashTable{
@@ -82,8 +83,8 @@ void HashTable<T>::show(const string& key){
     }
 }
 
-// Chuyển các hàm non-template sang file .cpp
 void searchByCCCD(const string& cccd, HashTable<Person>& ds);
 Person& getByCCCD(const string& cccd, HashTable<Person>& ds);
+// Chuyển các hàm non-template sang file .cpp
 
 #endif

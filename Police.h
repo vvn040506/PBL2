@@ -6,6 +6,7 @@
 #include <string>
 #include "HashFunction.h"
 #include "Xe.h"
+
 using namespace std;
 
 //class Person;
@@ -25,8 +26,9 @@ class Police: public Person{
         static Mylist<Pair> getPoliceWork(const string& id);
         
         void menu();
-        void themloiXe(vehicleshash* Hash,const string& bienSo,const string& ngayVP ,const string& loiVP);
-        void xoaloiXe(vehicleshash* Hash,const string& bienSo,const string& ngayVP ,const string& loiVP);
+        void themloiXe(vehicleshash* Hash);
+        void xoaloiXe(vehicleshash* Hash);
+        void themxeMoi(vehicleshash* Hash);
         
 };
 

@@ -7,6 +7,12 @@
 #include <string>
 #include <sstream>
 #include <fstream>
+#include <ctime>
+#include <limits>
+#include "Motor.h"
+#include "Car.h"
+#include "DataGenerator.h"
+#include "main1.h"
 using namespace std;
 
 // Constructor implementations
@@ -18,6 +24,68 @@ Person::Person(const string &cccd, const string &ten, const string& sdt, const s
     : cccd(cccd), ten(ten), sdt(sdt), diachi(d) { 
             hash_xe = new vehicleshash(10, 10, 100);
 
+}
+Person::Person(const Person& other) 
+    : cccd(other.cccd), ten(other.ten), sdt(other.sdt), diachi(other.diachi) {
+    
+    // Deep copy vehicleshash
+    hash_xe = new vehicleshash(other.hash_xe->get1(), 
+                               other.hash_xe->get2(), 
+                               other.hash_xe->get3());
+    
+    // Copy tất cả xe từ hash table cũ sang mới
+    for (int i = 0; i < other.hash_xe->get1(); ++i) {
+        for (int j = 0; j < other.hash_xe->get2(); ++j) {
+            for (int k = 0; k < other.hash_xe->get3(); ++k) {
+                Node<Xe*>* current = other.hash_xe->table[i][j][k].begin();
+                while (current != nullptr) {
+                    // Clone xe (bạn cần implement clone method cho Xe)
+                    Xe* xe = current->getdata();
+                    Xe* newXe = new Xe(*xe); // Giả sử Xe có copy constructor
+                    hash_xe->insertToHash(newXe);
+                    current = current->getnext();
+                }
+            }
+        }
+    }
+    
+    hash_nguoi = nullptr; // Hoặc copy nếu cần
+}
+
+// Assignment operator
+Person& Person::operator=(const Person& other) {
+    if (this != &other) {
+        // Xóa hash cũ
+        if (hash_xe != nullptr) {
+            delete hash_xe;
+        }
+        
+        // Copy data
+        cccd = other.cccd;
+        ten = other.ten;
+        sdt = other.sdt;
+        diachi = other.diachi;
+        
+        // Deep copy hash
+        hash_xe = new vehicleshash(other.hash_xe->get1(), 
+                                   other.hash_xe->get2(), 
+                                   other.hash_xe->get3());
+        
+        // Copy vehicles...
+        for (int i = 0; i < other.hash_xe->get1(); ++i) {
+            for (int j = 0; j < other.hash_xe->get2(); ++j) {
+                for (int k = 0; k < other.hash_xe->get3(); ++k) {
+                    Node<Xe*>* current = other.hash_xe->table[i][j][k].begin();
+                    while (current != nullptr) {
+                        Xe* newXe = new Xe(*current->getdata());
+                        hash_xe->insertToHash(newXe);
+                        current = current->getnext();
+                    }
+                }
+            }
+        }
+    }
+    return *this;
 }
 
 // Operator implementations
@@ -117,14 +185,19 @@ void Person::docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi)
         Mylist<string> tokens;
         while (ss >> token) tokens.push_back(token);
 
-        if (tokens.IsEmpty()) continue;
+        if (tokens.IsEmpty()) {
+            cout << "-> Dong " << lineCount << ": Dong trong, bo qua" << endl;
+            continue;
+        }
 
         cout << "\n--- Dong " << lineCount << " ---" << endl;
 
+        // Lấy CCCD
         string cccd = tokens.begin()->getdata();
         tokens.pop_front();
         cout << "CCCD: " << cccd << endl;
 
+        // Parse danh sách xe (LoaiXe BienSo)
         Mylist<Pair> danhSachXe;
         Node<string>* cur = tokens.begin();
         while (cur != nullptr) {
@@ -140,6 +213,7 @@ void Person::docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi)
             }
         }
 
+        // Parse thông tin còn lại (Tên, SDT, Địa chỉ)
         Mylist<string> thongTinConLai;
         while (cur != nullptr) {
             thongTinConLai.push_back(cur->getdata());
@@ -147,7 +221,7 @@ void Person::docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi)
         }
 
         if (thongTinConLai.size() < 3) {
-            cout << "-> Thieu thong tin, bo qua dong nay\n";
+            cout << "-> Dong " << lineCount << ": Thieu thong tin, bo qua" << endl;
             continue;
         }
 
@@ -160,6 +234,7 @@ void Person::docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi)
             p = p->getnext();
         }
 
+        // Tìm SDT (chuỗi all-digit)
         int posSDT = -1;
         for (int i = idx - 1; i >= 0; --i) {
             bool allDigit = true;
@@ -170,18 +245,21 @@ void Person::docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi)
         }
 
         if (posSDT == -1) {
-            cout << "-> Khong tim thay SDT, bo qua dong nay\n";
+            cout << "-> Dong " << lineCount << ": Khong tim thay SDT, bo qua" << endl;
             continue;
         }
 
+        // Parse Tên
         string ten = "";
         for (int i = 0; i < posSDT; ++i) {
             if (!ten.empty()) ten += " ";
             ten += arr[i];
         }
 
+        // Parse SDT
         string sdt = arr[posSDT];
 
+        // Parse Địa chỉ
         string diachi = "";
         for (int i = posSDT + 1; i < idx; ++i) {
             if (!diachi.empty()) diachi += " ";
@@ -190,17 +268,60 @@ void Person::docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi)
 
         cout << "Ten: " << ten << "\nSDT: " << sdt << "\nDia chi: " << diachi << endl;
 
+        // Tạo Person mới
         Person pnew(cccd, ten, sdt, diachi);
 
-        for (Node<Pair>* x = danhSachXe.begin(); x != danhSachXe.end(); x = x->getnext()) {
-            if (x->getdata().key == "Motor") {
-                Motor m;
-                m.setBienSo(x->getdata().value);
-                phanTichBienSo(x->getdata().value, m);
-                pnew.getXe()->insertToHash(&m);
+        // Thêm xe vào hash_xe của Person
+        for (Node<Pair>* x = danhSachXe.begin(); x != nullptr; x = x->getnext()) {
+            string loaiXe = x->getdata().key;
+            string bienSo = x->getdata().value;
+
+            // Tìm xe gốc từ hashtableXe toàn cục
+            Xe* xeGoc = hashtableXe->find(bienSo);
+            
+            // Tạo xe mới theo loại
+            Xe* xeMoi = nullptr;
+            if (loaiXe == "Motor") {
+                xeMoi = new Motor();
+            } else if (loaiXe == "Car") {
+                xeMoi = new Car();
+            } else {
+                cout << "-> Dong " << lineCount << ": Loai xe khong hop le: " << loaiXe << endl;
+                continue;
             }
+
+            // Set thông tin cơ bản
+            xeMoi->setBienSo(bienSo);
+            phanTichBienSo(bienSo, *xeMoi);
+
+            // Copy dsLoi và danhSachMucPhat từ xe gốc (nếu có)
+            if (xeGoc != nullptr) {
+                // Deep copy dsLoi
+                Node<Pair>* loiGoc = xeGoc->dsLoi.begin();
+                while (loiGoc != nullptr) {
+                    Pair loiCopy = loiGoc->getdata(); // Copy Pair (tenLoi, ngayVP)
+                    xeMoi->dsLoi.push_back(loiCopy);
+                    loiGoc = loiGoc->getnext();
+                }
+
+                // Set danhSachMucPhat (dùng global để đồng bộ)
+                xeMoi->danhSachMucPhat = (loaiXe == "Motor") ? dsMucPhatMotor : dsMucPhatCar;
+
+                // Copy các thuộc tính khác
+                //xeMoi->soLoi = xeGoc->soLoi;
+                // Nếu cần copy thêm tongTienPhat hoặc các field khác, thêm ở đây
+            } else {
+                cout << "-> Dong " << lineCount << ": Khong tim thay xe " << bienSo << " trong hashtableXe" << endl;
+                // Vẫn thêm xe mới vào Person, nhưng không có lỗi
+                xeMoi->danhSachMucPhat = (loaiXe == "Motor") ? dsMucPhatMotor : dsMucPhatCar;
+            }
+
+            // Thêm xe vào hash_xe của Person
+            pnew.getXe()->insertToHash(xeMoi);
+            cout << "-> Dong " << lineCount << ": Da them xe " << bienSo << " (" << loaiXe << ") vao Person" << endl;
         }
 
+        // Thêm Person vào HashTable
         dsNguoi.insert(cccd, pnew);
         cout << "-> Da them " << ten << " vao HashTable" << endl;
     }
@@ -209,16 +330,42 @@ void Person::docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi)
     fs.close();
 }
 
-Person& getByCCCD(const string& cccd, HashTable<Person>& ds) {
-    int pos = ds.hash_function(cccd);
+
+
+
+void Person :: timXe(vehicleshash* hash){
+    system("cls");
+    cout << "\n=== TIM KIEM XE THEO BIEN SO ===\n";
     
-    Node<Person>* x = ds.buckets[pos].begin();
-    while (x != nullptr) {
-        if (x->getdata().getCCCD() == cccd) {
-            return x->refgetdata();
-        }
-        x = x->getnext();
+    cout << "Nhap bien so xe (VD: 29-A1-12345): ";
+    string bienSo;
+    getline(cin, bienSo);
+    
+    Xe* xe = hash->find(bienSo);
+    if (xe) {
+        xe->truyxuatLoi();
+    } else {
+        cout << "\nKhong tim thay xe co bien so: " << bienSo << endl;
+    }
+    pause();
+}
+
+void Person :: truyvanCCCD(HashTable<Person>* HashTable){
+    system("cls");
+    cout << "\n=== TRA CUU THEO CCCD ===\n";
+    
+    cout << "Nhap so CCCD: ";
+    string cccd;
+    getline(cin, cccd);
+    
+    try {
+        Person &p = getByCCCD(cccd, *hashtableNguoi);
+        cout << "\n--- THONG TIN CHU XE ---" << endl;
+        cout << p;
+    } catch (const exception& e) {
+        cout << "\nKhong tim thay CCCD: " << cccd << endl;
     }
     
-    throw runtime_error("Khong tim thay CCCD " + cccd);
+    pause();
+
 }
