@@ -59,4 +59,5 @@ public:
 string generatePlate(int index);
 void saveToFile(vehicleshash& hash, const string& filename);
 
+
 #endif

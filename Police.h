@@ -25,11 +25,16 @@ class Police: public Person{
         static void addPoliceWork(const string& id_police, const string& bienso, const string& ngay);
         static Mylist<Pair> getPoliceWork(const string& id);
         
-        void menu();
+        void menu() override;
         void themloiXe(vehicleshash* Hash);
         void xoaloiXe(vehicleshash* Hash);
         void themxeMoi(vehicleshash* Hash);
         
 };
+void themXeVaoPerson(const string& cccd, const string& bienSo, const string& ten, 
+                     const string& sdt, const string& diachi, int loai);
+Xe* taoXeMoi(const string& bienSo, int loai);
+void capNhatFileCCCD(const string& cccd, const string& bienSo);
+void capNhatFileBienSo(Xe* xe);                   
 
 #include "Person.h"

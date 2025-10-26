@@ -1,17 +1,31 @@
 #include "main1.h"
+#define link D:\C++\PBL2\Data
 
-// ===== ĐỊNH NGHĨA BIẾN TOÀN CỤC =====
 vehicleshash* hashtableXe = nullptr;
 HashTable<Person>* hashtableNguoi = nullptr;
 Mylist<Violation> dsMucPhatMotor;
 Mylist<Violation> dsMucPhatCar;
+
+string ghepFile(const string& Link, const string& File){
+    return Link + File;
+}
+
+// INPUT FILE
+string Link = "D:\\C++\\PBL2\\Data\\";
+string finalMaVung = ghepFile(Link,"mavung.txt");
+string finalMotor = ghepFile(Link,"Motor.txt");
+string finalCar = ghepFile(Link,"Car.txt");
+string finalCCCD = ghepFile(Link,"cccd.txt");
+string finalbienSo = ghepFile(Link,"bienso.txt");
+
+
 
 void pause() {
     cout << "\nNhan phim bat ky de tiep tuc...";
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
 
-    void khoiTaoHeThong() {
+void khoiTaoHeThong() {
     
 system("cls");
     cout << "========================================" << endl;
@@ -24,18 +38,21 @@ system("cls");
         
         hashtableNguoi = new HashTable<Person>(1000);
         cout << "[OK] Da tao hash table nguoi" << endl;
+        string Link = "D:\\C++\\PBL2\\Data\\";
+        string finalMaVung = ghepFile(Link,"mavung.txt");
         
-        Xe::docFileMaVung("mavung.txt");
+        
+        Xe::docFileMaVung(finalMaVung);
         if (Xe::dsMaVung.size() > 0) {
             cout << "[OK] Da doc ma vung: " << Xe::dsMaVung.size() << " tinh/thanh" << endl;
         } else {
             cout << "[LOI] Khong doc duoc ma vung!" << endl;
         }
         
-        readDSLoi(dsMucPhatMotor, "Motor.txt");
+        readDSLoi(dsMucPhatMotor, finalMotor);
         cout << "[OK] Da doc muc phat Motor: " << dsMucPhatMotor.size() << " loai" << endl;
         
-        readDSLoi(dsMucPhatCar, "car.txt");
+        readDSLoi(dsMucPhatCar, finalCar);
         cout << "[OK] Da doc muc phat Car: " << dsMucPhatCar.size() << " loai" << endl;
         
         cout << "\n[HOAN TAT] He thong da san sang!" << endl;
@@ -52,7 +69,7 @@ system("cls");
     
     if (choice == 'y' || choice == 'Y') {
         // Kiểm tra sự tồn tại của file
-        ifstream cccdFile("cccd.txt"), biensoFile("bienso.txt");
+        ifstream cccdFile(finalCCCD), biensoFile(finalbienSo);
         if (!cccdFile.is_open() || !biensoFile.is_open()) {
             cout << "Loi: Khong tim thay file cccd.txt hoac bienso.txt." << endl;
             if (!cccdFile.is_open()) cout << "File cccd.txt khong ton tai." << endl;
@@ -60,8 +77,7 @@ system("cls");
             cccdFile.close();
             biensoFile.close();
             
-            // Hỏi có muốn tạo dữ liệu mẫu không
-            cout << "\nBan co muon tao du lieu mau? (y/n): ";
+            cout << "\nBan co muon tao du lieu mau tu file? (y/n): ";
             char createChoice;
             cin >> createChoice;
             cin.ignore();
@@ -73,7 +89,7 @@ system("cls");
                 cin.ignore();
                 
                 cout << "Dang tao du lieu mau..." << endl;
-                DataGenerator::taoDuLieuMau("cccd.txt", "bienso.txt", soLuong);
+                DataGenerator::taoDuLieuMau(finalCCCD, finalbienSo, soLuong);
                 cout << "Da tao xong du lieu mau!" << endl;
             } else {
                 pause();
@@ -82,25 +98,15 @@ system("cls");
         }
         cccdFile.close();
         biensoFile.close();
-
-        cout << "Nhap so luong ban ghi muon doc (nhap 0 de doc tat ca): ";
-        int soLuong;
-        cin >> soLuong;
-        cin.ignore();
         
         cout << "Bat dau doc du lieu. Vui long doi..." << endl;
         
         try {
-            // Đọc file cccd.txt
-            DataGenerator::docFileBienSo("bienso.txt", hashtableXe);
-            DataGenerator::docFileCCCD("cccd.txt", *hashtableNguoi);
-            
-            // Đọc file bienso.txt            
+
+            DataGenerator::docFileBienSo(finalbienSo, hashtableXe);
+            DataGenerator::docFileCCCD(finalCCCD, *hashtableNguoi);
+                     
             cout << "\n[THANH CONG] Doc du lieu thanh cong!" << endl;
-            
-            // Hiển thị thống kê ngay sau khi load
-            cout << "\n=== THONG KE SAU KHI TAI DU LIEU ===" << endl;
-            hashtableXe->thongke();
             
         } catch (const std::exception& e) {
             cout << "Loi khi doc du lieu: " << e.what() << endl;
@@ -109,8 +115,6 @@ system("cls");
     pause();
 }
 
-
-// ===== MENU CÔNG AN =====
 
 void congAn_XemThongKe() {
     system("cls");
@@ -133,13 +137,11 @@ void congAn_XemThongKe() {
             break;
         case 2:
             system("cls");
-            // hashtableXe->thongKeMotorVsCar();
             cout << "Chuc nang dang phat trien..." << endl;
             pause();
             break;
         case 3:
             system("cls");
-            // hashtableXe->thongKeTheoLoi(dsMucPhatMotor);
             cout << "Chuc nang dang phat trien..." << endl;
             pause();
             break;
@@ -156,24 +158,13 @@ void menuCongAn() {
     int choice;
     Police *p = new Police();
     do {
-        system("cls");
-        cout << "========================================" << endl;
-        cout << "           MENU CONG AN                 " << endl;
-        cout << "========================================" << endl;
-        cout << "1. Xem thong ke tong quan" << endl;
-        cout << "2. Tim xe theo bien so" << endl;
-        cout << "3. Them loi vi pham cho xe" << endl;
-        cout << "4. Xoa loi vi pham (neu ghi nham)" << endl;
-        cout << "5. Them xe moi vao he thong" << endl;
-        cout << "0. Quay lai" << endl;
-        cout << "========================================" << endl;
-        cout << "Nhap lua chon: ";
+        p->menu();
         cin >> choice;
         cin.ignore();
         
         switch (choice) {
             case 1:
-                congAn_XemThongKe();
+                hashtableXe->thongke();
                 break;
             case 2:
                 p->timXe(hashtableXe);
@@ -196,74 +187,21 @@ void menuCongAn() {
     } while (true);
 }
 
-// ===== MENU NGƯỜI DÂN =====
-
-void nguoiDan_XemThongKe() {
-    system("cls");
-    hashtableXe->thongke();
-    pause();
-}
-
-void nguoiDan_TraCuuXe() {
-    system("cls");
-    cout << "\n=== TRA CUU XE THEO BIEN SO ===\n";
-    
-    cout << "Nhap bien so xe: ";
-    string bienSo;
-    getline(cin, bienSo);
-    
-    Xe* xe = hashtableXe->find(bienSo);
-    if (xe) {
-        xe->truyxuatLoi();
-    } else {
-        cout << "\nKhong tim thay xe co bien so: " << bienSo << endl;
-    }
-    
-    pause();
-}
-
-void nguoiDan_TraCuuCCCD() {
-    system("cls");
-    cout << "\n=== TRA CUU THEO CCCD ===\n";
-    
-    cout << "Nhap so CCCD: ";
-    string cccd;
-    getline(cin, cccd);
-    
-    try {
-        Person &p = getByCCCD(cccd, *hashtableNguoi);
-        cout << "\n--- THONG TIN CHU XE ---" << endl;
-        cout << p;
-    } catch (const exception& e) {
-        cout << "\nKhong tim thay CCCD: " << cccd << endl;
-    }
-    
-    pause();
-}
 
 void menuNguoiDan() {
-    int choice;
     do {
-        system("cls");
-        cout << "========================================" << endl;
-        cout << "           MENU NGUOI DAN               " << endl;
-        cout << "========================================" << endl;
-        cout << "1. Xem thong ke tong quan" << endl;
-        cout << "2. Tra cuu xe theo bien so" << endl;
-        cout << "3. Tra cuu theo CCCD" << endl;
-        cout << "0. Quay lai" << endl;
-        cout << "========================================" << endl;
-        cout << "Nhap lua chon: ";
-        cin >> choice;
-        cin.ignore();
+        int choice;
         
         Citizen* c = new Citizen;
+        c->menu();
+        cin >> choice;
+        cin.ignore();
         switch (choice) {
             case 1:
-                nguoiDan_XemThongKe();
+                hashtableXe->thongke();
                 break;
             case 2:
-                nguoiDan_TraCuuXe();
+                c->timXe(hashtableXe);
                 break;
             case 3:
                 c->truyvanCCCD(hashtableNguoi);

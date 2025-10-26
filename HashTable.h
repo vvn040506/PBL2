@@ -5,6 +5,7 @@
 #include "Person.h"
 #include <iostream>
 #include <stdexcept>
+#include "HashFunction.h"
 using namespace std;
 
 // Forward declaration

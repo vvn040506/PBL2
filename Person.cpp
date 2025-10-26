@@ -88,7 +88,6 @@ Person& Person::operator=(const Person& other) {
     return *this;
 }
 
-// Operator implementations
 bool Person::operator==(const Person& other) const {
     return this->cccd == other.cccd;
 }
@@ -97,7 +96,6 @@ bool Person::operator!=(const Person& other) const {
     return this->cccd != other.cccd;
 }
 
-// Friend function implementations
 istream& operator >> (istream& in, Person& p){
     cout << "Nhap cccd: ";
     getline(in >> ws, p.cccd);  
@@ -163,174 +161,6 @@ void Person::phanTichBienSo(const string& bienSo, Xe& Xe) {
         }
     }
 }
-
-void Person::docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi) {
-    ifstream fs(filename);
-    if (!fs.is_open()) {
-        cout << "Khong the mo file " << filename << endl;
-        return;
-    }
-
-    cout << "Mo file thanh cong: " << filename << endl;
-    string line;
-    int lineCount = 0;
-
-    while (getline(fs, line)) {
-        lineCount++;
-        if (line.empty()) continue;
-
-        stringstream ss(line);
-        string token;
-
-        Mylist<string> tokens;
-        while (ss >> token) tokens.push_back(token);
-
-        if (tokens.IsEmpty()) {
-            cout << "-> Dong " << lineCount << ": Dong trong, bo qua" << endl;
-            continue;
-        }
-
-        cout << "\n--- Dong " << lineCount << " ---" << endl;
-
-        // Lấy CCCD
-        string cccd = tokens.begin()->getdata();
-        tokens.pop_front();
-        cout << "CCCD: " << cccd << endl;
-
-        // Parse danh sách xe (LoaiXe BienSo)
-        Mylist<Pair> danhSachXe;
-        Node<string>* cur = tokens.begin();
-        while (cur != nullptr) {
-            string loai = cur->getdata();
-            Node<string>* next = cur->getnext();
-
-            if ((loai == "Motor" || loai == "Car") && next != nullptr) {
-                string bienSo = next->getdata();
-                danhSachXe.push_back(Pair(loai, bienSo));
-                cur = next->getnext();
-            } else {
-                break;
-            }
-        }
-
-        // Parse thông tin còn lại (Tên, SDT, Địa chỉ)
-        Mylist<string> thongTinConLai;
-        while (cur != nullptr) {
-            thongTinConLai.push_back(cur->getdata());
-            cur = cur->getnext();
-        }
-
-        if (thongTinConLai.size() < 3) {
-            cout << "-> Dong " << lineCount << ": Thieu thong tin, bo qua" << endl;
-            continue;
-        }
-
-        int n = thongTinConLai.size();
-        Node<string>* p = thongTinConLai.begin();
-        string arr[100];
-        int idx = 0;
-        while (p != nullptr && idx < 100) {
-            arr[idx++] = p->getdata();
-            p = p->getnext();
-        }
-
-        // Tìm SDT (chuỗi all-digit)
-        int posSDT = -1;
-        for (int i = idx - 1; i >= 0; --i) {
-            bool allDigit = true;
-            for (char c : arr[i]) {
-                if (!isdigit(c)) { allDigit = false; break; }
-            }
-            if (allDigit) { posSDT = i; break; }
-        }
-
-        if (posSDT == -1) {
-            cout << "-> Dong " << lineCount << ": Khong tim thay SDT, bo qua" << endl;
-            continue;
-        }
-
-        // Parse Tên
-        string ten = "";
-        for (int i = 0; i < posSDT; ++i) {
-            if (!ten.empty()) ten += " ";
-            ten += arr[i];
-        }
-
-        // Parse SDT
-        string sdt = arr[posSDT];
-
-        // Parse Địa chỉ
-        string diachi = "";
-        for (int i = posSDT + 1; i < idx; ++i) {
-            if (!diachi.empty()) diachi += " ";
-            diachi += arr[i];
-        }
-
-        cout << "Ten: " << ten << "\nSDT: " << sdt << "\nDia chi: " << diachi << endl;
-
-        // Tạo Person mới
-        Person pnew(cccd, ten, sdt, diachi);
-
-        // Thêm xe vào hash_xe của Person
-        for (Node<Pair>* x = danhSachXe.begin(); x != nullptr; x = x->getnext()) {
-            string loaiXe = x->getdata().key;
-            string bienSo = x->getdata().value;
-
-            // Tìm xe gốc từ hashtableXe toàn cục
-            Xe* xeGoc = hashtableXe->find(bienSo);
-            
-            // Tạo xe mới theo loại
-            Xe* xeMoi = nullptr;
-            if (loaiXe == "Motor") {
-                xeMoi = new Motor();
-            } else if (loaiXe == "Car") {
-                xeMoi = new Car();
-            } else {
-                cout << "-> Dong " << lineCount << ": Loai xe khong hop le: " << loaiXe << endl;
-                continue;
-            }
-
-            // Set thông tin cơ bản
-            xeMoi->setBienSo(bienSo);
-            phanTichBienSo(bienSo, *xeMoi);
-
-            // Copy dsLoi và danhSachMucPhat từ xe gốc (nếu có)
-            if (xeGoc != nullptr) {
-                // Deep copy dsLoi
-                Node<Pair>* loiGoc = xeGoc->dsLoi.begin();
-                while (loiGoc != nullptr) {
-                    Pair loiCopy = loiGoc->getdata(); // Copy Pair (tenLoi, ngayVP)
-                    xeMoi->dsLoi.push_back(loiCopy);
-                    loiGoc = loiGoc->getnext();
-                }
-
-                // Set danhSachMucPhat (dùng global để đồng bộ)
-                xeMoi->danhSachMucPhat = (loaiXe == "Motor") ? dsMucPhatMotor : dsMucPhatCar;
-
-                // Copy các thuộc tính khác
-                //xeMoi->soLoi = xeGoc->soLoi;
-                // Nếu cần copy thêm tongTienPhat hoặc các field khác, thêm ở đây
-            } else {
-                cout << "-> Dong " << lineCount << ": Khong tim thay xe " << bienSo << " trong hashtableXe" << endl;
-                // Vẫn thêm xe mới vào Person, nhưng không có lỗi
-                xeMoi->danhSachMucPhat = (loaiXe == "Motor") ? dsMucPhatMotor : dsMucPhatCar;
-            }
-
-            // Thêm xe vào hash_xe của Person
-            pnew.getXe()->insertToHash(xeMoi);
-            cout << "-> Dong " << lineCount << ": Da them xe " << bienSo << " (" << loaiXe << ") vao Person" << endl;
-        }
-
-        // Thêm Person vào HashTable
-        dsNguoi.insert(cccd, pnew);
-        cout << "-> Da them " << ten << " vao HashTable" << endl;
-    }
-
-    cout << "\n=== KET THUC DOC FILE ===" << endl;
-    fs.close();
-}
-
-
 
 
 void Person :: timXe(vehicleshash* hash){

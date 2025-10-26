@@ -16,4 +16,5 @@ class Citizen: public Person{
         Citizen();
         Citizen(const string&);
         ~Citizen();
+        void menu() override;
 };

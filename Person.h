@@ -59,6 +59,7 @@ public:
     static void phanTichBienSo(const string& bienSo, Xe& Xe);
     static void docFileDanhSach(const string& filename, HashTable<Person>& dsNguoi);
     void truyvanCCCD(HashTable<Person>* hash);
+    virtual void menu();
 
 };
 

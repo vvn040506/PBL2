@@ -27,9 +27,7 @@ void khoiTaoHeThong();
 void menuHome();
 void menuCongAn();
 void menuNguoiDan();
-void congAn_XemThongKe();
-void nguoiDan_XemThongKe(); //
-void nguoiDan_TraCuuXe(); //
-void nguoiDan_TraCuuCCCD(); //
+string ghepFile(const string&, const string&);
+
 
 #endif

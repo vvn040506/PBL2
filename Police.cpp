@@ -4,6 +4,12 @@
 
 using namespace std;
 HashTable<Pair>* Police::dsPolice = new HashTable<Pair>(1000);
+extern string Link;
+extern string finalMaVung;
+extern string finalMotor;
+extern string finalCar;
+extern string finalCCCD;
+extern string finalbienSo;
 
 Police::Police(){ id_police = " "; }
 Police::~Police(){}
@@ -78,20 +84,14 @@ void Police::themloiXe(vehicleshash* Hash){
     xe->themLoi(tenLoi, ngayVP);
     cout << "\n[THANH CONG] Da them loi vi pham!" << endl;
     
+    capNhatFileBienSo(xe);
+    
     pause();
 }
 
 void Police :: xoaloiXe(vehicleshash* hashtableXe){
-    /*Xe* X = Hash->find(bienSo);
-
-    if (!X) {
-        cout <<"bien so xe khong ton tai " <<endl;
-        return;
-    }
-    X->dongPhat(loiVP,ngayVP);
-    cout <<"Da xoa loi thanh cong"<<endl;*/
     system("cls");
-    cout << "\n=== XOA LOI VI PHAM (NEU GHI NHAM) ===\n";
+    cout << "\n=== XOA LOI VI PHAM ===\n";
     
     cout << "Nhap bien so xe: ";
     string bienSo;
@@ -132,10 +132,13 @@ void Police :: xoaloiXe(vehicleshash* hashtableXe){
     xe->dongPhat(tenLoi, ngayVP);
     cout << "\n[THANH CONG] Da xoa loi vi pham!" << endl;
     
+    capNhatFileBienSo(xe);
+    
     pause();
 }
 
 void Police :: themxeMoi(vehicleshash* hashtableXe){
+    system("cls");
     system("cls");
     cout << "\n=== THEM XE MOI VAO HE THONG ===\n";
     
@@ -154,34 +157,177 @@ void Police :: themxeMoi(vehicleshash* hashtableXe){
         return;
     }
     
-    Xe* xe = nullptr;
+    // Nhập thông tin
+    string bienSo, cccd, ten, sdt, diachi;
+    cout << "Nhap bien so xe (VD: 29-A1-12345): ";
+    getline(cin, bienSo);
     
-    if (loai == 1) {
-        Motor* m = new Motor();
-        cin >> *m;
-        m->danhSachMucPhat = dsMucPhatMotor;
-        xe = m;
-    } else {
-        Car* c = new Car();
-        cin >> *c;
-        c->danhSachMucPhat = dsMucPhatCar;
-        xe = c;
+    if (hashtableXe->find(bienSo) != nullptr) {
+        cout << "Bien so nay da ton tai trong he thong!" << endl;
+        pause();
+        return;
     }
     
+    cout << "Nhap CCCD chu xe: ";
+    getline(cin, cccd);
+    cout << "Nhap ten chu xe: ";
+    getline(cin, ten);
+    cout << "Nhap so dien thoai: ";
+    getline(cin, sdt);
+    cout << "Nhap dia chi: ";
+    getline(cin, diachi);
+    
+    // Tạo và thêm xe vào hashtableXe
+    Xe* xe = taoXeMoi(bienSo, loai);
     hashtableXe->insertToHash(xe);
+    
+    // Ghi vào file bienso.txt
+    ofstream biensoFile(finalbienSo, ios::app);
+    if (biensoFile.is_open()) {
+        biensoFile << bienSo << endl;
+        biensoFile.close();
+        cout << "[OK] Da ghi vao file bienso.txt" << endl;
+    }
+    
+    // Thêm xe vào Person và cập nhật file cccd.txt
+    themXeVaoPerson(cccd, bienSo, ten, sdt, diachi, loai);
+    
     cout << "\n[THANH CONG] Da them xe vao he thong!" << endl;
-    cout << "\n--- NEW VEHICLES INFO ---" << endl;
+    cout << "\n--- THONG TIN XE MOI ---" << endl;
     cout << "Bien so: " << xe->getbienSo() << endl;
     cout << "Thanh pho: " << xe->getTP() << endl;
     cout << "Loai xe: " << xe->getLS() << endl;
+    cout << "Chu xe: " << ten << " (CCCD: " << cccd << ")" << endl;
     
-    // Thử tìm lại ngay
-    Xe* test = hashtableXe->find(xe->getbienSo());
-    if (test) {
-        cout << "Tim thay xe!" << endl;
-    } else {
-        cout << "KHONG tim thay xe!" << endl;
-    }
     pause();
 }
 
+void Police :: menu() {
+    system("cls");
+    cout << "========================================" << endl;
+    cout << "           MENU CONG AN                 " << endl;
+    cout << "========================================" << endl;
+    cout << "1. Xem thong ke tong quan" << endl;
+    cout << "2. Tim xe theo bien so" << endl;
+    cout << "3. Them loi vi pham cho xe" << endl;
+    cout << "4. Xoa loi vi pham (neu ghi nham)" << endl;
+    cout << "5. Them xe moi vao he thong" << endl;
+    cout << "0. Quay lai" << endl;
+    cout << "========================================" << endl;
+    cout << "Nhap lua chon: ";
+}
+
+void Person :: menu(){}
+
+void capNhatFileBienSo(Xe* xe) {
+    string bienSo = xe->getbienSo();
+    
+    ifstream fileIn(finalbienSo);
+    stringstream buffer;
+    string line;
+    bool updated = false;
+    
+    while (getline(fileIn, line)) {
+        if (line.substr(0, bienSo.length()) == bienSo && !updated) {
+            // Xây dựng lại dòng từ danh sách lỗi hiện tại
+            string newLine = bienSo;
+            
+            Node<Pair>* currentLoi = xe->dsLoi.begin();
+            if (currentLoi != nullptr) {
+                newLine += " |";
+                while (currentLoi != nullptr) {
+                    newLine += " " + currentLoi->getdata().key + " " + currentLoi->getdata().value;
+                    currentLoi = currentLoi->getnext();
+                    if (currentLoi != nullptr) {
+                        newLine += " |";
+                    }
+                }
+            }
+            
+            line = newLine;
+            updated = true;
+        }
+        buffer << line << endl;
+    }
+    fileIn.close();
+    
+    ofstream fileOut(finalbienSo);
+    fileOut << buffer.str();
+    fileOut.close();
+}
+
+void capNhatFileCCCD(const string& cccd, const string& bienSo) {
+    ifstream fileIn(finalCCCD);
+    stringstream buffer;
+    string line;
+    bool updated = false;
+    
+    while (getline(fileIn, line)) {
+        if (line.find(cccd) != string::npos && !updated) {
+            size_t firstPipe = line.find('|');
+            size_t secondPipe = line.find('|', firstPipe + 1);
+            
+            if (firstPipe != string::npos && secondPipe != string::npos) {
+                string bienSoPart = line.substr(firstPipe + 1, secondPipe - firstPipe - 1);
+                bienSoPart += " " + bienSo;
+                line = line.substr(0, firstPipe + 1) + bienSoPart + line.substr(secondPipe);
+                updated = true;
+            }
+        }
+        buffer << line << endl;
+    }
+    fileIn.close();
+    
+    ofstream fileOut(finalCCCD);
+    fileOut << buffer.str();
+    fileOut.close();
+}
+
+Xe* taoXeMoi(const string& bienSo, int loai) {
+    Xe* xe = nullptr;
+    if (loai == 1) {
+        Motor* m = new Motor();
+        m->setBienSo(bienSo);
+        m->danhSachMucPhat = dsMucPhatMotor;
+        Person::phanTichBienSo(bienSo, *m);
+        xe = m;
+    } else {
+        Car* c = new Car();
+        c->setBienSo(bienSo);
+        c->danhSachMucPhat = dsMucPhatCar;
+        Person::phanTichBienSo(bienSo, *c);
+        xe = c;
+    }
+    return xe;
+}
+
+
+void themXeVaoPerson(const string& cccd, const string& bienSo, const string& ten, 
+                     const string& sdt, const string& diachi, int loai) {
+    try {
+        // CCCD đã tồn tại
+        Person &p = getByCCCD(cccd, *hashtableNguoi);
+        Xe* xeCopy = taoXeMoi(bienSo, loai);
+        p.getXe()->insertToHash(xeCopy);
+        
+        capNhatFileCCCD(cccd, bienSo);
+        cout << "[OK] Da them xe vao chu xe co san (CCCD: " << cccd << ")" << endl;
+        
+    } catch (...) {
+        // CCCD chưa có, tạo mới
+        Person newPerson(cccd, ten, sdt, diachi);
+        Xe* xeCopy = taoXeMoi(bienSo, loai);
+        newPerson.getXe()->insertToHash(xeCopy);
+        hashtableNguoi->insert(cccd, newPerson);
+        
+        // Ghi vào file cccd.txt
+        ofstream cccdFile(finalCCCD, ios::app);
+        if (cccdFile.is_open()) {
+            cccdFile << cccd << " | " << bienSo << " | " << ten << " | " << diachi << " | " << sdt << endl;
+            cccdFile.close();
+            cout << "[OK] Da ghi vao file cccd.txt" << endl;
+        } else {
+            cout << "[LOI] Khong the mo file cccd.txt" << endl;
+        }
+    }
+}

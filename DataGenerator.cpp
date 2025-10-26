@@ -142,7 +142,6 @@ string DataGenerator::generateLoi(){
 // Tạo dữ liệu xe mẫu
 
 
-// Kiểm tra biển số có trong Mylist<string> không
 bool bienSoDaTonTai(Mylist<string>& bienSoList, const string& bienSo) {
     Node<string>* current = bienSoList.begin();
     while (current != nullptr) {
@@ -227,44 +226,14 @@ void DataGenerator::taoXeMau(vehicleshash* hashtableXe, Mylist<Violation>& dsGop
     //taoDuLieuMau("cccd.txt", "bienso.txt", soLuong);
     
     // Đọc file và lưu vào hash table
-     docFileBienSo("bienso.txt", hashtableXe);
+    docFileBienSo("bienso.txt", hashtableXe);
     docFileCCCD("cccd.txt", dsNguoi);
    
 
     cout << "Da tai du lieu tu file vao hashtable" << endl;
 }
 
-// ===== VÍ DỤ SỬ DỤNG TRONG MAIN.CPP =====
-/*
-#include "DataGenerator.h"
 
-int main() {
-    // Khởi tạo hệ thống
-    vehicleshash* hashTable = new vehicleshash(10, 10, 100);
-    
-    // Đọc danh sách mức phạt
-    Mylist<Violation> dsMucPhat;
-    readDSLoi(dsMucPhat, "Motor.txt");
-    
-    // Tạo 500 xe mẫu
-    DataGenerator::taoXeMau(hashTable, dsMucPhat, 500);
-    
-    // Hiển thị thống kê
-    hashTable->thongke();
-    
-    // Test sinh dữ liệu
-    cout << "\n=== TEST SINH DU LIEU ===" << endl;
-    cout << "Bien so: " << DataGenerator::generateBienSo(1) << endl;
-    cout << "Ngay: " << DataGenerator::generateNgay() << endl;
-    cout << "CCCD: " << DataGenerator::generateCCCD() << endl;
-    cout << "SDT: " << DataGenerator::generateSDT() << endl;
-    cout << "Ten: " << DataGenerator::generateTen() << endl;
-    cout << "Dia chi: " << DataGenerator::generateDiaChi() << endl;
-    
-    delete hashTable;
-    return 0;
-}
-*/
 void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNguoi) {
     ifstream file(filename);
     if (!file.is_open()) {

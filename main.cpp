@@ -11,8 +11,10 @@
 #include "main1.h"
 using namespace std;
 
+
+
 int main() {
-    // Banner chào mừng
+
     cout << "========================================" << endl;
     cout << "                                        " << endl;
     cout << "               PBL2                     " << endl;
@@ -20,16 +22,11 @@ int main() {
     cout << "                                        " << endl;
     cout << "     VO VIET NHAT - TRAN LE MINH        " << endl;
     cout << "                                        " << endl;
-    cout << "========================================" << endl;
-    //pause();
-    
-    // Khởi tạo hệ thống
+    cout << "========================================" << endl;    
+
     khoiTaoHeThong();
-    
-    // Vào menu chính
     menuHome();
     
-    // Dọn dẹp bộ nhớ
     if (hashtableXe != nullptr) {
         delete hashtableXe;
     }

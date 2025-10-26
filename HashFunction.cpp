@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <ctime>
 #include "Motor.h"
+#include "main1.h"
 using namespace std;
 
 
@@ -163,51 +164,6 @@ Xe* vehicleshash::find(const string& a){
     return nullptr;
 }
 
-/*string generatePlate(int index) {
-    string provinces[] = {"29", "30", "31", "35", "33", "23", "2", "12", "21", "32"};
-    string types[] = {"A1","AC","AB", "B2", "C1", "D1"};
-    
-    // Khởi tạo seed cho random
-    static bool seeded = false;
-    if (!seeded) {
-        srand(time(0));
-        seeded = true;
-    }
-    
-    string province = provinces[rand() % 10];
-    string type = types[rand() % 4];
-    string number = to_string(10000 + (index % 90000));
-    return province + "-" + type + "-" + number;
-}
-
-// Hàm lưu bảng băm vào file
-void saveToFile(vehicleshash& hash, const string& filename) {
-    ofstream out(filename);
-    if (!out.is_open()) {
-        cout << "Khong the mo file " << filename << endl;
-        return;
-    }
-    
-    for (int i = 0; i < hash.get1(); ++i) {
-        for (int j = 0; j < hash.get2(); ++j) {
-            for (int k = 0; k < hash.get3(); ++k) {
-                Node<Xe*>* current = hash.table[i][j][k].begin();
-                while (current != nullptr) {
-                    out << current->getdata().getbienSo() << endl;
-                    Node<Pair>* loi = current->getdata().dsLoi.begin();
-                    while (loi != nullptr) {
-                        out << loi->getdata().key << "," << loi->getdata().value << endl;
-                        loi = loi->getnext();
-                    }
-                    current = current->getnext();
-                }
-            }
-        }
-    }
-    
-    out.close();
-    cout << "Da luu du lieu vao file " << filename << endl;
-}*/
 
 void vehicleshash :: thongke(){
     cout << "      THONG KE TONG QUAN HE THONG      " << endl;
@@ -227,4 +183,6 @@ void vehicleshash :: thongke(){
 
     cout << "Tong so loi vi pham:     " << tongSoLoi << endl;
     cout << "Tong tien phat:          " << cachedtienPhat << " VND" << endl;
+    pause();
+
 }
