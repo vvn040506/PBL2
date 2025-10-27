@@ -45,11 +45,7 @@ istream& operator >> (istream& in, Motor& motor){
     getline(in, motor.bienSo);
     
     motor.bienSo = ma + "-" + motor.loaiXe + "-" + motor.bienSo;  
-    // if(motor.bienSo.length() >= 7) {
-    //     motor.bienSo.insert(2, "A");
-    //     motor.bienSo.insert(3, "-");   
-    //     motor.bienSo.insert(7, ".");   
-    // }
+ 
     return in;
 }
 
@@ -69,3 +65,4 @@ void Motor :: truyxuatLoi(){
     cout << "Loai xe: Motor " << endl;
     Xe :: truyxuatLoi();
 }
+
