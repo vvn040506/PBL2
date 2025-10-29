@@ -4,12 +4,7 @@
 
 using namespace std;
 HashTable<Pair>* Police::dsPolice = new HashTable<Pair>(1000);
-extern string Link;
-extern string finalMaVung;
-extern string finalMotor;
-extern string finalCar;
-extern string finalCCCD;
-extern string finalbienSo;
+
 
 Police::Police(){ id_police = " "; }
 Police::~Police(){}

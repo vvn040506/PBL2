@@ -12,6 +12,7 @@
 #include <regex>
 #include "main1.h"
 
+
 bool isValidBienSo(const string& bienSo) {
     regex bienSoPattern(R"(\d{2}-[A-Z]\d-\d{5})");
     return regex_match(bienSo, bienSoPattern);
@@ -222,19 +223,40 @@ void DataGenerator::taoDuLieuMau(const string& cccdFile, const string& biensoFil
 }
 
 void DataGenerator::taoXeMau(vehicleshash* hashtableXe, Mylist<Violation>& dsGop, int soLuong, HashTable<Person>& dsNguoi) {
-    // Tạo dữ liệu mẫu vào file
-    //taoDuLieuMau("cccd.txt", "bienso.txt", soLuong);
+    cout << "\n=== BAT DAU DOC BIENSO.TXT ===" << endl;
+    docFileBienSo(finalbienSo, hashtableXe);
     
-    // Đọc file và lưu vào hash table
-    docFileBienSo("bienso.txt", hashtableXe);
-    docFileCCCD("cccd.txt", dsNguoi);
-   
-
+    int xeCoLoiTrongHash = 0;
+    int xeKhongLoiTrongHash = 0;
+    for (int i = 0; i < hashtableXe->get1(); i++) {
+        for (int j = 0; j < hashtableXe->get2(); j++) {
+            for (int k = 0; k < hashtableXe->get3(); k++) {
+                Node<Xe*>* current = hashtableXe->table[i][j][k].begin();
+                while (current != nullptr) {
+                    if (current->getdata()->dsLoi.size() > 0) {
+                        xeCoLoiTrongHash++;
+                    } else {
+                        xeKhongLoiTrongHash++;
+                    }
+                    current = current->getnext();
+                }
+            }
+        }
+    }
+    cout << "[KIEM TRA] Trong hashtableXe: " << xeCoLoiTrongHash << " xe co loi, " 
+         << xeKhongLoiTrongHash << " xe khong loi" << endl;
+    
+    cout << "\n=== BAT DAU DOC CCCD.TXT ===" << endl;
+    docFileCCCD(finalCCCD, dsNguoi);
+    
+    cout << "\n=== HOAN TAT ===" << endl;
     cout << "Da tai du lieu tu file vao hashtable" << endl;
 }
 
 
 void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNguoi) {
+    initRandom(); // ✅ Khởi tạo random seed
+    
     ifstream file(filename);
     if (!file.is_open()) {
         cout << "Khong the mo file " << filename << endl;
@@ -286,7 +308,6 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
 
             // Tìm xe trong hashtableXe (đã được load từ bienso.txt)
             Xe* xeGoc = hashtableXe->find(bienSo);
-
             
             if (xeGoc != nullptr) {
                 // Xe đã tồn tại, copy thông tin xe (bao gồm cả lỗi)
@@ -296,13 +317,27 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
                     Motor* motor = new Motor();
                     motor->setBienSo(bienSo);
                     motor->danhSachMucPhat = dsMucPhatMotor;
-                    motor->dsLoi = xeGoc->dsLoi; 
+                    
+                    // ✅ Copy từng lỗi thủ công
+                    Node<Pair>* loiNode = xeGoc->dsLoi.begin();
+                    while (loiNode != nullptr) {
+                        motor->dsLoi.push_back(loiNode->getdata());
+                        loiNode = loiNode->getnext();
+                    }
+                    
                     xe = motor;
                 } else {
                     Car* car = new Car();
                     car->setBienSo(bienSo);
                     car->danhSachMucPhat = dsMucPhatCar;
-                    car->dsLoi = xeGoc->dsLoi;
+                    
+                    // ✅ Copy từng lỗi thủ công
+                    Node<Pair>* loiNode = xeGoc->dsLoi.begin();
+                    while (loiNode != nullptr) {
+                        car->dsLoi.push_back(loiNode->getdata());
+                        loiNode = loiNode->getnext();
+                    }
+                    
                     xe = car;
                 }
                 
@@ -311,7 +346,7 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
             } else {
                 // Xe chưa tồn tại, tạo mới (không có lỗi)
                 Xe* xe = nullptr;
-                bool isMotor = (rand() % 2 == 0);
+                bool isMotor = (successCount % 2 == 0);
                 
                 if (isMotor) {
                     Motor* motor = new Motor();
@@ -324,9 +359,9 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
                     car->danhSachMucPhat = dsMucPhatCar;
                     xe = car;
                 }
-            
-            Person::phanTichBienSo(bienSo, *xe);
-            person.getXe()->insertToHash(xe);
+                
+                Person::phanTichBienSo(bienSo, *xe);
+                person.getXe()->insertToHash(xe);
             }
         }
 
@@ -345,7 +380,7 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
     file.close();
     cout << "Da doc xong " << successCount << "/" << lineCount << " ban ghi tu file cccd.txt" << endl;
 }
-// Đọc file bienso.txt và lưu vào vehicleshash
+
 void DataGenerator::docFileBienSo(const string& filename, vehicleshash* hashtableXe) {
        ifstream file(filename);
     if (!file.is_open()) {

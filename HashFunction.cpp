@@ -14,8 +14,12 @@ vehicleshash::vehicleshash() : size1(100), size2(100), size3(100) {
     cachedtongsoXe = 0;
     cachedMotor = 0;
     cachedCar = 0;
+    cachedMotorViPham = 0;
+    cachedCarViPham = 0;
     cachedtongsoXeViPham = 0;
     cachedtienPhat = 0;
+    cachedtienPhatMotor = 0;
+    cachedtienPhatCar = 0;
 
     table = new Mylist<Xe*>**[size1];
     for (int i = 0; i < size1; ++i) {
@@ -31,7 +35,11 @@ vehicleshash::vehicleshash(int size1, int size2, int size3) : size1(size1), size
     cachedMotor = 0;
     cachedCar = 0;
     cachedtongsoXeViPham = 0;
+    cachedMotorViPham = 0;
+    cachedCarViPham = 0;
     cachedtienPhat = 0;
+    cachedtienPhatMotor = 0;
+    cachedtienPhatCar = 0;
 
     table = new Mylist<Xe*>**[size1];
     for (int i = 0; i < size1; ++i) {
@@ -102,12 +110,18 @@ void vehicleshash::insertToHash(Xe* a){
 
     cachedtongsoXe++;
     string loaiXe = a->getLS();
-    if (loaiXe == "Motor") {cachedMotor++;}
+    if (loaiXe == "Motor") cachedMotor++;
         else cachedCar++;
     int soLoi = a->getsoLoi();
-        if (soLoi > 0) {
-            cachedtongsoXeViPham++;
-        }
+    if (a->dsLoi.size() > 0) {  
+        cachedtongsoXeViPham++;
+    
+        if (loaiXe == "Motor") {
+            cachedMotorViPham++;
+        } else {
+            cachedCarViPham++;
+        }   
+    }   
         
     Node<Pair>* loiNode = a->dsLoi.begin();
     while (loiNode != nullptr) {
@@ -124,9 +138,12 @@ void vehicleshash::insertToHash(Xe* a){
             v = v->getnext();
         }
         
-        
-        
-        cachedtienPhat += tienPhat; 
+        cachedtienPhat += tienPhat;
+        if (loaiXe == "Motor") {
+            cachedtienPhatMotor += tienPhat;
+        } else {
+            cachedtienPhatCar += tienPhat;
+        }
         
         bool timThay = false;
         Node<thongkeLoi>* current = cachedthongkeLoi.begin();
@@ -185,4 +202,56 @@ void vehicleshash :: thongke(){
     cout << "Tong tien phat:          " << cachedtienPhat << " VND" << endl;
     pause();
 
+}
+
+void vehicleshash::thongkeMotorvsCar(){
+    cout << "\n========================================" << endl;
+    cout << "        THONG KE MOTOR vs CAR           " << endl;
+    cout << "========================================" << endl;
+    
+    cout << "\nSO LUONG XE:" << endl;
+    cout << "  Motor: " << cachedMotor << " xe" << endl;
+    cout << "  Car:   " << cachedCar << " xe" << endl;
+    
+    cout << "\nXE VI PHAM:" << endl;
+    cout << "  Motor: " << cachedMotorViPham << " / " << cachedMotor << " xe" << endl;
+    cout << "  Car:   " << cachedCarViPham << " / " << cachedCar << " xe" << endl;
+    
+    cout << "\nTIEN PHAT:" << endl;
+    cout << "  Motor: " << cachedtienPhatMotor << " VND" << endl;
+    cout << "  Car:   " << cachedtienPhatCar << " VND" << endl;
+    cout << "  Tong:  " << cachedtienPhat << " VND" << endl;
+    
+    cout << "========================================" << endl;
+}
+
+void vehicleshash::thongketheoLoi(){
+    cout << "\n========================================" << endl;
+    cout << "      THONG KE THEO LOI VI PHAM        " << endl;
+    cout << "========================================" << endl;
+    
+    if (cachedthongkeLoi.size() == 0) {
+        cout << "\nChua co loi vi pham nao!" << endl;
+        cout << "========================================" << endl;
+        return;
+    }
+    
+    int tongSoLoi = 0;
+    Node<thongkeLoi>* current = cachedthongkeLoi.begin();
+    while (current != nullptr) {
+        tongSoLoi += current->getdata().soLan;
+        current = current->getnext();
+    }
+    
+    cout << "\nTong so loi vi pham: " << tongSoLoi << endl;
+    cout << "\nChi tiet:" << endl;
+    
+    current = cachedthongkeLoi.begin();
+    while (current != nullptr) {
+        cout << "  - " << current->getdata().tenLoi 
+             << ": " << current->getdata().soLan << " lan" << endl;
+        current = current->getnext();
+    }
+    
+    cout << "========================================" << endl;
 }

@@ -34,7 +34,12 @@ private:
     int cachedtongsoXeViPham;
     int cachedMotor;
     int cachedCar;
+    int cachedMotorViPham;
+    int cachedCarViPham;
+    
     long long cachedtienPhat;
+    long long cachedtienPhatCar;
+    long long cachedtienPhatMotor;
     Mylist <thongkeLoi> cachedthongkeLoi;
 public:
     Mylist<Xe*> ***table;
@@ -53,6 +58,8 @@ public:
     void insertToHash(Xe* a);
     Xe* find(const string& a);
     void thongke();
+    void thongkeMotorvsCar();
+    void thongketheoLoi();
 };
 
 // Khai báo các hàm non-member

@@ -68,52 +68,44 @@ system("cls");
     cin.ignore();
     
     if (choice == 'y' || choice == 'Y') {
-        // Kiểm tra sự tồn tại của file
-        ifstream cccdFile(finalCCCD), biensoFile(finalbienSo);
-        if (!cccdFile.is_open() || !biensoFile.is_open()) {
-            cout << "Loi: Khong tim thay file cccd.txt hoac bienso.txt." << endl;
-            if (!cccdFile.is_open()) cout << "File cccd.txt khong ton tai." << endl;
-            if (!biensoFile.is_open()) cout << "File bienso.txt khong ton tai." << endl;
-            cccdFile.close();
-            biensoFile.close();
-            
-            cout << "\nBan co muon tao du lieu mau tu file? (y/n): ";
-            char createChoice;
-            cin >> createChoice;
-            cin.ignore();
-            
-            if (createChoice == 'y' || createChoice == 'Y') {
-                cout << "Nhap so luong nguoi muon tao (de xuat: 100-500): ";
-                int soLuong;
-                cin >> soLuong;
-                cin.ignore();
-                
-                cout << "Dang tao du lieu mau..." << endl;
-                DataGenerator::taoDuLieuMau(finalCCCD, finalbienSo, soLuong);
-                cout << "Da tao xong du lieu mau!" << endl;
-            } else {
-                pause();
-                return;
-            }
-        }
+        cout << "Bat dau doc du lieu..." << endl;
+        ifstream cccdFile(finalCCCD);
+        ifstream biensoFile(finalbienSo);
+    
+        bool fileExist = cccdFile.is_open() && biensoFile.is_open();
         cccdFile.close();
         biensoFile.close();
-        
-        cout << "Bat dau doc du lieu. Vui long doi..." << endl;
+    
+    if (!fileExist) {
+        cout << "\n[CANH BAO] Khong tim thay file cccd.txt hoac bienso.txt!" << endl;
+        cout << "Vui long tao du lieu truoc khi su dung he thong." << endl;
+        pause();
+        return;
+    }
         
         try {
-
-            DataGenerator::docFileBienSo(finalbienSo, hashtableXe);
-            DataGenerator::docFileCCCD(finalCCCD, *hashtableNguoi);
-                     
+            // Gộp danh sách mức phạt
+            Mylist<Violation> dsGop = dsMucPhatMotor;
+            Node<Violation>* v = dsMucPhatCar.begin();
+            while (v != nullptr) {
+                dsGop.push_back(v->getdata());
+                v = v->getnext();
+            }
+            
+            // Đọc file
+            DataGenerator::taoXeMau(hashtableXe, dsGop, 0, *hashtableNguoi);
+            
             cout << "\n[THANH CONG] Doc du lieu thanh cong!" << endl;
+            
+            // Hiển thị thống kê
+            hashtableXe->thongke();
             
         } catch (const std::exception& e) {
             cout << "Loi khi doc du lieu: " << e.what() << endl;
         }
     }
-    pause();
 }
+
 
 
 void congAn_XemThongKe() {
@@ -133,17 +125,14 @@ void congAn_XemThongKe() {
         case 1:
             system("cls");
             hashtableXe->thongke();
-            pause();
             break;
         case 2:
             system("cls");
-            cout << "Chuc nang dang phat trien..." << endl;
-            pause();
+            hashtableXe->thongkeMotorvsCar();
             break;
         case 3:
             system("cls");
-            cout << "Chuc nang dang phat trien..." << endl;
-            pause();
+            hashtableXe->thongketheoLoi();
             break;
         case 0:
             return;
@@ -164,7 +153,7 @@ void menuCongAn() {
         
         switch (choice) {
             case 1:
-                hashtableXe->thongke();
+                congAn_XemThongKe();
                 break;
             case 2:
                 p->timXe(hashtableXe);

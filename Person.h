@@ -11,6 +11,12 @@
 using namespace std;
 
 class Xe;
+extern string Link;
+extern string finalMaVung;
+extern string finalMotor;
+extern string finalCar;
+extern string finalCCCD;
+extern string finalbienSo;
 
 template<typename T> class HashTable;
 
