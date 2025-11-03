@@ -14,9 +14,11 @@ class thongkeLoi{
     public:
         string tenLoi;
         int soLan;
+        int soDaDong;     
+        int soChuaDong;   
 
-        thongkeLoi() : tenLoi(""), soLan(0){}
-        thongkeLoi(const string& a, int b) : tenLoi(a),soLan(b){}
+        thongkeLoi() : tenLoi(""), soLan(0), soDaDong(0), soChuaDong(0){}
+        thongkeLoi(const string& a, int b) : tenLoi(a), soLan(b), soDaDong(0), soChuaDong(0){}
         ~thongkeLoi(){}
 
         bool operator == (const thongkeLoi& tk) const {
@@ -40,6 +42,18 @@ private:
     long long cachedtienPhat;
     long long cachedtienPhatCar;
     long long cachedtienPhatMotor;
+    
+    // Thêm: thống kê theo trạng thái đóng phạt
+    long long cachedtienDaDong;
+    long long cachedtienChuaDong;
+    long long cachedtienDaDongMotor;
+    long long cachedtienChuaDongMotor;
+    long long cachedtienDaDongCar;
+    long long cachedtienChuaDongCar;
+    
+    int cachedsoLoiDaDong;
+    int cachedsoLoiChuaDong;
+    
     Mylist <thongkeLoi> cachedthongkeLoi;
 public:
     Mylist<Xe*> ***table;
@@ -60,11 +74,10 @@ public:
     void thongke();
     void thongkeMotorvsCar();
     void thongketheoLoi();
+    void thongkeTheoTrangThai();  // Thêm: hàm thống kê theo trạng thái
 };
 
-// Khai báo các hàm non-member
 string generatePlate(int index);
 void saveToFile(vehicleshash& hash, const string& filename);
-
 
 #endif

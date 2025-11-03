@@ -15,13 +15,11 @@
 
 using namespace std;
 
-// ===== BIẾN TOÀN CỤC =====
 extern vehicleshash* hashtableXe;
 extern HashTable<Person>* hashtableNguoi;
 extern Mylist<Violation> dsMucPhatMotor;
 extern Mylist<Violation> dsMucPhatCar;
 
-// ===== KHAI BÁO HÀM =====
 void pause();
 void khoiTaoHeThong();
 void menuHome();

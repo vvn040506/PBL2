@@ -38,22 +38,20 @@ system("cls");
         
         hashtableNguoi = new HashTable<Person>(1000);
         cout << "[OK] Da tao hash table nguoi" << endl;
-        string Link = "D:\\C++\\PBL2\\Data\\";
-        string finalMaVung = ghepFile(Link,"mavung.txt");
         
         
         Xe::docFileMaVung(finalMaVung);
         if (Xe::dsMaVung.size() > 0) {
-            cout << "[OK] Da doc ma vung: " << Xe::dsMaVung.size() << " tinh/thanh" << endl;
+            cout << "Da doc ma vung: " << Xe::dsMaVung.size() << " tinh/thanh" << endl;
         } else {
-            cout << "[LOI] Khong doc duoc ma vung!" << endl;
+            cout << "Khong doc duoc ma vung!" << endl;
         }
         
         readDSLoi(dsMucPhatMotor, finalMotor);
-        cout << "[OK] Da doc muc phat Motor: " << dsMucPhatMotor.size() << " loai" << endl;
+        cout << "Da doc muc phat Motor: " << dsMucPhatMotor.size() << " loai" << endl;
         
         readDSLoi(dsMucPhatCar, finalCar);
-        cout << "[OK] Da doc muc phat Car: " << dsMucPhatCar.size() << " loai" << endl;
+        cout << "Da doc muc phat Car: " << dsMucPhatCar.size() << " loai" << endl;
         
         cout << "\n[HOAN TAT] He thong da san sang!" << endl;
     } catch (const std::exception& e) {
@@ -68,7 +66,7 @@ system("cls");
     cin.ignore();
     
     if (choice == 'y' || choice == 'Y') {
-        cout << "Bat dau doc du lieu..." << endl;
+        DataGenerator ::taoDuLieuMau(finalCCCD,finalbienSo,1000);
         ifstream cccdFile(finalCCCD);
         ifstream biensoFile(finalbienSo);
     
@@ -77,27 +75,22 @@ system("cls");
         biensoFile.close();
     
     if (!fileExist) {
-        cout << "\n[CANH BAO] Khong tim thay file cccd.txt hoac bienso.txt!" << endl;
+        cout << "\nKhong tim thay file cccd.txt hoac bienso.txt!" << endl;
         cout << "Vui long tao du lieu truoc khi su dung he thong." << endl;
         pause();
         return;
     }
         
         try {
-            // Gộp danh sách mức phạt
             Mylist<Violation> dsGop = dsMucPhatMotor;
             Node<Violation>* v = dsMucPhatCar.begin();
             while (v != nullptr) {
                 dsGop.push_back(v->getdata());
                 v = v->getnext();
             }
-            
-            // Đọc file
             DataGenerator::taoXeMau(hashtableXe, dsGop, 0, *hashtableNguoi);
             
             cout << "\n[THANH CONG] Doc du lieu thanh cong!" << endl;
-            
-            // Hiển thị thống kê
             hashtableXe->thongke();
             
         } catch (const std::exception& e) {
@@ -107,10 +100,9 @@ system("cls");
 }
 
 
-
-void congAn_XemThongKe() {
+void XemThongKe() {
     system("cls");
-    cout << "\n=== MENU THONG KE (CONG AN) ===\n";
+    cout << "\n=== MENU THONG KE ===\n";
     cout << "1. Thong ke tong quan\n";
     cout << "2. Thong ke Motor vs Car\n";
     cout << "3. Thong ke theo loi vi pham\n";
@@ -125,14 +117,17 @@ void congAn_XemThongKe() {
         case 1:
             system("cls");
             hashtableXe->thongke();
+            pause();
             break;
         case 2:
             system("cls");
             hashtableXe->thongkeMotorvsCar();
+            pause();
             break;
         case 3:
             system("cls");
             hashtableXe->thongketheoLoi();
+            pause();
             break;
         case 0:
             return;
@@ -153,7 +148,7 @@ void menuCongAn() {
         
         switch (choice) {
             case 1:
-                congAn_XemThongKe();
+                XemThongKe();
                 break;
             case 2:
                 p->timXe(hashtableXe);
@@ -162,7 +157,7 @@ void menuCongAn() {
                 p->themloiXe(hashtableXe);
                 break;
             case 4:
-                p->xoaloiXe(hashtableXe);
+                p->dongPhat(hashtableXe);
                 break;
             case 5:
                 p->themxeMoi(hashtableXe);
@@ -187,13 +182,16 @@ void menuNguoiDan() {
         cin.ignore();
         switch (choice) {
             case 1:
-                hashtableXe->thongke();
+                XemThongKe();
+                pause();
                 break;
             case 2:
                 c->timXe(hashtableXe);
+                pause();
                 break;
             case 3:
                 c->truyvanCCCD(hashtableNguoi);
+                pause();
                 break;
             case 0:
                 return;
@@ -204,7 +202,6 @@ void menuNguoiDan() {
     } while (true);
 }
 
-// ===== MENU HOME =====
 void menuHome() {
     int choice;
     do {

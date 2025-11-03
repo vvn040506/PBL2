@@ -44,7 +44,7 @@ void Xe::docFileMaVung(const string& filename) {
         }
         
         if (!maVung.empty()) {
-            Pair p(thanhPho, maVung);
+            Pair p(thanhPho, maVung,true);
             dsMaVung.push_back(p);
         }
     }
@@ -110,17 +110,18 @@ void Xe::docFileMucPhat(const string& tenFile){
         int id = stoi(idStr);
         int mucPhat = stoi(mucPhatStr);
 
-        Violation p(id, tenLoi, mucPhat);
+        Violation p(id, tenLoi, mucPhat,true);
         Xe::danhSachMucPhat.push_back(p);
     }
     fs.close();
 }
 void Xe::themLoi(const string& loiVP, const string& ngayVP){
-    dsLoi.push_back(Pair(loiVP, ngayVP));
+    dsLoi.push_back(Pair(loiVP, ngayVP,false));
     int tienPhat = 0;
     
     for(Node<Violation>* x = danhSachMucPhat.begin(); x != danhSachMucPhat.end(); x = x->getnext()){
         if(loiVP == x->getdata().getLoiViPham()){
+            x->getdata().setState(false);
             tienPhat = x->getdata().getMucPhat();
         }
     }
@@ -135,9 +136,9 @@ void Xe::dongPhat(const string& loiVP, const string& ngayVP){
     for(Node<Violation>* x = danhSachMucPhat.begin(); x != danhSachMucPhat.end(); x = x->getnext()){
         if(loiVP == x->getdata().getLoiViPham()){
             tienPhat = x->getdata().getMucPhat();
+            x->getdata().setState(false);
         }
     }
-    dsLoi.erase(Pair(loiVP, ngayVP));
     tongTienPhat -= tienPhat;
     if(tongTienPhat == 0) cout << "Hoan tat dong phat" << endl;
     soLoi--;
@@ -173,7 +174,6 @@ void Xe :: truyxuatLoi(){
         string tenLoi = loiNode->getdata().key;
         string ngayVP = loiNode->getdata().value;
         
-        // Tìm mức phạt
         int tienPhat = 0;
         Node<Violation>* v = danhSachMucPhat.begin();
         while (v != nullptr) {
@@ -189,7 +189,13 @@ void Xe :: truyxuatLoi(){
              << setw(15) << ngayVP
              << setw(15) << tienPhat << " VND" << endl;
         
-        tongTien += tienPhat;
+        if (loiNode->getdata().State == true )tongTien += tienPhat;
+
+        if (loiNode->getdata().State) {
+            cout << " - [DA DONG PHAT]" << endl;
+        } else {
+            cout << " - [CHUA DONG PHAT]" << endl;
+        }
         loiNode = loiNode->getnext();
     }
     

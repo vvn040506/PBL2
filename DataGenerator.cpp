@@ -31,6 +31,12 @@ void DataGenerator::initRandom() {
     }
 }
 
+bool DataGenerator::generateState(){
+    initRandom();
+
+    if (rand () % 2 == 0) return false;
+    return true;
+}
 // Sinh biển số ngẫu nhiên
 string DataGenerator::generateBienSo() {
     //initRandom();
@@ -154,14 +160,11 @@ bool bienSoDaTonTai(Mylist<string>& bienSoList, const string& bienSo) {
     return false;
 }
 
-// Tạo 50,000 bản ghi cho cccd.txt và bienso.txt
 void DataGenerator::taoDuLieuMau(const string& cccdFile, const string& biensoFile, int soLuong) {
     initRandom();
 
-    // Danh sách để lưu trữ tất cả biển số
     Mylist<string> allBienSo;
 
-    // Tạo file cccd.txt
     ofstream cccdOut(cccdFile);
     if (!cccdOut.is_open()) {
         cout << "Khong the mo file " << cccdFile << endl;
@@ -174,12 +177,10 @@ void DataGenerator::taoDuLieuMau(const string& cccdFile, const string& biensoFil
         string diachi = generateDiaChi();
         string sdt = generateSDT();
 
-        // Tạo 1-5 biển số cho mỗi người
         int numBienSo = 1 + (rand() % 5);
         string bienSoStr;
         for (int j = 0; j < numBienSo; j++) {
             string bienSo = generateBienSo();
-            // Kiểm tra trùng lặp
             while (bienSoDaTonTai(allBienSo, bienSo)) {
                 bienSo = generateBienSo();
             }
@@ -187,75 +188,231 @@ void DataGenerator::taoDuLieuMau(const string& cccdFile, const string& biensoFil
             bienSoStr += (j > 0 ? " " : "") + bienSo;
         }
 
-        // Ghi vào file cccd.txt
         cccdOut << cccd << " | " << bienSoStr << " | " << ten << " | " << diachi << " | " << sdt << endl;
     }
     cccdOut.close();
     cout << "Da tao " << soLuong << " ban ghi trong " << cccdFile << endl;
 
-    // Tạo file bienso.txt
     ofstream biensoOut(biensoFile);
     if (!biensoOut.is_open()) {
         cout << "Khong the mo file " << biensoFile << endl;
         return;
     }
 
-    // Chọn ngẫu nhiên từ danh sách biển số
     int totalBienSo = allBienSo.size();
-    int soLuongBienso = min(totalBienSo, soLuong); // Tối đa số bản ghi bằng số biển số
+    int soLuongBienso = min(totalBienSo, soLuong);
     Node<string>* current = allBienSo.begin();
+    
+    int xeDaDong = 0;
+    int xeChuaDong = 0;
+    int xeKhongLoi = 0;
+    
     for (int i = 0; i < soLuongBienso && current != nullptr; i++) {
         string bienSo = current->getdata();
-        string loiStr;
-
-        // Tạo 0-5 lỗi vi phạm
-        int numLoi = rand() % 6;
-        for (int j = 0; j < numLoi; j++) {
-            loiStr += (j > 0 ? " " : "") + generateLoi() + " " + generateNgay();
+        
+        int coLoi = rand() % 100;
+        if (coLoi < 30) {
+            int numLoi = 1 + (rand() % 3);  // 1-3 lỗi
+            biensoOut << bienSo << " |";
+            
+            bool xeNayCoLoiChuaDong = false;
+            
+            for (int j = 0; j < numLoi; j++) {
+                string tenLoi = generateLoi();
+                string ngay = generateNgay();
+                
+                bool daDong = (rand() % 100 < 60);
+                
+                if (!daDong) {
+                    xeNayCoLoiChuaDong = true;
+                }
+                
+                string trangThai;
+                if (!daDong) trangThai = "CD";
+                    else trangThai = "DD";
+                
+                biensoOut << " " << tenLoi << " " << ngay << " " << trangThai;
+                if (j < numLoi - 1) biensoOut << " |";
+            }
+            biensoOut << endl;
+            
+            if (xeNayCoLoiChuaDong) {
+                xeChuaDong++;
+            } else {
+                xeDaDong++;
+            }
+        } else {
+            // 70% không có lỗi
+            biensoOut << bienSo << endl;
+            xeKhongLoi++;
         }
-
-        // Ghi vào file bienso.txt
-        biensoOut << bienSo << (loiStr.empty() ? "" : " | " + loiStr) << endl;
+        
         current = current->getnext();
     }
     biensoOut.close();
+    
     cout << "Da tao " << soLuongBienso << " ban ghi trong " << biensoFile << endl;
+    cout << "  - Xe khong loi: " << xeKhongLoi << endl;
+    cout << "  - Xe da dong het phat: " << xeDaDong << endl;
+    cout << "  - Xe con no phat: " << xeChuaDong << endl;
 }
 
-void DataGenerator::taoXeMau(vehicleshash* hashtableXe, Mylist<Violation>& dsGop, int soLuong, HashTable<Person>& dsNguoi) {
-    cout << "\n=== BAT DAU DOC BIENSO.TXT ===" << endl;
-    docFileBienSo(finalbienSo, hashtableXe);
+// Sửa hàm docFileBienSo để đọc trạng thái
+void DataGenerator::docFileBienSo(const string& filename, vehicleshash* hashtableXe) {
+    ifstream file(filename);
+    if (!file.is_open()) {
+        cout << "Khong the mo file " << filename << endl;
+        return;
+    }
     
-    int xeCoLoiTrongHash = 0;
-    int xeKhongLoiTrongHash = 0;
-    for (int i = 0; i < hashtableXe->get1(); i++) {
-        for (int j = 0; j < hashtableXe->get2(); j++) {
-            for (int k = 0; k < hashtableXe->get3(); k++) {
-                Node<Xe*>* current = hashtableXe->table[i][j][k].begin();
-                while (current != nullptr) {
-                    if (current->getdata()->dsLoi.size() > 0) {
-                        xeCoLoiTrongHash++;
-                    } else {
-                        xeKhongLoiTrongHash++;
+    string line;
+    int lineCount = 0;
+    int successCount = 0;
+    int loiDaDong = 0;
+    int loiChuaDong = 0;
+    
+    while (getline(file, line)) {
+        lineCount++;
+        if (line.empty()) continue;
+
+        size_t pipePos = line.find('|');
+        string bienSo;
+        string loiPart;
+        
+        if (pipePos != string::npos) {
+            bienSo = line.substr(0, pipePos);
+            loiPart = line.substr(pipePos + 1);
+        } else {
+            bienSo = line;
+            loiPart = "";
+        }
+
+        bienSo.erase(0, bienSo.find_first_not_of(" \t"));
+        bienSo.erase(bienSo.find_last_not_of(" \t") + 1);
+
+        Xe* xe = nullptr;
+        bool isMotor = (rand() % 2 == 0);
+        
+        if (isMotor) {
+            Motor* motor = new Motor();
+            motor->setBienSo(bienSo);
+            motor->danhSachMucPhat = dsMucPhatMotor;
+            xe = motor;
+        } else {
+            Car* car = new Car();
+            car->setBienSo(bienSo);
+            car->danhSachMucPhat = dsMucPhatCar;
+            xe = car;
+        }
+        
+        Person::phanTichBienSo(bienSo, *xe);
+
+        // Đọc lỗi vi phạm với trạng thái
+        if (!loiPart.empty()) {
+            stringstream ss(loiPart);
+            string token;
+            Mylist<string> tokens;  
+            
+            while (ss >> token) {
+                tokens.push_back(token);
+            }
+            
+            Node<string>* current = tokens.begin();
+            int index = 0;
+            
+            while (current != nullptr) {
+                string currentToken = current->getdata();
+                
+                // Kiểm tra xem token có phải là trạng thái không (DD hoặc CD)
+                bool laTrangThai = (currentToken == "DD" || currentToken == "CD");
+                
+                // Tìm ngày (định dạng DD-MM-YYYY)
+                if (!laTrangThai && currentToken.length() == 10 && 
+                    currentToken[2] == '-' && 
+                    currentToken[5] == '-' &&
+                    isdigit(currentToken[0]) && 
+                    isdigit(currentToken[1])) {
+                    
+                    string tenLoi = "";
+                    Node<string>* prev = tokens.begin();
+                    int prevIndex = 0;
+                    int startIdx = 0;
+                    
+                    // Tìm điểm bắt đầu của tên lỗi
+                    while (prev != nullptr && prevIndex < index) {
+                        if (prev->getdata() == "|" || 
+                            (prev->getdata().length() == 10 && 
+                             prev->getdata()[2] == '-' && 
+                             prev->getdata()[5] == '-' &&
+                             isdigit(prev->getdata()[0]))) {
+                            startIdx = prevIndex + 1;
+                        }
+                        prev = prev->getnext();
+                        prevIndex++;
                     }
-                    current = current->getnext();
+                    
+                    // Ghép tên lỗi
+                    Node<string>* nameNode = tokens.begin();
+                    int nameIdx = 0;
+                    while (nameNode != nullptr && nameIdx < index) {
+                        if (nameIdx >= startIdx && nameNode->getdata() != "|") {
+                            if (!tenLoi.empty()) tenLoi += " ";
+                            tenLoi += nameNode->getdata();
+                        }
+                        nameNode = nameNode->getnext();
+                        nameIdx++;
+                    }
+                    
+                    // Lấy trạng thái từ token tiếp theo sau ngày
+                    bool trangThaiDong = false; 
+                    Node<string>* nextNode = current->getnext();
+                    if (nextNode != nullptr) {
+                        string trangThaiStr = nextNode->getdata();
+                        if (trangThaiStr == "DD") {
+                            trangThaiDong = true;
+                            loiDaDong++;
+                        } else if (trangThaiStr == "CD") {
+                            trangThaiDong = false;
+                            loiChuaDong++;
+                        } else {
+                            // Token không phải DD/CD, coi như chưa có trạng thái
+                            // Mặc định là chưa đóng
+                            trangThaiDong = false;
+                            loiChuaDong++;
+                        }
+                    } else {
+                        // Không có token tiếp theo, mặc định chưa đóng
+                        trangThaiDong = false;
+                        loiChuaDong++;
+                    }
+                    
+                    if (!tenLoi.empty()) {
+                        Pair loiPair(tenLoi, currentToken, trangThaiDong);
+                        xe->dsLoi.push_back(loiPair);
+                    }
                 }
+                
+                current = current->getnext();
+                index++;
             }
         }
+
+        hashtableXe->insertToHash(xe);
+        successCount++;
+
+        if (lineCount % 1000 == 0) {
+            cout << "Da doc " << lineCount << " dong..." << endl;
+        }
     }
-    cout << "[KIEM TRA] Trong hashtableXe: " << xeCoLoiTrongHash << " xe co loi, " 
-         << xeKhongLoiTrongHash << " xe khong loi" << endl;
     
-    cout << "\n=== BAT DAU DOC CCCD.TXT ===" << endl;
-    docFileCCCD(finalCCCD, dsNguoi);
-    
-    cout << "\n=== HOAN TAT ===" << endl;
-    cout << "Da tai du lieu tu file vao hashtable" << endl;
+    file.close();
+    cout << "Da doc xong " << successCount << "/" << lineCount << " ban ghi tu file bienso.txt" << endl;
+    cout << "  - Loi da dong phat: " << loiDaDong << endl;
+    cout << "  - Loi chua dong phat: " << loiChuaDong << endl;
 }
 
-
 void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNguoi) {
-    initRandom(); // ✅ Khởi tạo random seed
+    initRandom(); 
     
     ifstream file(filename);
     if (!file.is_open()) {
@@ -306,11 +463,9 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
                 continue;
             }
 
-            // Tìm xe trong hashtableXe (đã được load từ bienso.txt)
             Xe* xeGoc = hashtableXe->find(bienSo);
             
             if (xeGoc != nullptr) {
-                // Xe đã tồn tại, copy thông tin xe (bao gồm cả lỗi)
                 Xe* xe = nullptr;
                 
                 if (xeGoc->getLS() == "Motor") {
@@ -318,10 +473,12 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
                     motor->setBienSo(bienSo);
                     motor->danhSachMucPhat = dsMucPhatMotor;
                     
-                    // ✅ Copy từng lỗi thủ công
                     Node<Pair>* loiNode = xeGoc->dsLoi.begin();
                     while (loiNode != nullptr) {
-                        motor->dsLoi.push_back(loiNode->getdata());
+                        Pair loiMoi(loiNode->getdata().key, 
+                                   loiNode->getdata().value, 
+                                   loiNode->getdata().State);  // Copy cả trạng thái
+                        motor->dsLoi.push_back(loiMoi);
                         loiNode = loiNode->getnext();
                     }
                     
@@ -331,10 +488,12 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
                     car->setBienSo(bienSo);
                     car->danhSachMucPhat = dsMucPhatCar;
                     
-                    // ✅ Copy từng lỗi thủ công
                     Node<Pair>* loiNode = xeGoc->dsLoi.begin();
                     while (loiNode != nullptr) {
-                        car->dsLoi.push_back(loiNode->getdata());
+                        Pair loiMoi(loiNode->getdata().key, 
+                                   loiNode->getdata().value, 
+                                   loiNode->getdata().State);  // Copy cả trạng thái
+                        car->dsLoi.push_back(loiMoi);
                         loiNode = loiNode->getnext();
                     }
                     
@@ -381,124 +540,33 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
     cout << "Da doc xong " << successCount << "/" << lineCount << " ban ghi tu file cccd.txt" << endl;
 }
 
-void DataGenerator::docFileBienSo(const string& filename, vehicleshash* hashtableXe) {
-       ifstream file(filename);
-    if (!file.is_open()) {
-        cout << "Khong the mo file " << filename << endl;
-        return;
-    }
+void DataGenerator::taoXeMau(vehicleshash* hashtableXe, Mylist<Violation>& dsGop, int soLuong, HashTable<Person>& dsNguoi) {
+    cout << "\n=== BAT DAU DOC BIENSO.TXT ===" << endl;
+    docFileBienSo(finalbienSo, hashtableXe);
     
-    string line;
-    int lineCount = 0;
-    int successCount = 0;
-    
-    while (getline(file, line)) {
-        lineCount++;
-        if (line.empty()) continue;
-
-        size_t pipePos = line.find('|');
-        string bienSo;
-        string loiPart;
-        
-        if (pipePos != string::npos) {
-            bienSo = line.substr(0, pipePos);
-            loiPart = line.substr(pipePos + 1);
-        } else {
-            bienSo = line;
-            loiPart = "";
-        }
-
-        // Loại bỏ khoảng trắng
-        bienSo.erase(0, bienSo.find_first_not_of(" \t"));
-        bienSo.erase(bienSo.find_last_not_of(" \t") + 1);
-
-        // Random tạo Motor hoặc Car (50-50)
-        Xe* xe = nullptr;
-        bool isMotor = (rand() % 2 == 0);
-        
-        if (isMotor) {
-            Motor* motor = new Motor();
-            motor->setBienSo(bienSo);
-            motor->danhSachMucPhat = dsMucPhatMotor;
-            xe = motor;
-        } else {
-            Car* car = new Car();
-            car->setBienSo(bienSo);
-            car->danhSachMucPhat = dsMucPhatCar;
-            xe = car;
-        }
-        
-        Person::phanTichBienSo(bienSo, *xe);
-
-        // Đọc lỗi vi phạm
-        if (!loiPart.empty()) {
-            stringstream ss(loiPart);
-            string token;
-            Mylist<string> tokens;  
-            
-            while (ss >> token) {
-                tokens.push_back(token);
-            }
-            
-            Node<string>* current = tokens.begin();
-            int index = 0;
-            
-            while (current != nullptr) {
-                string currentToken = current->getdata();
-                
-                if (currentToken.length() == 10 && 
-                    currentToken[2] == '-' && 
-                    currentToken[5] == '-' &&
-                    isdigit(currentToken[0]) && 
-                    isdigit(currentToken[1])) {
-                    
-                    string tenLoi = "";
-                    Node<string>* prev = tokens.begin();
-                    int prevIndex = 0;
-                    int startIdx = 0;
-                    
-                    while (prev != nullptr && prevIndex < index) {
-                        if (prev->getdata() == "|" || 
-                            (prev->getdata().length() == 10 && 
-                             prev->getdata()[2] == '-' && 
-                             prev->getdata()[5] == '-' &&
-                             isdigit(prev->getdata()[0]))) {
-                            startIdx = prevIndex + 1;
-                        }
-                        prev = prev->getnext();
-                        prevIndex++;
+    int xeCoLoiTrongHash = 0;
+    int xeKhongLoiTrongHash = 0;
+    for (int i = 0; i < hashtableXe->get1(); i++) {
+        for (int j = 0; j < hashtableXe->get2(); j++) {
+            for (int k = 0; k < hashtableXe->get3(); k++) {
+                Node<Xe*>* current = hashtableXe->table[i][j][k].begin();
+                while (current != nullptr) {
+                    if (current->getdata()->dsLoi.size() > 0) {
+                        xeCoLoiTrongHash++;
+                    } else {
+                        xeKhongLoiTrongHash++;
                     }
-                    
-                    Node<string>* nameNode = tokens.begin();
-                    int nameIdx = 0;
-                    while (nameNode != nullptr && nameIdx < index) {
-                        if (nameIdx >= startIdx && nameNode->getdata() != "|") {
-                            if (!tenLoi.empty()) tenLoi += " ";
-                            tenLoi += nameNode->getdata();
-                        }
-                        nameNode = nameNode->getnext();
-                        nameIdx++;
-                    }
-                    
-                    if (!tenLoi.empty()) {
-                        Pair loiPair(tenLoi, currentToken);
-                        xe->dsLoi.push_back(loiPair);
-                    }
+                    current = current->getnext();
                 }
-                
-                current = current->getnext();
-                index++;
             }
         }
-
-        hashtableXe->insertToHash(xe);
-        successCount++;
-
-        if (lineCount % 1000 == 0) {
-            cout << "Da doc " << lineCount << " dong..." << endl;
-        }
     }
+    cout << "[KIEM TRA] Trong hashtableXe: " << xeCoLoiTrongHash << " xe co loi, " 
+         << xeKhongLoiTrongHash << " xe khong loi" << endl;
     
-    file.close();
-    cout << "Da doc xong " << successCount << "/" << lineCount << " ban ghi tu file bienso.txt" << endl;
+    cout << "\n=== BAT DAU DOC CCCD.TXT ===" << endl;
+    docFileCCCD(finalCCCD, dsNguoi);
+    
+    cout << "\n=== HOAN TAT ===" << endl;
+    cout << "Da tai du lieu tu file vao hashtable" << endl;
 }

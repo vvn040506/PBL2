@@ -7,17 +7,22 @@ using namespace std;
 class Violation{
     private:
         int id_loi;
-        string loiViPham; // lỗi vi phạm
-        int mucPhat; // mức phạt tiền
+        string loiViPham;
+        int mucPhat;
+        bool State;
     public:
         Mylist<Violation> list;
-        Violation(const int&, const string&, const int&); 
+        Violation(const int&, const string&, const int&,bool); 
         ~Violation();
         void display();
         int getID();
         string getLoiViPham() ;
         int getMucPhat();
+        bool getState();
+        void setState(bool);
+
         void setLoiViPham(const string&);
         void setMucPhat(const double&);
         friend void readDSLoi(Mylist<Violation> &, const string&);
+        
 };

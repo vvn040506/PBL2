@@ -8,9 +8,10 @@ struct Pair {
     
     string key;
     string value;
+    bool State;
 
     Pair(){}
-    Pair(string key, string value) : key(key), value(value){}
+    Pair(string key, string value, bool State) : key(key), value(value),State(State){}
 
     friend ostream& operator<<(ostream& os, const Pair& p) {
         os << "(" << p.key << ", " << p.value << ")";

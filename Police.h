@@ -27,7 +27,7 @@ class Police: public Person{
         
         void menu() override;
         void themloiXe(vehicleshash* Hash);
-        void xoaloiXe(vehicleshash* Hash);
+        void dongPhat(vehicleshash* Hash);
         void themxeMoi(vehicleshash* Hash);
         
 };

@@ -8,8 +8,6 @@
 #include "main1.h"
 using namespace std;
 
-
-
 vehicleshash::vehicleshash() : size1(100), size2(100), size3(100) {
     cachedtongsoXe = 0;
     cachedMotor = 0;
@@ -20,6 +18,16 @@ vehicleshash::vehicleshash() : size1(100), size2(100), size3(100) {
     cachedtienPhat = 0;
     cachedtienPhatMotor = 0;
     cachedtienPhatCar = 0;
+    
+    // Khởi tạo thêm
+    cachedtienDaDong = 0;
+    cachedtienChuaDong = 0;
+    cachedtienDaDongMotor = 0;
+    cachedtienChuaDongMotor = 0;
+    cachedtienDaDongCar = 0;
+    cachedtienChuaDongCar = 0;
+    cachedsoLoiDaDong = 0;
+    cachedsoLoiChuaDong = 0;
 
     table = new Mylist<Xe*>**[size1];
     for (int i = 0; i < size1; ++i) {
@@ -30,7 +38,6 @@ vehicleshash::vehicleshash() : size1(100), size2(100), size3(100) {
 }
 
 vehicleshash::vehicleshash(int size1, int size2, int size3) : size1(size1), size2(size2), size3(size3){
-
     cachedtongsoXe = 0;
     cachedMotor = 0;
     cachedCar = 0;
@@ -40,6 +47,16 @@ vehicleshash::vehicleshash(int size1, int size2, int size3) : size1(size1), size
     cachedtienPhat = 0;
     cachedtienPhatMotor = 0;
     cachedtienPhatCar = 0;
+    
+    // Khởi tạo thêm
+    cachedtienDaDong = 0;
+    cachedtienChuaDong = 0;
+    cachedtienDaDongMotor = 0;
+    cachedtienChuaDongMotor = 0;
+    cachedtienDaDongCar = 0;
+    cachedtienChuaDongCar = 0;
+    cachedsoLoiDaDong = 0;
+    cachedsoLoiChuaDong = 0;
 
     table = new Mylist<Xe*>**[size1];
     for (int i = 0; i < size1; ++i) {
@@ -112,7 +129,7 @@ void vehicleshash::insertToHash(Xe* a){
     string loaiXe = a->getLS();
     if (loaiXe == "Motor") cachedMotor++;
         else cachedCar++;
-    int soLoi = a->getsoLoi();
+    
     if (a->dsLoi.size() > 0) {  
         cachedtongsoXeViPham++;
     
@@ -126,6 +143,7 @@ void vehicleshash::insertToHash(Xe* a){
     Node<Pair>* loiNode = a->dsLoi.begin();
     while (loiNode != nullptr) {
         string tenLoi = loiNode->getdata().key;
+        bool trangThaiDong = loiNode->getdata().State;  // Lấy trạng thái đóng phạt
         
         long long tienPhat = 0;
         Node<Violation>* v = a->danhSachMucPhat.begin();
@@ -138,6 +156,7 @@ void vehicleshash::insertToHash(Xe* a){
             v = v->getnext();
         }
         
+        // Cập nhật tổng tiền phạt
         cachedtienPhat += tienPhat;
         if (loaiXe == "Motor") {
             cachedtienPhatMotor += tienPhat;
@@ -145,25 +164,56 @@ void vehicleshash::insertToHash(Xe* a){
             cachedtienPhatCar += tienPhat;
         }
         
+        // Cập nhật theo trạng thái đóng phạt
+        if (trangThaiDong) {
+            cachedtienDaDong += tienPhat;
+            cachedsoLoiDaDong++;
+            if (loaiXe == "Motor") {
+                cachedtienDaDongMotor += tienPhat;
+            } else {
+                cachedtienDaDongCar += tienPhat;
+            }
+        } else {
+            cachedtienChuaDong += tienPhat;
+            cachedsoLoiChuaDong++;
+            if (loaiXe == "Motor") {
+                cachedtienChuaDongMotor += tienPhat;
+            } else {
+                cachedtienChuaDongCar += tienPhat;
+            }
+        }
+        
+        // Cập nhật thống kê lỗi
         bool timThay = false;
         Node<thongkeLoi>* current = cachedthongkeLoi.begin();
         while (current != nullptr) {
             if (current->refgetdata().tenLoi == tenLoi) {
                 current->refgetdata().soLan++;
+                if (trangThaiDong) {
+                    current->refgetdata().soDaDong++;
+                } else {
+                    current->refgetdata().soChuaDong++;
+                }
                 timThay = true;
                 break;
             }
             current = current->getnext();
         }
 
-
-            if (!timThay) {
-                cachedthongkeLoi.push_back(thongkeLoi(tenLoi, 1));
+        if (!timThay) {
+            thongkeLoi tkLoi(tenLoi, 1);
+            if (trangThaiDong) {
+                tkLoi.soDaDong = 1;
+                tkLoi.soChuaDong = 0;
+            } else {
+                tkLoi.soDaDong = 0;
+                tkLoi.soChuaDong = 1;
             }
-            
-            loiNode = loiNode->getnext();
+            cachedthongkeLoi.push_back(tkLoi);
         }
-
+        
+        loiNode = loiNode->getnext();
+    }
 }
 
 Xe* vehicleshash::find(const string& a){
@@ -181,8 +231,7 @@ Xe* vehicleshash::find(const string& a){
     return nullptr;
 }
 
-
-void vehicleshash :: thongke(){
+void vehicleshash::thongke(){
     cout << "      THONG KE TONG QUAN HE THONG      " << endl;
     cout << "========================================" << endl;
         
@@ -192,16 +241,19 @@ void vehicleshash :: thongke(){
     cout << "Tong xe da vi pham:      " << cachedtongsoXeViPham << endl;
         
     int tongSoLoi = 0;
-        Node<thongkeLoi>* current = cachedthongkeLoi.begin();
-        while (current != nullptr) {
-            tongSoLoi += current->getdata().soLan;
-            current = current->getnext();
-        }
+    Node<thongkeLoi>* current = cachedthongkeLoi.begin();
+    while (current != nullptr) {
+        tongSoLoi += current->getdata().soLan;
+        current = current->getnext();
+    }
 
     cout << "Tong so loi vi pham:     " << tongSoLoi << endl;
+    cout << "  - Da dong phat:        " << cachedsoLoiDaDong << " loi" << endl;
+    cout << "  - Chua dong phat:      " << cachedsoLoiChuaDong << " loi" << endl;
     cout << "Tong tien phat:          " << cachedtienPhat << " VND" << endl;
+    cout << "  - Da thu:              " << cachedtienDaDong << " VND" << endl;
+    cout << "  - Chua thu:            " << cachedtienChuaDong << " VND" << endl;
     pause();
-
 }
 
 void vehicleshash::thongkeMotorvsCar(){
@@ -219,7 +271,11 @@ void vehicleshash::thongkeMotorvsCar(){
     
     cout << "\nTIEN PHAT:" << endl;
     cout << "  Motor: " << cachedtienPhatMotor << " VND" << endl;
+    cout << "    + Da thu:  " << cachedtienDaDongMotor << " VND" << endl;
+    cout << "    + Chua thu: " << cachedtienChuaDongMotor << " VND" << endl;
     cout << "  Car:   " << cachedtienPhatCar << " VND" << endl;
+    cout << "    + Da thu:  " << cachedtienDaDongCar << " VND" << endl;
+    cout << "    + Chua thu: " << cachedtienChuaDongCar << " VND" << endl;
     cout << "  Tong:  " << cachedtienPhat << " VND" << endl;
     
     cout << "========================================" << endl;
@@ -244,14 +300,42 @@ void vehicleshash::thongketheoLoi(){
     }
     
     cout << "\nTong so loi vi pham: " << tongSoLoi << endl;
+    cout << "  - Da dong phat: " << cachedsoLoiDaDong << " loi" << endl;
+    cout << "  - Chua dong phat: " << cachedsoLoiChuaDong << " loi" << endl;
     cout << "\nChi tiet:" << endl;
     
     current = cachedthongkeLoi.begin();
     while (current != nullptr) {
         cout << "  - " << current->getdata().tenLoi 
-             << ": " << current->getdata().soLan << " lan" << endl;
+             << ": " << current->getdata().soLan << " lan";
+        cout << " (Da dong: " << current->getdata().soDaDong 
+             << ", Chua dong: " << current->getdata().soChuaDong << ")" << endl;
         current = current->getnext();
     }
+    
+    cout << "========================================" << endl;
+}
+
+void vehicleshash::thongkeTheoTrangThai(){
+    cout << "\n========================================" << endl;
+    cout << "    THONG KE THEO TRANG THAI DONG PHAT " << endl;
+    cout << "========================================" << endl;
+    
+    cout << "\nDA DONG PHAT:" << endl;
+    cout << "  So loi: " << cachedsoLoiDaDong << endl;
+    cout << "  Tong tien thu: " << cachedtienDaDong << " VND" << endl;
+    cout << "    + Motor: " << cachedtienDaDongMotor << " VND" << endl;
+    cout << "    + Car:   " << cachedtienDaDongCar << " VND" << endl;
+    
+    cout << "\nCHUA DONG PHAT:" << endl;
+    cout << "  So loi: " << cachedsoLoiChuaDong << endl;
+    cout << "  Tong tien can thu: " << cachedtienChuaDong << " VND" << endl;
+    cout << "    + Motor: " << cachedtienChuaDongMotor << " VND" << endl;
+    cout << "    + Car:   " << cachedtienChuaDongCar << " VND" << endl;
+    
+    double tiLeDaDong = (cachedtienPhat > 0) ? 
+        (double)cachedtienDaDong / cachedtienPhat * 100 : 0;
+    cout << "\nTi le thu phat: " << tiLeDaDong << "%" << endl;
     
     cout << "========================================" << endl;
 }

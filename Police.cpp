@@ -14,7 +14,7 @@ string Police::getID() { return id_police; }
 
 void Police::addPoliceWork(const string& id_police, const string& bienso, const string& ngay){
             if(dsPolice != nullptr){
-                dsPolice->insert(id_police, Pair(bienso, ngay));
+                dsPolice->insert(id_police, Pair(bienso, ngay,false));
             }
         }
 void Police::showPoliceWork(const string& id){
@@ -84,7 +84,7 @@ void Police::themloiXe(vehicleshash* Hash){
     pause();
 }
 
-void Police :: xoaloiXe(vehicleshash* hashtableXe){
+void Police :: dongPhat(vehicleshash* hashtableXe){
     system("cls");
     cout << "\n=== XOA LOI VI PHAM ===\n";
     
@@ -110,12 +110,14 @@ void Police :: xoaloiXe(vehicleshash* hashtableXe){
     Node<Pair>* loi = xe->dsLoi.begin();
     int stt = 1;
     while (loi != nullptr) {
-        cout << stt++ << ". " << loi->getdata().key 
-             << " - " << loi->getdata().value << endl;
-        loi = loi->getnext();
+        if(loi->getdata().State == false){
+            cout << stt++ << ". " << loi->getdata().key 
+                << " - " << loi->getdata().value << endl;
+            loi = loi->getnext();
+        }
     }
     
-    cout << "\nNhap ten loi can xoa: ";
+    cout << "\nNhap ten loi can dong phat: ";
     string tenLoi;
     getline(cin, tenLoi);
     
@@ -125,7 +127,7 @@ void Police :: xoaloiXe(vehicleshash* hashtableXe){
     
     // Xóa lỗi
     xe->dongPhat(tenLoi, ngayVP);
-    cout << "\n[THANH CONG] Da xoa loi vi pham!" << endl;
+    cout << "\n[THANH CONG] Da dong phat!" << endl;
     
     capNhatFileBienSo(xe);
     
@@ -224,14 +226,22 @@ void capNhatFileBienSo(Xe* xe) {
     
     while (getline(fileIn, line)) {
         if (line.substr(0, bienSo.length()) == bienSo && !updated) {
-            // Xây dựng lại dòng từ danh sách lỗi hiện tại
             string newLine = bienSo;
-            
             Node<Pair>* currentLoi = xe->dsLoi.begin();
+            
             if (currentLoi != nullptr) {
                 newLine += " |";
                 while (currentLoi != nullptr) {
-                    newLine += " " + currentLoi->getdata().key + " " + currentLoi->getdata().value;
+                    newLine += " " + currentLoi->getdata().key + " " 
+                             + currentLoi->getdata().value + " ";
+                    
+                    // Ghi rõ ràng
+                    if (currentLoi->getdata().State) {
+                        newLine += "DD";
+                    } else {
+                        newLine += "CD";
+                    }
+                    
                     currentLoi = currentLoi->getnext();
                     if (currentLoi != nullptr) {
                         newLine += " |";

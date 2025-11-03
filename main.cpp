@@ -22,7 +22,8 @@ int main() {
     cout << "                                        " << endl;
     cout << "     VO VIET NHAT - TRAN LE MINH        " << endl;
     cout << "                                        " << endl;
-    cout << "========================================" << endl;    
+    cout << "========================================" << endl;
+    pause();
 
     khoiTaoHeThong();
     menuHome();

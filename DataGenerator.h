@@ -32,7 +32,8 @@ public:
     // Sinh địa chỉ ngẫu nhiên
     static string generateDiaChi();
     
-    // Tạo dữ liệu mẫu cho hệ thống
+    static bool generateState();
+    
     //static void taoXeMau(vehicleshash* hashTable, Mylist<Violation>& dsMucPhat, int soLuong);
     static string generateLoi();
     static void taoXeMau(vehicleshash* hashTable, Mylist<Violation>& dsMucPhat, int soLuong, HashTable<Person>& dsNguoi);
