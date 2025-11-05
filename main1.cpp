@@ -82,13 +82,7 @@ system("cls");
     }
         
         try {
-            Mylist<Violation> dsGop = dsMucPhatMotor;
-            Node<Violation>* v = dsMucPhatCar.begin();
-            while (v != nullptr) {
-                dsGop.push_back(v->getdata());
-                v = v->getnext();
-            }
-            DataGenerator::taoXeMau(hashtableXe, dsGop, 0, *hashtableNguoi);
+            DataGenerator::taoXeMau(hashtableXe, 0, *hashtableNguoi);
             
             cout << "\n[THANH CONG] Doc du lieu thanh cong!" << endl;
             hashtableXe->thongke();
@@ -117,23 +111,19 @@ void XemThongKe() {
         case 1:
             system("cls");
             hashtableXe->thongke();
-            pause();
             break;
         case 2:
             system("cls");
             hashtableXe->thongkeMotorvsCar();
-            pause();
             break;
         case 3:
             system("cls");
             hashtableXe->thongketheoLoi();
-            pause();
             break;
         case 0:
             return;
         default:
             cout << "Lua chon khong hop le!" << endl;
-            pause();
     }
 }
 
@@ -166,7 +156,6 @@ void menuCongAn() {
                 return;
             default:
                 cout << "Lua chon khong hop le!" << endl;
-                pause();
         }
     } while (true);
 }
@@ -183,21 +172,17 @@ void menuNguoiDan() {
         switch (choice) {
             case 1:
                 XemThongKe();
-                pause();
                 break;
             case 2:
                 c->timXe(hashtableXe);
-                pause();
                 break;
             case 3:
                 c->truyvanCCCD(hashtableNguoi);
-                pause();
                 break;
             case 0:
                 return;
             default:
                 cout << "Lua chon khong hop le!" << endl;
-                pause();
         }
     } while (true);
 }

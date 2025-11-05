@@ -207,7 +207,7 @@ void Police :: menu() {
     cout << "1. Xem thong ke tong quan" << endl;
     cout << "2. Tim xe theo bien so" << endl;
     cout << "3. Them loi vi pham cho xe" << endl;
-    cout << "4. Xoa loi vi pham (neu ghi nham)" << endl;
+    cout << "4. Dong phat" << endl;
     cout << "5. Them xe moi vao he thong" << endl;
     cout << "0. Quay lai" << endl;
     cout << "========================================" << endl;

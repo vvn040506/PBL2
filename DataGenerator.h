@@ -36,7 +36,7 @@ public:
     
     //static void taoXeMau(vehicleshash* hashTable, Mylist<Violation>& dsMucPhat, int soLuong);
     static string generateLoi();
-    static void taoXeMau(vehicleshash* hashTable, Mylist<Violation>& dsMucPhat, int soLuong, HashTable<Person>& dsNguoi);
+    static void taoXeMau(vehicleshash* hashTable, int soLuong, HashTable<Person>& dsNguoi);
     
     // Tạo dữ liệu mẫu vào file
     static void taoDuLieuMau(const string& cccdFile, const string& biensoFile, int soLuong);

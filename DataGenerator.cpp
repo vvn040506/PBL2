@@ -540,7 +540,7 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
     cout << "Da doc xong " << successCount << "/" << lineCount << " ban ghi tu file cccd.txt" << endl;
 }
 
-void DataGenerator::taoXeMau(vehicleshash* hashtableXe, Mylist<Violation>& dsGop, int soLuong, HashTable<Person>& dsNguoi) {
+void DataGenerator::taoXeMau(vehicleshash* hashtableXe, int soLuong, HashTable<Person>& dsNguoi) {
     cout << "\n=== BAT DAU DOC BIENSO.TXT ===" << endl;
     docFileBienSo(finalbienSo, hashtableXe);
     

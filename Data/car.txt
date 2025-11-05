@@ -1,8 +1,8 @@
-1 di nguoc chieu 5000000
-2 di tren via he 5000000
-3 vuot toc do 500000
-4 vuot den do 5000000
+1 di nguoc chieu 50000000
+2 di tren via he 50000000
+3 vuot toc do 6000000
+4 vuot den do 1500000
 5 do via he 500000
-6 khong mang bang lai 300000
-7 do po 1000000
-8 di sai lan duong 700000
+6 khong mang bang lai 3000000
+7 do po 10000000
+8 di sai lan duong 2700000

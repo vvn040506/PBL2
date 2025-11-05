@@ -50,10 +50,14 @@ public:
     void erase(Node<T>* index);
     void erase(const T &value);
     void print();
+    
     Node<T>* begin();
     Node<T>* end();
     bool operator==(const Mylist<T>& other) const;
     bool operator!=(const Mylist<T>& other) const;
+    
+    Mylist(const Mylist& other);
+    Mylist& operator=(const Mylist& other);
 };
 
 template <typename T>
@@ -279,6 +283,35 @@ bool Mylist<T>::operator==(const Mylist<T>& other) const {
 template <typename T>
 bool Mylist<T>::operator!=(const Mylist<T>& other) const {
     return !(*this == other);
+}
+
+template <typename T>
+Mylist<T>::Mylist(const Mylist& other) : head(nullptr), tail(nullptr), n(0) {
+    Node<T>* cur = other.head;
+    while (cur) {
+        push_back(cur->getdata());
+        cur = cur->getnext();
+    }
+}
+
+template <typename T>
+Mylist<T>& Mylist<T>::operator=(const Mylist& other) {
+    if (this == &other) return *this;
+
+    while (head) {
+        Node<T>* temp = head;
+        head = head->next;
+        delete temp;
+    }
+    head = tail = nullptr;
+    n = 0;
+
+    Node<T>* cur = other.head;
+    while (cur) {
+        push_back(cur->getdata());
+        cur = cur->getnext();
+    }
+    return *this;
 }
 
 #endif
