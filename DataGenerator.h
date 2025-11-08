@@ -42,12 +42,12 @@ public:
     // Tạo dữ liệu mẫu vào file
     static void taoDuLieuMau(const string& cccdFile, const string& biensoFile, int soLuong);
     static void docFileCCCD(const string& filename, HashTable<Person>& dsNguoi);
-    static void docFileBienSo(const string& filename, vehicleshash* hashtableXe);
-    void docFilePolice(const string& filename);
-    
+    static void docFileBienSo(const string& filename, vehicleshash* hashtableXe);    
     // Khởi tạo random seed
     static void initRandom();
 };
+
+    void docFilePolice(const string& filename);
 
 
 #endif

@@ -5,7 +5,6 @@ vehicleshash* hashtableXe = nullptr;
 HashTable<Person>* hashtableNguoi = nullptr;
 Mylist<Violation> dsMucPhatMotor;
 Mylist<Violation> dsMucPhatCar;
-HashTable<Police>* hashtablepolice = nullptr;
 
 string ghepFile(const string& Link, const string& File){
     return Link + File;
@@ -40,9 +39,6 @@ system("cls");
         
         hashtableNguoi = new HashTable<Person>(1000);
         cout << "[OK] Da tao hash table nguoi" << endl;
-
-        hashtablepolice = new HashTable<Police>(1000);
-        cout << "[OK] Da tao hash table canh sat" << endl;
         
         
         Xe::docFileMaVung(finalMaVung);
@@ -90,6 +86,7 @@ system("cls");
         
         try {
             DataGenerator::taoXeMau(hashtableXe, 0, *hashtableNguoi);
+            docFilePolice(finalpolice);
             
             cout << "\n[THANH CONG] Doc du lieu thanh cong!" << endl;
             hashtableXe->thongke();
@@ -136,8 +133,22 @@ void XemThongKe() {
 
 
 void menuCongAn() {
-    int choice;
+    string i;
+    string pass;
     Police *p = new Police();
+
+    do{
+        cout << "nhap c de thoat qua trinh dang nhap " << endl;
+        string c;
+        cin >> c;
+        if (c=="c") break;
+        cout << "ban chua dang nhap hoac nhap sai id/pass" <<endl;
+        cout << "nhap id : " <<endl; cin >> i;
+        cout << "nhap pass : " << endl; cin >> pass;
+    } while (!(p->dangNhap(i,pass)));
+    
+
+    int choice;
     do {
         p->menu();
         cin >> choice;
@@ -201,7 +212,7 @@ void menuHome() {
         cout << "========================================" << endl;
         cout << "   HE THONG QUAN LY XE BI PHAT NGUOI    " << endl;
         cout << "========================================" << endl;
-        cout << "1. Dang nhap Cong an" << endl;
+        cout << "1. Dang nhap Cong an (yeu cau dang nhap)" << endl;
         cout << "2. Dang nhap Nguoi dan" << endl;
         cout << "3. Thoat" << endl;
         cout << "========================================" << endl;

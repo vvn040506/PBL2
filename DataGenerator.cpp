@@ -569,7 +569,7 @@ string DataGenerator ::generatePolice(){
     return to_string(id) + " " + pass;
 }
 
-void DataGenerator :: docFilePolice(const string& filename) {
+void docFilePolice(const string& filename) {
     ifstream file(filename);
     
     if (!file.is_open()) {
