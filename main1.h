@@ -19,6 +19,8 @@ extern vehicleshash* hashtableXe;
 extern HashTable<Person>* hashtableNguoi;
 extern Mylist<Violation> dsMucPhatMotor;
 extern Mylist<Violation> dsMucPhatCar;
+extern HashTable<Police>* hashtablepolice = nullptr;
+
 
 void pause();
 void khoiTaoHeThong();

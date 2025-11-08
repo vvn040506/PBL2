@@ -6,10 +6,13 @@ using namespace std;
 HashTable<Pair>* Police::dsPolice = new HashTable<Pair>(1000);
 
 
-Police::Police(){ id_police = " "; }
+Police::Police(){ 
+    id_police = " ";
+    pass = "";
+}
 Police::~Police(){}
 
-Police::Police(const string& id) : id_police(id) {}
+Police::Police(const string& id,const string& pass) : id_police(id), pass(pass) {}
 string Police::getID() { return id_police; }
 
 void Police::addPoliceWork(const string& id_police, const string& bienso, const string& ngay){
@@ -335,4 +338,18 @@ void themXeVaoPerson(const string& cccd, const string& bienSo, const string& ten
             cout << "[LOI] Khong the mo file cccd.txt" << endl;
         }
     }
+}
+
+
+bool Police :: dangNhap(const string& i,const string& p){
+
+    int pos = dsPolice->hash_function(i);
+
+    Node<Pair>* node = dsPolice->buckets[pos].begin(); 
+    while (node != nullptr){
+       Pair& check = node->refgetdata();
+       if (check.key == i && check.value == p) return true;
+       node = node->getnext();
+    }
+    return false;
 }

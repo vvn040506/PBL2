@@ -15,10 +15,11 @@ using namespace std;
 class Police: public Person{
     private:
         string id_police;
+        string pass;
     public:
         static HashTable<Pair>* dsPolice;
         Police();
-        Police(const string&);
+        Police(const string&,const string&);
         ~Police();
         string getID();
         static void showPoliceWork(const string&);
@@ -29,6 +30,7 @@ class Police: public Person{
         void themloiXe(vehicleshash* Hash);
         void dongPhat(vehicleshash* Hash);
         void themxeMoi(vehicleshash* Hash);
+        bool dangNhap(const string& i, const string& p);
         
 };
 void themXeVaoPerson(const string& cccd, const string& bienSo, const string& ten, 

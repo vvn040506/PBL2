@@ -22,7 +22,7 @@ extern vehicleshash* hashtableXe;
 extern HashTable<Person>* hashtableNguoi;
 extern Mylist<Violation> dsMucPhatMotor;
 extern Mylist<Violation> dsMucPhatCar;
-// Khởi tạo random seed
+
 void DataGenerator::initRandom() {
     static bool initialized = false;
     if (!initialized) {
@@ -42,12 +42,12 @@ string DataGenerator::generateBienSo() {
     //initRandom();
     
     string provinces[] = {
-        "29", "30", "31", "32", "33",  // Hà Nội
-        "35", "36", "37", "38",         // Miền Trung
-        "41", "50", "51", "52",         // TP.HCM
-        "60", "61", "72",               // Miền Nam
-        "15", "16", "17", "18",         // Hải Phòng, Thái Bình
-        "43", "47", "48", "49"          // Đà Nẵng, Tây Nguyên
+        "29", "30", "31", "32", "33",
+        "35", "36", "37", "38",        
+        "41", "50", "51", "52",        
+        "60", "61", "72",              
+        "15", "16", "17", "18",         
+        "43", "47", "48", "49"          
     };
     
     string types[] = {"A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2"};
@@ -61,13 +61,13 @@ string DataGenerator::generateBienSo() {
     return province + "-" + type + "-" + to_string(number);
 }
 
-// Sinh ngày ngẫu nhiên (năm 2024-2025)
+
 string DataGenerator::generateNgay() {
     initRandom();
     
-    int ngay = 1 + (rand() % 28);  // 1-28
-    int thang = 1 + (rand() % 12); // 1-12
-    int nam = 2024 + (rand() % 2); // 2024-2025
+    int ngay = 1 + (rand() % 28); 
+    int thang = 1 + (rand() % 12);
+    int nam = 2024 + (rand() % 2);
     
     string d = (ngay < 10) ? "0" + to_string(ngay) : to_string(ngay);
     string m = (thang < 10) ? "0" + to_string(thang) : to_string(thang);
@@ -75,7 +75,6 @@ string DataGenerator::generateNgay() {
     return d + "-" + m + "-" + to_string(nam);
 }
 
-// Sinh CCCD ngẫu nhiên (12 số)
 string DataGenerator::generateCCCD() {
     initRandom();
     
@@ -86,7 +85,7 @@ string DataGenerator::generateCCCD() {
     return cccd;
 }
 
-// Sinh SĐT ngẫu nhiên
+
 string DataGenerator::generateSDT() {
     initRandom();
     
@@ -104,7 +103,6 @@ string DataGenerator::generateSDT() {
     return sdt;
 }
 
-// Sinh tên ngẫu nhiên
 string DataGenerator::generateTen() {
     initRandom();
     
@@ -123,7 +121,6 @@ string DataGenerator::generateTen() {
            ten[rand() % 15];
 }
 
-// Sinh địa chỉ ngẫu nhiên
 string DataGenerator::generateDiaChi() {
     initRandom();
     
@@ -146,7 +143,6 @@ string DataGenerator::generateLoi(){
     string loi[] = {"di nguoc chieu","di tren via he", "vuot toc do","do via he","khong mang bang lai","do po","di sai lan duong"};
     return loi [rand() % 5];
 }
-// Tạo dữ liệu xe mẫu
 
 
 bool bienSoDaTonTai(Mylist<string>& bienSoList, const string& bienSo) {
@@ -242,7 +238,6 @@ void DataGenerator::taoDuLieuMau(const string& cccdFile, const string& biensoFil
                 xeDaDong++;
             }
         } else {
-            // 70% không có lỗi
             biensoOut << bienSo << endl;
             xeKhongLoi++;
         }
@@ -257,7 +252,6 @@ void DataGenerator::taoDuLieuMau(const string& cccdFile, const string& biensoFil
     cout << "  - Xe con no phat: " << xeChuaDong << endl;
 }
 
-// Sửa hàm docFileBienSo để đọc trạng thái
 void DataGenerator::docFileBienSo(const string& filename, vehicleshash* hashtableXe) {
     ifstream file(filename);
     if (!file.is_open()) {
@@ -307,7 +301,6 @@ void DataGenerator::docFileBienSo(const string& filename, vehicleshash* hashtabl
         
         Person::phanTichBienSo(bienSo, *xe);
 
-        // Đọc lỗi vi phạm với trạng thái
         if (!loiPart.empty()) {
             stringstream ss(loiPart);
             string token;
@@ -323,10 +316,8 @@ void DataGenerator::docFileBienSo(const string& filename, vehicleshash* hashtabl
             while (current != nullptr) {
                 string currentToken = current->getdata();
                 
-                // Kiểm tra xem token có phải là trạng thái không (DD hoặc CD)
                 bool laTrangThai = (currentToken == "DD" || currentToken == "CD");
                 
-                // Tìm ngày (định dạng DD-MM-YYYY)
                 if (!laTrangThai && currentToken.length() == 10 && 
                     currentToken[2] == '-' && 
                     currentToken[5] == '-' &&
@@ -338,7 +329,6 @@ void DataGenerator::docFileBienSo(const string& filename, vehicleshash* hashtabl
                     int prevIndex = 0;
                     int startIdx = 0;
                     
-                    // Tìm điểm bắt đầu của tên lỗi
                     while (prev != nullptr && prevIndex < index) {
                         if (prev->getdata() == "|" || 
                             (prev->getdata().length() == 10 && 
@@ -351,7 +341,6 @@ void DataGenerator::docFileBienSo(const string& filename, vehicleshash* hashtabl
                         prevIndex++;
                     }
                     
-                    // Ghép tên lỗi
                     Node<string>* nameNode = tokens.begin();
                     int nameIdx = 0;
                     while (nameNode != nullptr && nameIdx < index) {
@@ -363,7 +352,6 @@ void DataGenerator::docFileBienSo(const string& filename, vehicleshash* hashtabl
                         nameIdx++;
                     }
                     
-                    // Lấy trạng thái từ token tiếp theo sau ngày
                     bool trangThaiDong = false; 
                     Node<string>* nextNode = current->getnext();
                     if (nextNode != nullptr) {
@@ -375,13 +363,10 @@ void DataGenerator::docFileBienSo(const string& filename, vehicleshash* hashtabl
                             trangThaiDong = false;
                             loiChuaDong++;
                         } else {
-                            // Token không phải DD/CD, coi như chưa có trạng thái
-                            // Mặc định là chưa đóng
                             trangThaiDong = false;
                             loiChuaDong++;
                         }
                     } else {
-                        // Không có token tiếp theo, mặc định chưa đóng
                         trangThaiDong = false;
                         loiChuaDong++;
                     }
@@ -436,7 +421,6 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
         getline(ss, diachi, '|');
         getline(ss, sdt);
 
-        // Loại bỏ khoảng trắng thừa
         cccd.erase(0, cccd.find_first_not_of(" \t"));
         cccd.erase(cccd.find_last_not_of(" \t") + 1);
         ten.erase(0, ten.find_first_not_of(" \t"));
@@ -452,7 +436,6 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
 
         Person person(cccd, ten, sdt, diachi);
 
-        // Thêm biển số
         stringstream bienSoSS(bienSoStr);
         string bienSo;
         while (bienSoSS >> bienSo) {
@@ -477,7 +460,7 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
                     while (loiNode != nullptr) {
                         Pair loiMoi(loiNode->getdata().key, 
                                    loiNode->getdata().value, 
-                                   loiNode->getdata().State);  // Copy cả trạng thái
+                                   loiNode->getdata().State); 
                         motor->dsLoi.push_back(loiMoi);
                         loiNode = loiNode->getnext();
                     }
@@ -492,7 +475,7 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
                     while (loiNode != nullptr) {
                         Pair loiMoi(loiNode->getdata().key, 
                                    loiNode->getdata().value, 
-                                   loiNode->getdata().State);  // Copy cả trạng thái
+                                   loiNode->getdata().State);  
                         car->dsLoi.push_back(loiMoi);
                         loiNode = loiNode->getnext();
                     }
@@ -503,7 +486,6 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
                 Person::phanTichBienSo(bienSo, *xe);
                 person.getXe()->insertToHash(xe);
             } else {
-                // Xe chưa tồn tại, tạo mới (không có lỗi)
                 Xe* xe = nullptr;
                 bool isMotor = (successCount % 2 == 0);
                 
@@ -569,4 +551,42 @@ void DataGenerator::taoXeMau(vehicleshash* hashtableXe, int soLuong, HashTable<P
     
     cout << "\n=== HOAN TAT ===" << endl;
     cout << "Da tai du lieu tu file vao hashtable" << endl;
+}
+
+string DataGenerator ::generatePolice(){
+    initRandom();
+
+    int id = 100000 + rand() % 899999;
+    string pass;
+    int n = 6 + rand() % 3;
+    const string c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    
+    for (int i = 0; i < n ; i++){
+        if (rand() % 100 < 70)
+            pass += to_string(rand() % 9);
+                else pass += c[rand() % 52];
+    }
+    return to_string(id) + " " + pass;
+}
+
+void DataGenerator :: docFilePolice(const string& filename) {
+    ifstream file(filename);
+    
+    if (!file.is_open()) {
+        cout << "Khong the mo file: " << filename << endl;
+        return;
+    }
+
+    string line;
+    while (getline(file, line)) {
+        stringstream ss(line);
+        string id, pass;
+
+        if (ss >> id >> pass) {
+            Police::dsPolice->insert(id, Pair(id, pass, false));
+        }
+    }
+
+    file.close();
+    cout << "Da tai danh sach canh sat tu file: " << filename << endl;
 }

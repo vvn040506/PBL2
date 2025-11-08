@@ -31,6 +31,7 @@ public:
     
     // Sinh địa chỉ ngẫu nhiên
     static string generateDiaChi();
+    static string generatePolice();
     
     static bool generateState();
     
@@ -42,6 +43,7 @@ public:
     static void taoDuLieuMau(const string& cccdFile, const string& biensoFile, int soLuong);
     static void docFileCCCD(const string& filename, HashTable<Person>& dsNguoi);
     static void docFileBienSo(const string& filename, vehicleshash* hashtableXe);
+    void docFilePolice(const string& filename);
     
     // Khởi tạo random seed
     static void initRandom();

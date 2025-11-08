@@ -5,6 +5,7 @@ vehicleshash* hashtableXe = nullptr;
 HashTable<Person>* hashtableNguoi = nullptr;
 Mylist<Violation> dsMucPhatMotor;
 Mylist<Violation> dsMucPhatCar;
+HashTable<Police>* hashtablepolice = nullptr;
 
 string ghepFile(const string& Link, const string& File){
     return Link + File;
@@ -17,6 +18,7 @@ string finalMotor = ghepFile(Link,"Motor.txt");
 string finalCar = ghepFile(Link,"Car.txt");
 string finalCCCD = ghepFile(Link,"cccd.txt");
 string finalbienSo = ghepFile(Link,"bienso.txt");
+string finalpolice = ghepFile(Link,"police.txt");
 
 
 
@@ -38,6 +40,9 @@ system("cls");
         
         hashtableNguoi = new HashTable<Person>(1000);
         cout << "[OK] Da tao hash table nguoi" << endl;
+
+        hashtablepolice = new HashTable<Police>(1000);
+        cout << "[OK] Da tao hash table canh sat" << endl;
         
         
         Xe::docFileMaVung(finalMaVung);
@@ -69,10 +74,12 @@ system("cls");
         DataGenerator ::taoDuLieuMau(finalCCCD,finalbienSo,1000);
         ifstream cccdFile(finalCCCD);
         ifstream biensoFile(finalbienSo);
+        ifstream policeFile(finalpolice);
     
-        bool fileExist = cccdFile.is_open() && biensoFile.is_open();
+        bool fileExist = cccdFile.is_open() && biensoFile.is_open() && policeFile.is_open();
         cccdFile.close();
         biensoFile.close();
+        policeFile.close();
     
     if (!fileExist) {
         cout << "\nKhong tim thay file cccd.txt hoac bienso.txt!" << endl;
