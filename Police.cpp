@@ -81,6 +81,7 @@ void Police::themloiXe(vehicleshash* Hash){
     // Thêm lỗi
     xe->themLoi(tenLoi, ngayVP);
     cout << "\n[THANH CONG] Da them loi vi pham!" << endl;
+
     
     capNhatFileBienSo(xe);
     

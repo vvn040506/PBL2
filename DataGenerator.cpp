@@ -290,11 +290,13 @@ void DataGenerator::docFileBienSo(const string& filename, vehicleshash* hashtabl
         if (isMotor) {
             Motor* motor = new Motor();
             motor->setBienSo(bienSo);
+            motor->setOwner("");
             motor->danhSachMucPhat = dsMucPhatMotor;
             xe = motor;
         } else {
             Car* car = new Car();
             car->setBienSo(bienSo);
+            car->setOwner("");
             car->danhSachMucPhat = dsMucPhatCar;
             xe = car;
         }
@@ -398,6 +400,8 @@ void DataGenerator::docFileBienSo(const string& filename, vehicleshash* hashtabl
 
 void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNguoi) {
     initRandom(); 
+
+    int xeDaCapNhatOwner = 0;
     
     ifstream file(filename);
     if (!file.is_open()) {
@@ -447,13 +451,18 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
             }
 
             Xe* xeGoc = hashtableXe->find(bienSo);
-            
+            if (xeGoc != nullptr) {
+                xeGoc->setOwner(cccd);
+                xeDaCapNhatOwner++;
+            }
+
             if (xeGoc != nullptr) {
                 Xe* xe = nullptr;
                 
                 if (xeGoc->getLS() == "Motor") {
                     Motor* motor = new Motor();
                     motor->setBienSo(bienSo);
+                    motor->setOwner(cccd);
                     motor->danhSachMucPhat = dsMucPhatMotor;
                     
                     Node<Pair>* loiNode = xeGoc->dsLoi.begin();
@@ -469,6 +478,7 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
                 } else {
                     Car* car = new Car();
                     car->setBienSo(bienSo);
+                    car->setOwner(cccd);
                     car->danhSachMucPhat = dsMucPhatCar;
                     
                     Node<Pair>* loiNode = xeGoc->dsLoi.begin();
@@ -492,11 +502,13 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
                 if (isMotor) {
                     Motor* motor = new Motor();
                     motor->setBienSo(bienSo);
+                    motor->setOwner(cccd);
                     motor->danhSachMucPhat = dsMucPhatMotor;
                     xe = motor;
                 } else {
                     Car* car = new Car();
                     car->setBienSo(bienSo);
+                    car->setOwner(cccd);
                     car->danhSachMucPhat = dsMucPhatCar;
                     xe = car;
                 }
@@ -520,6 +532,7 @@ void DataGenerator::docFileCCCD(const string& filename, HashTable<Person>& dsNgu
     
     file.close();
     cout << "Da doc xong " << successCount << "/" << lineCount << " ban ghi tu file cccd.txt" << endl;
+    cout << "  - Da cap nhat chu xe cho " << xeDaCapNhatOwner << " xe trong hashtableXe" << endl;
 }
 
 void DataGenerator::taoXeMau(vehicleshash* hashtableXe, int soLuong, HashTable<Person>& dsNguoi) {

@@ -9,12 +9,12 @@ class Xe{
         string thanhPho;
         string loaiXe;
         string bienSo;
-        // bool daDongPhat;
+        string Owner_id;
         static int tongTienPhat ;
         int soLoi;
     public:
         Xe();
-        Xe(string&, string&, string&,int); 
+        Xe(string&,string&, string&, string&,int); 
         ~Xe();
         static Mylist<Pair> dsMaVung;
         Mylist<Pair> dsLoi;
@@ -23,9 +23,8 @@ class Xe{
         string getbienSo() const;
         string getTP() const;
         string getLS() const;
+        string getID() const;
         int getsoLoi();
-        // int& gettongTienPhat();
-        // void dongPhat() const;
         static void docFileMaVung(const string&);
         void themLoi(const string&, const string&) ;
         void dongPhat(const string&, const string&) ;
@@ -37,6 +36,7 @@ class Xe{
         void setThanhPho(const string&);
         void setBienSo(const string&);
         void setloaiXe(const string&);
+        void setOwner(string cccd);
         int& gettongTienPhat();
         void truyenDSVP(const string&);
 };

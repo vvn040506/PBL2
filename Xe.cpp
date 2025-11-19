@@ -1,19 +1,22 @@
 #include"Xe.h"
 #include<iostream>
-#include<vector>
+#include<string>
 #include<fstream>
 #include<sstream>
 #include<ctime>
 #include<iomanip>
+#include"HashTable.h"
+
 using namespace std;
+extern HashTable<Person>* hashtableNguoi;
 int Xe::tongTienPhat = 0;
 Mylist<Pair> Xe::dsMaVung;
 Xe::Xe(){
-    thanhPho = bienSo = " ";
+    Owner_id = thanhPho = bienSo = " ";
     soLoi = 0;
 }
 
-Xe::Xe(string &tp, string& ls, string &bs,int soLoi) : thanhPho(tp), loaiXe(ls), bienSo(bs), soLoi(soLoi) {}
+Xe::Xe(string &Owner_id,string &tp, string& ls, string &bs,int soLoi) : Owner_id(Owner_id), thanhPho(tp), loaiXe(ls), bienSo(bs), soLoi(soLoi) {}
 
 Xe::~Xe(){}
 
@@ -66,11 +69,20 @@ int Xe :: getsoLoi(){
     return soLoi;
 }
 
+string Xe :: getID() const{
+    return Owner_id;
+}
+
+void Xe :: setOwner(string cccd) {
+    Owner_id = cccd;
+}
+
 int &Xe::gettongTienPhat(){
     return tongTienPhat;
 }
 
 Xe& Xe::operator = (const Xe& other){
+    this->Owner_id = other.Owner_id;
     this->bienSo = other.bienSo;
     this->thanhPho = other.thanhPho;
     return *(this);
@@ -127,6 +139,14 @@ void Xe::themLoi(const string& loiVP, const string& ngayVP){
     }
     
     cout << "Tien phat cua " << loiVP << " la: " << fixed << setprecision(0) << tienPhat << endl;
+    try {
+        Person &p = getByCCCD(Owner_id, *hashtableNguoi);
+        cout << "\n--- THONG TIN CHU XE ---" << endl;
+        cout << p;
+    } catch (const exception& e) {
+        cout << "\nKhong tim thay CCCD: " << Owner_id << endl;
+    }
+
     tongTienPhat += tienPhat;
     soLoi++;
 }
