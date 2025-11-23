@@ -1,40 +1,30 @@
-#include <iostream>
-#include <string>
-#include <ctime>
-#include <limits>
-#include "Motor.h"
-#include "Car.h"
-#include "HashFunction.h"
-#include "Person.h"
-#include "HashTable.h"
+#include "mainwindow.h"
+#include "StartupDialog.h"
+#include "Menu.h"
 #include "DataGenerator.h"
-#include "main1.h"
-using namespace std;
+#include <QApplication>
+#include <QMessageBox>
 
+extern vehicleshash* hashtableXe;
+extern HashTable<Person>* hashtableNguoi;
+extern Mylist<Violation> dsMucPhatMotor;
+extern Mylist<Violation> dsMucPhatCar;
 
+void khoiTaoHeThong(StartupDialog& startup);
 
-int main() {
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
 
-    cout << "========================================" << endl;
-    cout << "                                        " << endl;
-    cout << "               PBL2                     " << endl;
-    cout << "        DO AN CO SO LAP TRINH           " << endl;
-    cout << "                                        " << endl;
-    cout << "     VO VIET NHAT - TRAN LE MINH        " << endl;
-    cout << "                                        " << endl;
-    cout << "========================================" << endl;
-    pause();
+    StartupDialog startup;
 
-    khoiTaoHeThong();
-    menuHome();
-    
-    if (hashtableXe != nullptr) {
-        delete hashtableXe;
+    khoiTaoHeThong(startup);
+
+    if (startup.exec() == QDialog::Accepted) {
+        Menu menu;
+        menu.show();
+        return a.exec();
     }
-    if (hashtableNguoi != nullptr) {
-        delete hashtableNguoi;
-    }
-    
+
     return 0;
-
 }

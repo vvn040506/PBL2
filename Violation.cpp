@@ -1,70 +1,77 @@
-#include<iostream>
-#include<fstream>
-#include"Violation.h"
-using namespace std;
-Violation::Violation(const int& id, const string& loi, const int& tien,bool State)
-    : id_loi(id), loiViPham(loi), mucPhat(tien),State(State){} 
+#include "Violation.h"
+#include <QFile>
+#include <QTextStream>
+#include <QDebug>
+
+Violation::Violation(const int& id, const QString& loi, const int& tien, bool State)
+    : id_loi(id), loiViPham(loi), mucPhat(tien), State(State){}
 
 Violation::~Violation() {}
+
 void Violation::display(){
-    cout << "Loi vi pham: " << loiViPham<< " - " << " muc phat tien " << mucPhat << "-";
-    if (State == true) cout << "da dong phat" << endl;
-        else cout << "chua dong phat" <<endl;
+    qDebug() << "Loi vi pham: " << loiViPham<< " - " << " muc phat tien " << mucPhat << "-";
+    if (State == true) qDebug() << "da dong phat";
+    else qDebug() << "chua dong phat";
 }
-int Violation::getID(){
-    return id_loi;
-}
-string Violation::getLoiViPham(){
-    return loiViPham;
-}
-int Violation::getMucPhat(){
-    return mucPhat;
-}
+
 bool Violation::getState(){
     return State;
 }
 void Violation :: setState(bool state){
     this->State = state;
 }
-void Violation::setLoiViPham(const string &name){
+
+int Violation::getID() {
+    return id_loi;
+}
+
+QString Violation::getLoiViPham() {
+    return loiViPham;
+}
+
+int Violation::getMucPhat() {
+    return mucPhat;
+}
+
+void Violation::setLoiViPham(const QString& name) {
     this->loiViPham = name;
 }
-void Violation::setMucPhat(const double &fine){
+
+void Violation::setMucPhat(const double& fine) {
     this->mucPhat = fine;
 }
 
-void readDSLoi(Mylist<Violation>& list, const string& filename) {
-    ifstream fs(filename);
-    if (!fs.is_open()){
-        cout << "mo file that bai" << endl;
+void readDSLoi(Mylist<Violation>& list, const QString& filename) {
+    QFile file(filename);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qDebug() << "mo file that bai";
         return;
     }
-    cout << "mo file thanh cong" << endl;
+    qDebug() << "mo file thanh cong";
 
-    string line;
-    int id;
-    int mucPhat;
-    string tenLoi;
+    QTextStream in(&file);
+    while (!in.atEnd()) {
+        QString line = in.readLine();
+        if (line.isEmpty()) continue;
 
-    while (getline(fs, line)) {
-        if (line.empty()) continue;
-        
-        size_t first_space = line.find(' '); 
-        if (first_space == string::npos) continue;
+        QStringList parts = line.split(' ');
+        if (parts.size() < 3) continue;
 
-        size_t last_space = line.find_last_of(' ');
-        if (last_space == string::npos || last_space <= first_space) continue;
+        bool ok;
+        int id = parts[0].toInt(&ok);
+        if (!ok) continue;
 
-        string idStr = line.substr(0, first_space);
-        string mucPhatStr = line.substr(last_space + 1);
+        int mucPhat = parts[parts.size() - 1].toInt(&ok);
+        if (!ok) continue;
 
-        tenLoi = line.substr(first_space + 1, last_space - (first_space + 1));
-        
-            id = stoi(idStr);
-            mucPhat = stoi(mucPhatStr);
+        QString tenLoi;
+        for (int i = 1; i < parts.size() - 1; ++i) {
+            tenLoi += parts[i];
+            if (i < parts.size() - 2) tenLoi += " ";
+        }
 
-            Violation p(id, tenLoi, mucPhat,true);
-            list.push_back(p);
+        Violation p(id, tenLoi, mucPhat, true);
+        list.push_back(p);
     }
-    fs.close();
+    file.close();
 }

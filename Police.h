@@ -1,42 +1,43 @@
-#pragma once
-#include"HashTable.h"
-#include"Person.h"
+#ifndef POLICE_H
+#define POLICE_H
+
+#include "Violation.h"
+#include "Mylist.h"
+#include "HashTable.h"
+#include "Person.h"
 #include "pair.hpp"
-#include <iostream>
-#include <string>
 #include "HashFunction.h"
 #include "Xe.h"
+#include <QLineEdit>
+#include <QString>
 
-using namespace std;
+class Police : public Person {
+private:
+    QString id_police;
+    QString pass;
+    QLineEdit* createStyledLineEdit(const QString& placeholder);
+public:
+    static HashTable<Pair>* dsPolice;
+    Police();
+    Police(const QString&, const QString&);
+    ~Police();
+    QString getID();
+    static void showPoliceWork(const QString& id);
+    static void addPoliceWork(const QString& id_police, const QString& bienso, const QString& ngay);
+    static Mylist<Pair> getPoliceWork(const QString& id);
 
-//class Person;
-//template<typename T> class HashTable;
-
-class Police: public Person{
-    private:
-        string id_police;
-        string pass;
-    public:
-        static HashTable<Pair>* dsPolice;
-        Police();
-        Police(const string&,const string&);
-        ~Police();
-        string getID();
-        static void showPoliceWork(const string&);
-        static void addPoliceWork(const string& id_police, const string& bienso, const string& ngay);
-        static Mylist<Pair> getPoliceWork(const string& id);
-        
-        void menu() override;
-        void themloiXe(vehicleshash* Hash);
-        void dongPhat(vehicleshash* Hash);
-        void themxeMoi(vehicleshash* Hash);
-        bool dangNhap(const string& i, const string& p);
-        
+    // void menu() override;
+    void themloiXe(vehicleshash* Hash);
+    void xoaloiXe(vehicleshash* Hash);
+    void themxeMoi(vehicleshash* Hash);
+    bool dangNhap(const QString& i, const QString& p);
 };
-void themXeVaoPerson(const string& cccd, const string& bienSo, const string& ten, 
-                     const string& sdt, const string& diachi, int loai);
-Xe* taoXeMoi(const string& bienSo, int loai);
-void capNhatFileCCCD(const string& cccd, const string& bienSo);
-void capNhatFileBienSo(Xe* xe);                   
 
-#include "Person.h"
+void themXeVaoPerson(const QString& cccd, const QString& bienSo, const QString& ten,
+                     const QString& sdt, const QString& diachi, int loai);
+Xe* taoXeMoi(const QString& bienSo, int loai);
+void capNhatFileBienSo(Xe* xe);
+void capNhatFileCCCD(const QString& cccd, const QString& bienSo);
+
+
+#endif // POLICE_H

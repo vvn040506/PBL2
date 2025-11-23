@@ -1,28 +1,28 @@
-//Vi phạm
-#pragma once
-#include<iostream>
-#include<string>
-#include"Mylist.h"
-using namespace std;
-class Violation{
-    private:
-        int id_loi;
-        string loiViPham;
-        int mucPhat;
-        bool State;
-    public:
-        Mylist<Violation> list;
-        Violation(const int&, const string&, const int&,bool); 
-        ~Violation();
-        void display();
-        int getID();
-        string getLoiViPham() ;
-        int getMucPhat();
-        bool getState();
-        void setState(bool);
+#ifndef VIOLATION_H
+#define VIOLATION_H
 
-        void setLoiViPham(const string&);
-        void setMucPhat(const double&);
-        friend void readDSLoi(Mylist<Violation> &, const string&);
-        
+#include <QString>
+#include "Mylist.h"
+
+class Violation {
+private:
+    int id_loi;
+    QString loiViPham;
+    int mucPhat;
+    bool State;
+public:
+    Mylist<Violation> list;
+    Violation(const int&, const QString&, const int&,bool);
+    ~Violation();
+    void display();
+    int getID();
+    QString getLoiViPham();
+    int getMucPhat();
+    void setLoiViPham(const QString& name);
+    void setMucPhat(const double& fine);
+    bool getState();
+    void setState(bool);
+    friend void readDSLoi(Mylist<Violation>& list, const QString& filename);
 };
+
+#endif // VIOLATION_H

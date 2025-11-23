@@ -1,26 +1,23 @@
-#pragma once
-#include "Xe.h" 
+#ifndef CAR_H
+#define CAR_H
+
+#include "Xe.h"
 #include "Mylist.h"
 #include "pair.hpp"
-#include <iostream>
-#include <string>
-using namespace std;
+#include <QString>
 
-class Car: public Xe{
-    private:
-        static long long tongTienPhat;
-    public:
-        Car();
-        ~Car();
-        
-        long long& gettongTienPhat();
-        void truyxuatLoi() override;
-        void display() override;
+class Car: public Xe {
+private:
+    static long long tongTienPhat;
+public:
+    Car();
+    ~Car();
 
+    long long& gettongTienPhat();
+    QString truyxuatLoi() override;
+    void display() override;
 
-        friend istream& operator >> (istream&, Car&);
-        friend ostream& operator << (ostream&, Car&);
+    friend QDebug operator<<(QDebug debug, Car& car);
 };
 
-#include "Police.h"
-
+#endif // CAR_H

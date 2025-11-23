@@ -1,9 +1,8 @@
 #ifndef MYLIST_H
 #define MYLIST_H
 
-#include<iostream>
-#include"pair.hpp"
-using namespace std;
+#include <QDebug>
+#include "pair.hpp"
 
 template <typename T>
 class Mylist;
@@ -14,6 +13,7 @@ private:
     T data;
     Node<T>* prev;
     Node<T>* next;
+
 public:
     Node(T val);
     T getdata() const;
@@ -21,8 +21,9 @@ public:
     void setdata(T val);
     Node* getprev();
     Node* getnext();
-    bool operator == (const Node<T>&) const;
-    bool operator != (const Node<T>&) const;
+    bool operator==(const Node<T>& other) const;
+    bool operator!=(const Node<T>& other) const;
+
     friend class Mylist<T>;
 };
 
@@ -32,11 +33,13 @@ private:
     Node<T>* head;
     Node<T>* tail;
     int n;
+
 public:
     Mylist();
+    Mylist(const Mylist<T>& other);
     ~Mylist();
 
-    bool IsEmpty();
+    bool isEmpty();
     int size();
     Node<T>* getNodeByValue(T value);
 
@@ -50,14 +53,13 @@ public:
     void erase(Node<T>* index);
     void erase(const T &value);
     void print();
-    
     Node<T>* begin();
     Node<T>* end();
     bool operator==(const Mylist<T>& other) const;
     bool operator!=(const Mylist<T>& other) const;
-    
-    Mylist(const Mylist& other);
-    Mylist& operator=(const Mylist& other);
+    Mylist<T>& operator=(const Mylist<T>& other);
+
+    void clear();
 };
 
 template <typename T>
@@ -65,8 +67,9 @@ Node<T>::Node(T val) : data(val), prev(nullptr), next(nullptr) {}
 
 template <typename T>
 T Node<T>::getdata() const { return data; }
+
 template <typename T>
-T& Node<T>::refgetdata() { return data; } 
+T& Node<T>::refgetdata() { return data; }
 
 template <typename T>
 void Node<T>::setdata(T val) { data = val; }
@@ -78,12 +81,12 @@ template <typename T>
 Node<T>* Node<T>::getnext() { return next; }
 
 template <typename T>
-bool Node<T>::operator == (const Node<T>& other) const{
+bool Node<T>::operator==(const Node<T>& other) const {
     return this->getdata() == other.getdata();
 }
 
 template <typename T>
-bool Node<T>::operator != (const Node<T>& other) const{
+bool Node<T>::operator!=(const Node<T>& other) const {
     return this->getdata() != other.getdata();
 }
 
@@ -100,7 +103,7 @@ Mylist<T>::~Mylist() {
 }
 
 template <typename T>
-bool Mylist<T>::IsEmpty() { return n == 0; }
+bool Mylist<T>::isEmpty() { return n == 0; }
 
 template <typename T>
 int Mylist<T>::size() { return n; }
@@ -132,7 +135,7 @@ void Mylist<T>::push_back(T value) {
 template <typename T>
 void Mylist<T>::push_front(T value) {
     Node<T>* node = new Node<T>(value);
-    if (IsEmpty()) {
+    if (isEmpty()) {
         head = tail = node;
     } else {
         head->prev = node;
@@ -145,7 +148,7 @@ void Mylist<T>::push_front(T value) {
 template <typename T>
 void Mylist<T>::insert(T value, int index) {
     if (index < 0 || index > n) {
-        cout << "Vi tri chen khong hop le" << endl;
+        qDebug() << "Vi tri chen khong hop le";
         return;
     }
     if (index == 0) { push_front(value); return; }
@@ -165,13 +168,13 @@ void Mylist<T>::insert(T value, int index) {
 template <typename T>
 void Mylist<T>::insert(Node<T>* position, T value) {
     if (position == nullptr) {
-        cout << "Node chi dinh khong hop le!" << endl;
+        qDebug() << "Node chi dinh khong hop le!";
         return;
     }
 
     Node<T>* node = new Node<T>(value);
 
-    if (position == tail) { 
+    if (position == tail) {
         position->next = node;
         node->prev = position;
         tail = node;
@@ -186,22 +189,22 @@ void Mylist<T>::insert(Node<T>* position, T value) {
 
 template <typename T>
 void Mylist<T>::pop_back() {
-    if (IsEmpty()) return;
+    if (isEmpty()) return;
     Node<T>* temp = tail;
     tail = tail->prev;
     n--;
-    if (!IsEmpty()) tail->next = nullptr;
+    if (!isEmpty()) tail->next = nullptr;
     else head = tail = nullptr;
     delete temp;
 }
 
 template <typename T>
 void Mylist<T>::pop_front() {
-    if (IsEmpty()) return;
+    if (isEmpty()) return;
     Node<T>* temp = head;
     head = head->next;
     n--;
-    if (!IsEmpty()) head->prev = nullptr;
+    if (!isEmpty()) head->prev = nullptr;
     else head = tail = nullptr;
     delete temp;
 }
@@ -237,9 +240,9 @@ void Mylist<T>::erase(Node<T>* position) {
 template <typename T>
 void Mylist<T>::erase(const T& value) {
     Node<T>* nodeToDelete = getNodeByValue(value);
-    
+
     if (nodeToDelete != nullptr) {
-        erase(nodeToDelete); 
+        erase(nodeToDelete);
     }
 }
 
@@ -247,10 +250,9 @@ template <typename T>
 void Mylist<T>::print() {
     Node<T>* current = head;
     while (current) {
-        cout << current->getdata() << " ";
+        qDebug() << current->getdata();
         current = current->getnext();
     }
-    cout << endl;
 }
 
 template <typename T>
@@ -265,7 +267,7 @@ Node<T>* Mylist<T>::end(){
 
 template <typename T>
 bool Mylist<T>::operator==(const Mylist<T>& other) const {
-    if (this->n != other.n) 
+    if (this->n != other.n)
         return false;
 
     Node<T>* cur1 = this->head;
@@ -285,33 +287,42 @@ bool Mylist<T>::operator!=(const Mylist<T>& other) const {
     return !(*this == other);
 }
 
-template <typename T>
-Mylist<T>::Mylist(const Mylist& other) : head(nullptr), tail(nullptr), n(0) {
-    Node<T>* cur = other.head;
-    while (cur) {
-        push_back(cur->getdata());
-        cur = cur->getnext();
-    }
-}
-
-template <typename T>
-Mylist<T>& Mylist<T>::operator=(const Mylist& other) {
-    if (this == &other) return *this;
-
-    while (head) {
-        Node<T>* temp = head;
-        head = head->next;
+template<typename T>
+void Mylist<T>::clear() {
+    Node<T>* current = head;
+    while (current != nullptr) {
+        Node<T>* temp = current;
+        current = current->next;
         delete temp;
     }
     head = tail = nullptr;
     n = 0;
+}
 
-    Node<T>* cur = other.head;
-    while (cur) {
-        push_back(cur->getdata());
-        cur = cur->getnext();
+template <typename T>
+Mylist<T>::Mylist(const Mylist<T>& other) : head(nullptr), tail(nullptr), n(0) {
+    Node<T>* current = other.head;
+    while (current != nullptr) {
+        this->push_back(current->getdata());
+        current = current->getnext();
     }
+}
+
+template <typename T>
+Mylist<T>& Mylist<T>::operator=(const Mylist<T>& other) {
+    if (this == &other) {
+        return *this;
+    }
+
+    this->clear();
+
+    Node<T>* current = other.head;
+    while (current != nullptr) {
+        this->push_back(current->refgetdata());
+        current = current->getnext();
+    }
+
     return *this;
 }
 
-#endif
+#endif // MYLIST_H

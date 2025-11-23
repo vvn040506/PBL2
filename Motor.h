@@ -1,24 +1,23 @@
-#pragma once
-#include "Xe.h" 
+#ifndef MOTOR_H
+#define MOTOR_H
+
+#include "Xe.h"
 #include "Mylist.h"
 #include "pair.hpp"
-#include <iostream>
-#include <string>
-using namespace std;
-class Motor: public Xe{
-    private:
-        static long long tongTienPhat;
-    public:
-        Motor();
-        ~Motor();
-        
-        long long& gettongTienPhat();
-        void display() override;
-        void truyxuatLoi() override;
+#include <QString>
 
+class Motor: public Xe {
+private:
+    static long long tongTienPhat;
+public:
+    Motor();
+    ~Motor();
 
-        friend istream& operator >> (istream&, Motor&);
-        friend ostream& operator << (ostream&, Motor&);
+    long long& gettongTienPhat();
+    void display() override;
+    QString truyxuatLoi() override;
+
+    friend QDebug operator<<(QDebug debug, Motor& motor);
 };
 
-#include "Police.h"
+#endif // MOTOR_H
