@@ -23,7 +23,7 @@ extern QString finalbienSo;
 extern QString finalCCCD;
 
 bool isValidBienSo(const QString& bienSo) {
-    QRegularExpression bienSoPattern(R"(\d{2}-[A-Z]\d-\d{5})");
+    QRegularExpression bienSoPattern(R"(^\d{2}-(?:[A-Z]{2}|[A-Z]\d?)-\d{5}$)");
     return bienSoPattern.match(bienSo).hasMatch();
 }
 
@@ -51,7 +51,7 @@ QString DataGenerator::generateBienSo() {
         "43", "47", "48", "49"          // Đà Nẵng, Tây Nguyên
     };
 
-    QStringList types = {"A1", "A2", "B1", "B2", "C1", "C2", "D1", "D2"};
+    QStringList types = {"A", "AA", "B", "B1", "C", "C1", "D1", "D2"};
 
     QString province = provinces.at(rand() % provinces.size());
     QString type = types.at(rand() % types.size());
@@ -291,21 +291,27 @@ void DataGenerator::docFileBienSo(const QString& filename, vehicleshash* hashtab
         if (line.isEmpty()) continue;
 
         int pipePos = line.indexOf('|');
-        QString bienSo;
+
+        QString header;
         QString loiPart;
 
         if (pipePos != -1) {
-            bienSo = line.left(pipePos);
+            header = line.left(pipePos).trimmed();
             loiPart = line.mid(pipePos + 1);
         } else {
-            bienSo = line;
+            header = line.trimmed();
             loiPart = "";
         }
 
-        bienSo = bienSo.trimmed();
+        QStringList headTokens = header.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts);
+        QString bienSo = headTokens.value(0).trimmed();
+        QString type   = headTokens.value(1).trimmed();
+        if (type != "M" && type != "C") type = "C";
+
+        bool isMotor = (type == "M");
+        // ===== HẾT PHẦN CHỈNH =====
 
         Xe* xe = nullptr;
-        bool isMotor = (rand() % 2 == 0);
 
         if (isMotor) {
             Motor* motor = new Motor();
@@ -397,6 +403,8 @@ void DataGenerator::docFileBienSo(const QString& filename, vehicleshash* hashtab
     qDebug() << "  - Loi da dong phat:" << loiDaDong;
     qDebug() << "  - Loi chua dong phat:" << loiChuaDong;
 }
+
+
 void DataGenerator::docFileCCCD(const QString& filename, HashTable<Person>& dsNguoi) {
     initRandom();
 

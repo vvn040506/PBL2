@@ -1,1001 +1,402 @@
-52-B1-16472 | di tren via he 04-04-2025 CD | khong mang bang lai 16-08-2025 CD
-18-B1-19437 | su dung dien thoai 15-03-2024 CD
-37-C2-25644 | khong mang bang lai 20-08-2024 CD | do via he 15-07-2024 CD | di nguoc chieu 20-02-2025 CD
-47-C1-14719 | do via he 11-06-2025 CD | vuot toc do 14-12-2024 CD | vuot toc do 07-02-2024 CD
-51-A1-11247 | vuot toc do 07-08-2024 CD
-29-A2-36709 | su dung dien thoai 22-09-2024 CD
-52-B1-26756 | chuyen huong khong xi nhan 10-11-2025 CD
-18-A2-16944 | khong mang bang lai 13-09-2024 CD
-52-D1-33813 | dung do sai quy dinh 30-05-2025 CD
-37-B2-38730 | vuot den do 14-07-2024 CD
-72-C1-39522 | khong bat den sang ban dem 05-01-2025 CD
-72-B1-12652 | cho nguoi qua so quy dinh 18-10-2024 CD
-50-D2-17336 | di nguoc chieu 22-04-2024 CD | di nguoc chieu 24-06-2024 CD | di tren via he 17-01-2025 CD
-48-A1-34279 | vuot den do 03-08-2025 CD
-29-B1-41804 | khong co giay phep lai xe 25-12-2024 CD
-37-D1-30887 | di sai lan duong 09-04-2025 CD
-52-B2-17582 | vuot toc do 23-06-2024 CD | di nguoc chieu 28-03-2024 CD
-38-A2-16530 | khong nhuong duong cho xe uu tien 11-02-2025 CD
-33-C2-28316 | khong co giay phep lai xe 19-09-2025 CD
-50-A1-42435 | khong nhuong duong cho xe uu tien 06-06-2024 CD
-60-B1-12873 | khong giu khoang cach an toan 27-03-2025 CD
-31-A2-19764 | vuot xe sai quy dinh 15-11-2024 CD
-29-C1-40934 | khong co bien so xe 08-08-2025 CD
-61-D1-21797 | van chay qua tai 21-01-2025 CD
-60-C2-36571 | doi tuyen tai noi duong bo bi cam 02-10-2024 CD
-41-A2-34299 | di nguoc chieu 04-04-2025 CD | khong mang bang lai 08-03-2025 CD | do via he 06-03-2024 CD
-16-D2-21728 | di tren via he 17-01-2024 CD | vuot toc do 19-08-2024 CD
-41-B2-38172 | khong mang bang lai 14-06-2024 CD
-51-B1-40987 | vuot xe sai quy dinh 13-07-2025 CD
-30-C1-31190 | vuot toc do 13-11-2025 DD | khong co giay phep lai xe 18-11-2025 CD
-35-C1-24086 | khong tuong tron 24-05-2024 CD
-30-A2-10762 | di nguoc chieu 17-02-2025 CD
-60-D1-18129 | khong co giay phep lai xe 30-09-2024 CD
-49-A1-25983 | di tren via he 12-04-2025 CD | di tren via he 22-05-2024 CD | do via he 07-02-2025 CD
-38-C2-25574 | di nguoc chieu 26-12-2024 CD | do via he 23-09-2024 CD
-52-B2-23322 | di tren via he 25-05-2025 CD
-29-B2-34977 | khong mang bang lai 04-11-2024 CD
-29-A2-22029 | di tren via he 19-08-2024 CD | do via he 01-07-2024 CD
-32-B1-39764 | su dung dien thoai 10-10-2025 CD
-30-B2-34387 | vuot den do 22-12-2024 CD
-49-D1-39954 | khong mang bang lai 27-09-2024 CD
-37-A1-31642 | di sai lan duong 15-08-2025 CD
-60-A1-32672 | su dung dien thoai 03-04-2024 CD
-31-C1-25518 | vuot den do 28-07-2025 CD
-29-B1-32162 | khong co giay phep lai xe 11-01-2025 CD
-72-C2-13941 | vuot toc do 09-02-2025 CD | di nguoc chieu 12-11-2024 CD
-72-A2-16439 | di nguoc chieu 04-08-2024 CD | do via he 05-07-2024 CD | di nguoc chieu 14-10-2025 CD
-52-C2-16116 | vuot toc do 19-12-2025 CD | di tren via he 13-12-2025 CD | di nguoc chieu 27-07-2025 CD
-41-A1-33394 | khong nhuong duong cho xe uu tien 20-06-2025 CD
-50-A2-15774 | vuot toc do 25-08-2025 CD
-43-D2-10924 | vuot toc do 15-05-2024 CD | di tren via he 26-08-2025 CD
-47-C2-31502 | chuyen huong khong xi nhan 07-09-2024 CD
-72-D1-38942 | dung do sai quy dinh 14-03-2025 CD
-38-A2-35543 | di nguoc chieu 10-08-2024 CD
-29-B1-15165 | vuot den do 25-10-2025 CD
-47-B1-42694 | khong bat den sang ban dem 01-02-2024 CD
-50-D2-21684 | cho nguoi qua so quy dinh 18-11-2024 CD
-72-A1-23978 | vuot den do 05-04-2025 CD
-72-B1-24840 | khong co giay phep lai xe 30-12-2024 CD
-30-A1-29586 | di sai lan duong 11-07-2025 CD
-15-A2-41507 | khong co giay phep lai xe 23-09-2025 CD
-29-A2-11435 | khong nhuong duong cho xe uu tien 08-06-2024 CD
-29-B1-25303 | khong giu khoang cach an toan 17-03-2025 CD
-17-B2-41486 | di nguoc chieu 11-11-2024 CD | do via he 08-12-2024 CD | di nguoc chieu 03-03-2024 CD
-52-B2-40188 | vuot xe sai quy dinh 19-10-2024 CD
-49-A2-17611 | khong co bien so xe 12-08-2025 CD
-31-D1-21747 | van chay qua tai 26-01-2025 CD
-15-C2-22416 | do via he 05-09-2025 CD
-72-D2-41908 | di nguoc chieu 17-12-2025 CD
-31-A2-41840 | doi tuyen tai noi duong bo bi cam 04-10-2024 CD
-72-A1-35691 | khong tuong tron 21-05-2024 CD
-43-C1-25708 | di nguoc chieu 23-01-2025 CD | di tren via he 21-04-2025 CD
-30-D1-29595 | vuot xe sai quy dinh 15-07-2025 CD
-33-A1-10735 | di nguoc chieu 13-03-2024 CD | di tren via he 11-02-2024 CD | khong mang bang lai 24-08-2024 CD
-60-B1-40046 | su dung dien thoai 09-04-2025 CD
-30-B1-32882 | do via he 13-04-2024 CD | di tren via he 17-10-2025 CD | khong mang bang lai 19-06-2025 CD
-60-C1-15774 | di tren via he 09-06-2025 CD | do via he 21-11-2025 CD
-16-C1-33308 | su dung dien thoai 28-08-2024 CD
-72-D1-35935 | di tren via he 18-09-2025 CD | di nguoc chieu 12-04-2025 CD
-29-D2-20231 | vuot den do 03-11-2024 CD
-50-A1-10528 | khong nhuong duong cho xe uu tien 16-02-2025 CD
-47-D2-13583 | chuyen huong khong xi nhan 24-07-2025 CD
-52-B2-21951 | dung do sai quy dinh 11-10-2024 CD
-43-D1-33239 | khong mang bang lai 05-09-2025 CD
-33-D1-11189 | di sai lan duong 20-08-2025 CD
-43-C2-31818 | khong mang bang lai 06-07-2024 CD | di nguoc chieu 01-06-2025 CD | khong mang bang lai 27-04-2024 CD
-35-A2-31279 | su dung dien thoai 13-01-2025 CD
-50-B2-26392 | vuot den do 07-03-2025 CD
-31-A2-22820 | khong co giay phep lai xe 22-12-2024 CD
-15-A2-11259 | vuot toc do 09-09-2024 CD
-41-C1-38156 | vuot den do 18-11-2025 CD
-35-D2-42654 | khong bat den sang ban dem 02-02-2024 CD
-49-B1-17745 | khong mang bang lai 27-03-2024 CD | khong mang bang lai 09-09-2025 CD
-47-B1-10149 | cho nguoi qua so quy dinh 26-10-2024 CD
-36-B1-13314 | vuot den do 14-04-2025 CD
-41-D1-39763 | di sai lan duong 08-08-2025 CD
-47-D2-32386 | khong mang bang lai 17-05-2024 CD | do via he 10-10-2024 CD
-52-C2-24974 | khong co giay phep lai xe 30-09-2025 CD
-36-B2-26969 | khong nhuong duong cho xe uu tien 11-06-2024 CD
-38-D1-42074 | di nguoc chieu 01-03-2024 CD
-37-B2-30724 | khong giu khoang cach an toan 23-03-2025 CD
-36-B2-23253 | vuot toc do 08-08-2024 CD | di tren via he 10-01-2025 CD
-17-D2-12385 | khong mang bang lai 09-05-2024 CD
-16-D1-11461 | vuot xe sai quy dinh 16-10-2024 CD
-48-B2-26289 | khong co bien so xe 05-08-2025 CD
-36-B1-30485 | van chay qua tai 28-01-2025 CD
-30-A2-23284 | vuot toc do 23-11-2025 CD
-29-D1-10964 | doi tuyen tai noi duong bo bi cam 08-10-2024 CD
-18-A2-30879 | khong tuong tron 17-05-2024 CD
-51-D1-27738 | do via he 11-01-2024 CD | do via he 23-10-2024 CD
-15-C1-11088 | do via he 27-12-2024 CD | vuot toc do 27-11-2025 CD
-72-D1-24844 | su dung dien thoai 07-04-2025 CD
-15-C1-23640 | su dung dien thoai 20-08-2024 CD
-36-B2-12986 | vuot den do 12-11-2024 CD
-30-B1-27960 | di tren via he 09-04-2024 CD | di nguoc chieu 12-01-2024 CD | di tren via he 21-05-2024 CD
-41-A2-24277 | khong nhuong duong cho xe uu tien 25-02-2025 CD
-37-D2-42598 | chuyen huong khong xi nhan 03-07-2025 CD
-35-D1-35647 | khong mang bang lai 16-12-2024 CD | di tren via he 16-06-2025 CD | khong mang bang lai 12-03-2025 CD
-38-C1-31252 | do via he 07-02-2025 CD | di nguoc chieu 19-11-2025 CD
-33-D2-40450 | dung do sai quy dinh 15-10-2024 CD
-51-B1-17213 | khong mang bang lai 08-09-2025 CD
-72-C1-40431 | di sai lan duong 22-08-2025 CD
-52-C2-24431 | su dung dien thoai 11-01-2025 CD
-61-A1-28625 | khong mang bang lai 22-02-2025 CD | di tren via he 24-07-2025 CD
-43-C2-32688 | vuot den do 06-03-2025 CD
-36-C2-30465 | khong co giay phep lai xe 29-12-2024 CD
-16-C2-29660 | di nguoc chieu 12-04-2024 CD | di tren via he 03-04-2024 CD
-17-A2-31446 | di tren via he 12-08-2024 CD | di nguoc chieu 08-07-2024 CD | vuot toc do 06-04-2025 CD
-41-A2-12033 | di nguoc chieu 01-07-2025 CD | di nguoc chieu 03-02-2024 CD | di nguoc chieu 25-07-2024 CD
-29-C1-19447 | vuot den do 17-11-2025 CD
-17-A2-36353 | khong nhuong duong cho xe uu tien 14-02-2025 CD
-38-A2-14455 | chuyen huong khong xi nhan 27-07-2025 CD
-36-B2-11778 | vuot toc do 14-04-2024 CD | di nguoc chieu 13-09-2024 CD
-72-D1-35177 | dung do sai quy dinh 10-10-2024 CD
-49-A1-18164 | di nguoc chieu 04-06-2024 CD | di nguoc chieu 18-10-2025 CD
-36-B1-25717 | di nguoc chieu 20-05-2024 CD
-31-C2-26381 | di tren via he 08-04-2025 CD | vuot toc do 28-04-2024 CD | vuot toc do 20-12-2024 CD
-49-C2-42255 | di tren via he 22-09-2024 CD | vuot toc do 17-12-2024 CD | do via he 25-07-2025 CD
-33-D1-33952 | do via he 23-07-2025 CD | khong mang bang lai 08-03-2025 CD
-43-B2-17541 | vuot toc do 17-08-2025 CD | vuot toc do 22-06-2024 CD | vuot toc do 14-03-2025 CD
-50-C2-18253 | khong co giay phep lai xe 01-10-2025 CD
-72-A2-36755 | khong nhuong duong cho xe uu tien 13-06-2024 CD
-30-B1-32448 | khong giu khoang cach an toan 25-03-2025 CD
-36-D1-35910 | vuot xe sai quy dinh 18-10-2024 CD
-15-C1-19089 | di tren via he 27-02-2024 CD | do via he 18-01-2025 CD
-72-B1-14501 | di nguoc chieu 25-07-2024 CD
-16-B2-12525 | khong co bien so xe 09-08-2025 CD
-30-A2-14483 | van chay qua tai 30-01-2025 CD
-48-D1-22505 | doi tuyen tai noi duong bo bi cam 12-10-2024 CD
-72-A2-16236 | khong tuong tron 23-05-2024 CD
-16-A2-19284 | khong mang bang lai 21-05-2025 CD
-29-A1-18724 | su dung dien thoai 10-04-2025 CD
-60-D1-20078 | su dung dien thoai 24-08-2024 CD
-36-A1-14976 | di nguoc chieu 09-09-2025 CD
-60-C1-25328 | vuot den do 28-10-2025 CD
-72-B1-37911 | do via he 12-08-2024 CD | do via he 14-02-2025 CD
-29-D1-31654 | khong mang bang lai 07-11-2025 CD | khong mang bang lai 14-05-2025 CD | di tren via he 17-04-2024 CD
-72-A2-14528 | do via he 23-03-2025 CD
-36-C2-31765 | khong mang bang lai 18-01-2024 CD
-37-D1-34541 | di nguoc chieu 19-07-2024 CD | khong mang bang lai 23-01-2024 CD | di tren via he 22-01-2024 CD
-52-B2-18487 | di nguoc chieu 09-05-2024 CD
-47-B1-37444 | khong nhuong duong cho xe uu tien 18-02-2025 CD
-51-B1-41829 | di tren via he 18-05-2024 CD | di nguoc chieu 26-11-2025 CD
-41-A1-20980 | chuyen huong khong xi nhan 05-07-2025 CD
-49-B2-14953 | dung do sai quy dinh 16-10-2024 CD
-18-D1-11989 | do via he 19-01-2024 CD | di nguoc chieu 27-04-2025 CD | vuot toc do 23-04-2024 CD
-35-A1-36378 | di nguoc chieu 24-08-2025 CD | khong mang bang lai 20-03-2024 CD | di tren via he 02-05-2025 CD
-32-D1-24535 | khong mang bang lai 11-09-2025 CD
-33-D2-41680 | di tren via he 27-08-2024 CD
-47-C1-21617 | di sai lan duong 24-08-2025 CD
-38-D1-28473 | su dung dien thoai 12-04-2025 CD
-33-C1-41743 | vuot den do 09-03-2025 CD
-32-A1-18440 | di tren via he 22-06-2025 CD | khong mang bang lai 11-03-2025 CD | di nguoc chieu 18-07-2024 CD
-35-B2-40182 | khong co giay phep lai xe 31-12-2024 CD
-31-C1-38159 | di tren via he 17-03-2025 CD | do via he 23-04-2024 CD
-35-C1-20203 | vuot den do 21-11-2024 CD
-33-C2-22225 | khong bat den sang ban dem 06-02-2024 CD
-29-A2-35786 | cho nguoi qua so quy dinh 30-10-2024 CD
-30-A2-35655 | vuot den do 10-03-2025 CD
-36-B2-38449 | di sai lan duong 26-08-2025 CD
-16-C2-38400 | khong co giay phep lai xe 04-10-2025 CD
-72-D2-18377 | di tren via he 09-11-2024 CD
-72-B1-30303 | di nguoc chieu 02-11-2024 CD | vuot toc do 23-07-2025 CD
-41-D1-21270 | khong nhuong duong cho xe uu tien 15-06-2024 CD
-35-D1-16763 | khong mang bang lai 08-04-2024 CD | di nguoc chieu 04-03-2024 CD | khong mang bang lai 17-07-2025 CD
-29-C2-34493 | khong giu khoang cach an toan 27-03-2025 CD
-32-B1-11335 | vuot xe sai quy dinh 20-10-2024 CD
-61-B2-14661 | di tren via he 18-07-2024 CD | di nguoc chieu 19-04-2025 CD | vuot toc do 12-03-2025 CD
-29-B1-38708 | khong co bien so xe 11-08-2025 CD
-50-A2-39436 | van chay qua tai 01-02-2025 CD
-52-D2-14961 | doi tuyen tai noi duong bo bi cam 14-10-2024 CD
-18-A2-24474 | khong tuong tron 25-05-2024 CD
-50-B2-23581 | su dung dien thoai 13-04-2025 CD
-36-D2-13865 | su dung dien thoai 28-08-2024 CD
-16-D2-31919 | vuot den do 05-11-2024 CD
-32-C1-30084 | di tren via he 07-11-2025 CD
-51-C1-27559 | khong nhuong duong cho xe uu tien 19-02-2025 CD
-43-C1-35104 | vuot toc do 03-02-2024 CD | di tren via he 24-01-2025 CD | di nguoc chieu 01-09-2024 CD
-15-A1-31132 | chuyen huong khong xi nhan 08-07-2025 CD
-17-C2-19625 | dung do sai quy dinh 17-10-2024 CD
-43-B2-24791 | di tren via he 17-10-2024 CD | di nguoc chieu 21-04-2025 CD | di tren via he 12-07-2025 CD
-31-D2-29718 | khong mang bang lai 12-09-2025 CD
-31-D2-13460 | di sai lan duong 23-08-2025 CD
-43-A1-40876 | su dung dien thoai 14-04-2025 CD
-31-A2-31221 | vuot den do 11-03-2025 CD
-16-A2-31426 | khong co giay phep lai xe 02-01-2025 CD
-37-C1-31384 | di nguoc chieu 12-03-2025 CD | khong mang bang lai 17-08-2025 CD
-48-A1-10812 | vuot den do 07-11-2024 CD
-37-D1-14877 | vuot toc do 25-09-2024 CD
-72-C2-36483 | khong bat den sang ban dem 08-02-2024 CD
-38-D1-34242 | khong mang bang lai 02-12-2025 CD | vuot toc do 19-05-2025 CD | di nguoc chieu 22-09-2025 CD
-36-B2-40961 | cho nguoi qua so quy dinh 01-11-2024 CD
-41-C2-33948 | vuot den do 12-03-2025 CD
-29-C2-41147 | di sai lan duong 27-08-2025 CD
-33-B2-40613 | vuot toc do 11-11-2024 CD
-32-C1-14773 | khong co giay phep lai xe 06-10-2025 CD
-51-A2-29706 | khong nhuong duong cho xe uu tien 18-06-2024 CD
-38-B2-26062 | di nguoc chieu 01-10-2025 CD | di nguoc chieu 06-06-2024 CD | do via he 01-02-2024 CD
-51-A2-30744 | khong giu khoang cach an toan 29-03-2025 CD
-47-A2-18901 | vuot xe sai quy dinh 23-10-2024 CD
-31-C2-39053 | do via he 02-12-2025 CD
-38-C2-35663 | khong co bien so xe 15-08-2025 CD
-15-A1-28974 | di tren via he 15-08-2025 CD | vuot toc do 05-05-2025 CD | khong mang bang lai 02-10-2025 CD
-50-C2-24021 | van chay qua tai 05-02-2025 CD
-38-B2-35699 | doi tuyen tai noi duong bo bi cam 16-10-2024 CD
-31-B1-10492 | khong tuong tron 28-05-2024 CD
-35-C1-18377 | su dung dien thoai 16-04-2025 CD
-33-A2-22682 | vuot toc do 01-12-2024 CD
-31-A2-19553 | su dung dien thoai 01-09-2024 CD
-49-A2-14898 | vuot den do 10-11-2024 CD
-32-B1-40351 | khong nhuong duong cho xe uu tien 22-02-2025 CD
-38-A2-37427 | di tren via he 05-05-2025 CD | vuot toc do 02-05-2024 CD | di tren via he 18-10-2024 CD
-29-B2-13708 | vuot toc do 02-09-2024 CD | khong mang bang lai 07-01-2024 CD
-52-C1-12710 | chuyen huong khong xi nhan 11-07-2025 CD
-30-D2-27147 | dung do sai quy dinh 20-10-2024 CD
-52-C2-33575 | khong mang bang lai 15-09-2025 CD
-60-C2-15167 | di sai lan duong 30-08-2025 CD
-35-D2-12401 | su dung dien thoai 17-04-2025 CD
-17-C2-13151 | di nguoc chieu 24-04-2024 CD
-60-D2-14639 | do via he 16-11-2025 CD | di tren via he 07-01-2024 CD | khong mang bang lai 02-05-2025 CD
-43-C1-20639 | vuot den do 13-03-2025 CD
-17-C1-24226 | khong co giay phep lai xe 04-01-2025 CD
-30-A2-34230 | khong bat den sang ban dem 09-02-2024 CD
-48-D2-14531 | cho nguoi qua so quy dinh 05-11-2024 CD
-41-D2-42033 | vuot den do 14-03-2025 CD
-29-A2-18728 | di sai lan duong 31-08-2025 CD
-18-C2-18617 | khong co giay phep lai xe 08-10-2025 CD
-31-B1-15092 | khong nhuong duong cho xe uu tien 20-06-2024 CD
-47-D2-35871 | di nguoc chieu 14-04-2024 CD | vuot toc do 12-12-2024 CD | di tren via he 14-08-2025 CD
-47-C2-17995 | khong giu khoang cach an toan 31-03-2025 CD
-41-A2-34299 | vuot xe sai quy dinh 26-10-2024 CD
-61-C1-26359 | khong co bien so xe 18-08-2025 CD
-15-D1-18306 | van chay qua tai 07-02-2025 CD
-43-B1-12558 | doi tuyen tai noi duong bo bi cam 18-10-2024 CD
-61-C1-21815 | khong tuong tron 30-05-2024 CD
-72-D1-21864 | su dung dien thoai 18-04-2025 CD
-37-D2-16115 | su dung dien thoai 03-09-2024 CD
-49-B1-22990 | vuot den do 13-11-2024 CD
-18-C1-36857 | khong nhuong duong cho xe uu tien 24-02-2025 CD
-51-A1-33224 | chuyen huong khong xi nhan 12-07-2025 CD
-15-B2-41286 | di tren via he 28-11-2024 CD | di nguoc chieu 02-05-2024 CD
-52-C2-33212 | vuot toc do 18-02-2025 CD | vuot toc do 10-07-2025 CD
-38-D2-16463 | dung do sai quy dinh 23-10-2024 CD
-52-C1-40725 | khong mang bang lai 18-09-2025 CD
-61-B1-30139 | do via he 27-01-2024 CD | khong mang bang lai 18-11-2025 CD
-33-B2-10044 | di nguoc chieu 02-02-2024 CD | di tren via he 27-06-2025 CD
-16-A1-29782 | di sai lan duong 01-09-2025 CD
-30-A1-11733 | su dung dien thoai 19-04-2025 CD
-61-A1-25231 | vuot den do 15-03-2025 CD
-72-C2-30655 | khong co giay phep lai xe 07-01-2025 CD
-31-A1-12968 | di tren via he 13-02-2025 CD
-18-D1-35239 | khong bat den sang ban dem 11-02-2024 CD
-52-C2-21775 | cho nguoi qua so quy dinh 08-11-2024 CD
-52-D2-25675 | vuot den do 16-03-2025 CD
-33-D1-25309 | di sai lan duong 04-09-2025 CD
-31-C1-15594 | khong co giay phep lai xe 11-10-2025 CD
-17-A1-36889 | khong nhuong duong cho xe uu tien 23-06-2024 CD
-51-B1-38120 | khong giu khoang cach an toan 02-04-2025 CD
-17-C1-19149 | vuot xe sai quy dinh 29-10-2024 CD
-29-D2-12286 | khong co bien so xe 21-08-2025 CD
-38-D1-27248 | van chay qua tai 11-02-2025 CD
-37-B2-16560 | doi tuyen tai noi duong bo bi cam 21-10-2024 CD
-32-A2-24972 | khong tuong tron 01-06-2024 CD
-43-A1-27334 | su dung dien thoai 20-04-2025 CD
-49-B1-10432 | su dung dien thoai 06-09-2024 CD
-51-A2-27045 | vuot den do 16-11-2024 CD
-32-D1-31510 | khong nhuong duong cho xe uu tien 27-02-2025 CD
-52-B1-11616 | di nguoc chieu 19-07-2025 CD | di tren via he 08-12-2024 CD | di nguoc chieu 27-07-2024 CD
-51-C2-10052 | chuyen huong khong xi nhan 15-07-2025 CD
-52-A2-14343 | dung do sai quy dinh 26-10-2024 CD
-47-A2-15129 | khong mang bang lai 21-09-2025 CD
-35-D2-14980 | di sai lan duong 07-09-2025 CD
-15-A2-18407 | su dung dien thoai 21-04-2025 CD
-29-B1-40441 | vuot den do 18-03-2025 CD
-48-C1-18279 | di nguoc chieu 14-02-2024 CD | do via he 20-07-2024 CD
-36-A2-27078 | khong co giay phep lai xe 09-01-2025 CD
-16-A1-20893 | khong bat den sang ban dem 13-02-2024 CD
-32-D2-18326 | di nguoc chieu 18-05-2025 CD | vuot toc do 18-02-2024 CD | do via he 11-12-2025 CD
-33-A2-22789 | cho nguoi qua so quy dinh 12-11-2024 CD
-38-B1-25705 | vuot den do 19-03-2025 CD
-60-C2-31775 | vuot toc do 03-07-2025 CD | di tren via he 28-05-2024 CD | di tren via he 16-12-2025 CD
-50-B1-30059 | di sai lan duong 11-09-2025 CD
-17-A1-14701 | khong mang bang lai 03-06-2025 CD
-61-B1-40565 | di tren via he 26-01-2024 CD | do via he 03-08-2025 CD
-43-D1-16776 | khong co giay phep lai xe 13-10-2025 CD
-48-C1-41058 | khong mang bang lai 10-10-2025 CD
-16-A2-11514 | khong nhuong duong cho xe uu tien 25-06-2024 CD
-31-B1-22467 | do via he 22-09-2025 CD | do via he 21-12-2024 CD | vuot toc do 04-11-2024 CD
-36-C1-42134 | di tren via he 12-03-2025 CD | di tren via he 08-10-2025 CD | vuot toc do 26-08-2025 CD
-35-A2-38691 | khong mang bang lai 03-08-2024 CD
-61-C1-33909 | khong giu khoang cach an toan 05-04-2025 CD
-60-C1-31433 | vuot xe sai quy dinh 31-10-2024 CD
-47-C2-41486 | khong co bien so xe 24-08-2025 CD
-43-B2-35416 | di nguoc chieu 07-08-2025 CD
-32-A1-17784 | van chay qua tai 14-02-2025 CD
-72-A1-19683 | doi tuyen tai noi duong bo bi cam 27-10-2024 CD
-29-A2-17001 | khong tuong tron 04-06-2024 CD
-36-A1-33240 | su dung dien thoai 22-04-2025 CD
-51-A2-35488 | su dung dien thoai 09-09-2024 CD
-37-A1-36269 | vuot den do 18-11-2025 CD
-60-A1-42578 | khong nhuong duong cho xe uu tien 28-02-2025 CD
-31-A1-32290 | di nguoc chieu 07-08-2024 CD | do via he 19-09-2024 CD | vuot toc do 20-12-2024 CD
-49-A2-19031 | di nguoc chieu 28-03-2024 CD
-49-D1-22777 | chuyen huong khong xi nhan 18-07-2025 CD
-60-A1-24227 | dung do sai quy dinh 28-10-2024 CD
-31-B1-26386 | khong mang bang lai 25-09-2025 CD
-60-D1-17417 | di nguoc chieu 28-05-2025 CD | di nguoc chieu 13-11-2025 CD
-51-A2-21706 | do via he 15-03-2024 CD | di nguoc chieu 07-05-2024 CD
-36-B1-19249 | di sai lan duong 14-09-2025 CD
-49-D1-14415 | vuot toc do 10-05-2025 CD
-17-B2-19829 | vuot toc do 09-02-2024 CD | do via he 15-08-2025 CD
-30-C2-29890 | su dung dien thoai 23-04-2025 CD
-36-D1-22073 | di nguoc chieu 25-09-2025 CD
-31-A2-32630 | vuot den do 20-03-2025 CD
-49-B1-33767 | khong co giay phep lai xe 11-01-2025 CD
-31-D2-22829 | khong bat den sang ban dem 15-02-2024 CD
-29-C2-36036 | cho nguoi qua so quy dinh 10-11-2024 CD
-48-C2-21421 | vuot toc do 13-01-2024 CD | di tren via he 27-06-2025 CD | vuot toc do 13-02-2024 CD
-36-C2-12192 | vuot den do 17-03-2025 CD
-43-D1-17902 | di sai lan duong 05-09-2025 CD
-41-C2-16869 | khong co giay phep lai xe 15-10-2025 CD
-31-C1-21496 | vuot toc do 02-06-2024 CD | di nguoc chieu 26-10-2025 CD | di nguoc chieu 28-11-2025 CD
-61-D2-13497 | khong nhuong duong cho xe uu tien 28-06-2024 CD
-60-D1-14106 | khong giu khoang cach an toan 08-04-2025 CD
-37-B1-16660 | vuot xe sai quy dinh 02-11-2024 CD
-48-B1-10766 | di tren via he 14-10-2024 CD | do via he 07-11-2024 CD | vuot toc do 10-07-2024 CD
-33-B2-36096 | khong mang bang lai 09-05-2024 CD | vuot toc do 02-12-2024 CD
-32-D2-22053 | khong co bien so xe 26-08-2025 CD
-17-B1-10274 | di nguoc chieu 03-07-2024 CD | vuot toc do 04-06-2025 CD
-52-D1-38420 | van chay qua tai 17-02-2025 CD
-31-C2-17351 | vuot toc do 15-04-2025 CD
-38-A2-24161 | doi tuyen tai noi duong bo bi cam 29-10-2024 CD
-18-B1-13415 | khong tuong tron 07-06-2024 CD
-31-C1-31272 | su dung dien thoai 25-04-2025 CD
-52-D2-16293 | su dung dien thoai 12-09-2024 CD
-37-C1-36096 | vuot den do 21-11-2025 CD
-31-D1-27514 | khong nhuong duong cho xe uu tien 01-03-2025 CD
-51-C1-14553 | chuyen huong khong xi nhan 21-07-2025 CD
-18-C1-19187 | khong mang bang lai 27-11-2025 CD
-49-A1-24020 | dung do sai quy dinh 30-10-2024 CD
-72-A2-40661 | khong mang bang lai 23-09-2025 CD
-61-B2-25514 | di sai lan duong 15-09-2025 CD
-36-C2-27648 | su dung dien thoai 26-04-2025 CD
-33-C2-18944 | khong mang bang lai 19-06-2024 CD | vuot toc do 19-07-2025 CD | do via he 19-05-2024 CD
-32-A1-34904 | khong mang bang lai 15-10-2025 CD
-36-A2-14740 | vuot den do 22-03-2025 CD
-72-C2-25853 | khong co giay phep lai xe 14-01-2025 CD
-60-B2-28313 | khong bat den sang ban dem 18-02-2024 CD
-38-B2-16813 | vuot toc do 13-09-2024 CD | di nguoc chieu 16-08-2025 CD | di nguoc chieu 20-09-2025 CD
-48-D2-18735 | di nguoc chieu 03-09-2024 CD
-32-D2-25580 | do via he 23-01-2024 CD
-36-B2-28735 | cho nguoi qua so quy dinh 14-11-2024 CD
-72-C1-30577 | khong mang bang lai 22-10-2024 CD | di tren via he 10-08-2025 CD
-15-B2-26400 | khong mang bang lai 02-02-2025 CD
-60-D2-20679 | vuot den do 24-03-2025 CD
-15-D1-28935 | do via he 13-08-2025 CD | khong mang bang lai 22-05-2025 CD | khong mang bang lai 01-12-2024 CD
-43-D2-12100 | di sai lan duong 09-09-2025 CD
-37-D2-13544 | khong co giay phep lai xe 17-10-2025 CD
-37-A2-37836 | khong nhuong duong cho xe uu tien 30-06-2024 CD
-16-D2-33741 | vuot toc do 13-05-2024 CD
-52-A2-38079 | khong mang bang lai 19-02-2024 CD | vuot toc do 05-01-2025 CD | di tren via he 17-01-2025 CD
-61-A2-15842 | khong giu khoang cach an toan 11-04-2025 CD
-72-A2-31576 | vuot toc do 12-07-2024 CD | vuot toc do 05-11-2025 CD | di nguoc chieu 19-08-2024 CD
-33-A2-17040 | vuot xe sai quy dinh 05-11-2024 CD
-49-B2-18570 | khong co bien so xe 28-08-2025 CD
-18-D1-18077 | van chay qua tai 19-02-2025 CD
-15-A2-19780 | doi tuyen tai noi duong bo bi cam 31-10-2024 CD
-16-D1-38722 | khong mang bang lai 12-10-2025 CD
-17-C2-29704 | khong tuong tron 10-06-2024 CD
-37-D2-12241 | su dung dien thoai 27-04-2025 CD
-37-B2-26855 | su dung dien thoai 15-09-2024 CD
-32-D1-21697 | di tren via he 10-10-2025 CD | vuot toc do 04-07-2025 CD | vuot toc do 13-11-2024 CD
-72-D1-36060 | vuot toc do 08-09-2024 CD | vuot toc do 05-10-2024 CD
-47-B1-41563 | vuot den do 24-11-2025 CD
-43-D1-17782 | do via he 16-06-2025 CD | vuot toc do 06-04-2025 CD
-41-D2-27761 | vuot toc do 07-06-2025 CD | vuot toc do 10-10-2025 CD
-36-C1-24942 | khong nhuong duong cho xe uu tien 03-03-2025 CD
-35-B1-26725 | dung do sai quy dinh 21-10-2024 CD
-35-D1-30602 | khong mang bang lai 26-09-2025 CD
-36-C2-33861 | di sai lan duong 12-09-2025 CD
-18-B1-35487 | su dung dien thoai 28-04-2025 CD
-31-C1-37997 | do via he 04-07-2025 CD
-30-C2-23384 | do via he 27-11-2025 CD | vuot toc do 19-03-2024 CD
-41-A2-29132 | di nguoc chieu 15-08-2025 CD
-31-B1-24186 | vuot den do 26-03-2025 CD
-50-A2-40333 | khong co giay phep lai xe 18-01-2025 CD
-72-A1-27581 | khong bat den sang ban dem 16-02-2024 CD
-52-D2-27858 | cho nguoi qua so quy dinh 03-11-2024 CD
-38-C2-18908 | vuot den do 29-03-2025 CD
-33-C2-11742 | di sai lan duong 08-09-2025 CD
-72-A2-23981 | di nguoc chieu 18-01-2024 CD | do via he 14-01-2025 CD
-32-D2-27403 | do via he 17-01-2025 CD
-32-D1-37815 | khong co giay phep lai xe 09-10-2025 CD
-18-C1-13112 | khong nhuong duong cho xe uu tien 01-07-2024 CD
-35-C2-35249 | khong mang bang lai 20-06-2025 CD
-17-A2-37261 | khong giu khoang cach an toan 06-04-2025 CD
-37-B1-32104 | vuot xe sai quy dinh 07-11-2024 CD
-29-C2-34183 | khong co bien so xe 12-08-2025 CD
-36-A2-41260 | do via he 25-10-2025 CD | di nguoc chieu 06-03-2025 CD | vuot toc do 03-03-2024 CD
-31-C1-22795 | di tren via he 26-06-2024 CD
-50-D1-36892 | van chay qua tai 24-02-2025 CD
-41-B1-17446 | doi tuyen tai noi duong bo bi cam 03-11-2024 CD
-50-C2-16597 | do via he 02-06-2024 CD
-49-B2-29713 | khong tuong tron 13-06-2024 CD
-36-B1-29638 | su dung dien thoai 29-04-2025 CD
-29-C1-25161 | di tren via he 07-01-2024 CD
-36-A2-14680 | su dung dien thoai 10-09-2024 CD
-38-A1-41322 | vuot den do 26-11-2025 CD
-52-C1-17393 | khong nhuong duong cho xe uu tien 05-03-2025 CD
-52-A1-42258 | chuyen huong khong xi nhan 24-07-2025 CD
-37-C2-23961 | dung do sai quy dinh 01-11-2024 CD
-61-A2-11124 | do via he 06-03-2025 CD
-16-A1-13568 | do via he 28-03-2025 CD
-43-D1-18463 | khong mang bang lai 30-09-2025 CD
-52-B1-27799 | di sai lan duong 16-09-2025 CD
-35-A2-30082 | su dung dien thoai 01-05-2025 CD
-16-A1-32390 | vuot den do 30-03-2025 CD
-31-B1-24028 | khong co giay phep lai xe 15-01-2025 CD
-29-B2-16244 | di nguoc chieu 25-04-2024 CD | di nguoc chieu 25-12-2025 CD | khong mang bang lai 14-11-2024 CD
-37-C1-33451 | di nguoc chieu 01-06-2024 CD | do via he 03-08-2025 CD
-35-C2-37412 | khong bat den sang ban dem 20-02-2024 CD
-18-A1-11562 | cho nguoi qua so quy dinh 09-11-2024 CD
-35-C2-16541 | khong mang bang lai 18-12-2025 CD
-18-B2-31896 | di tren via he 10-05-2024 CD | di tren via he 12-01-2025 CD
-72-B2-36970 | vuot den do 31-03-2025 CD
-17-D1-28377 | di sai lan duong 18-09-2025 CD
-52-B1-40802 | khong co giay phep lai xe 12-10-2025 CD
-49-D1-15088 | khong mang bang lai 22-05-2024 CD | di tren via he 03-03-2025 CD
-16-D2-25152 | vuot toc do 16-09-2025 CD | di nguoc chieu 27-12-2024 CD | vuot toc do 26-02-2024 CD
-60-B2-31466 | khong nhuong duong cho xe uu tien 05-07-2024 CD
-49-A1-27265 | khong giu khoang cach an toan 09-04-2025 CD
-15-A2-30573 | vuot xe sai quy dinh 13-11-2024 CD
-15-B1-33647 | khong co bien so xe 01-09-2025 CD
-72-C2-34849 | di tren via he 19-01-2024 CD | vuot toc do 28-12-2025 CD | vuot toc do 04-02-2024 CD
-37-B2-31740 | van chay qua tai 21-02-2025 CD
-18-B1-19066 | doi tuyen tai noi duong bo bi cam 07-11-2024 CD
-15-D1-20862 | khong tuong tron 15-06-2024 CD
-33-B2-40099 | su dung dien thoai 02-05-2025 CD
-29-A2-30974 | di tren via he 23-03-2025 CD | do via he 15-10-2025 CD | vuot toc do 01-04-2025 CD
-18-C1-28401 | su dung dien thoai 17-09-2024 CD
-29-D2-33897 | vuot den do 28-11-2025 CD
-49-A1-36968 | khong nhuong duong cho xe uu tien 07-03-2025 CD
-41-C2-31330 | chuyen huong khong xi nhan 28-07-2025 CD
-43-A2-40248 | di nguoc chieu 19-05-2024 CD | di tren via he 08-02-2025 CD
-17-C2-37025 | dung do sai quy dinh 05-11-2024 CD
-36-C2-40014 | khong mang bang lai 04-10-2025 CD
-47-B2-37418 | vuot toc do 10-10-2025 CD | vuot toc do 21-05-2025 CD | di nguoc chieu 26-05-2025 CD
-15-C1-40748 | di sai lan duong 21-09-2025 CD
-47-C2-21895 | su dung dien thoai 04-05-2025 CD
-43-B2-23777 | vuot den do 01-04-2025 CD
-32-C2-16098 | di nguoc chieu 11-10-2024 CD | di tren via he 15-07-2025 CD | di nguoc chieu 27-10-2024 CD
-51-B1-13066 | khong co giay phep lai xe 22-01-2025 CD
-52-D2-39925 | khong bat den sang ban dem 24-02-2024 CD
-43-D1-42583 | cho nguoi qua so quy dinh 16-11-2024 CD
-47-A2-28890 | vuot den do 02-04-2025 CD
-30-C1-14326 | di sai lan duong 22-09-2025 CD
-36-D1-39691 | khong co giay phep lai xe 14-10-2025 CD
-72-B2-39906 | khong nhuong duong cho xe uu tien 08-07-2024 CD
-72-B2-41804 | khong giu khoang cach an toan 13-04-2025 CD
-72-A2-27255 | vuot xe sai quy dinh 18-11-2024 CD
-50-B2-34569 | khong mang bang lai 27-09-2025 CD | khong mang bang lai 11-09-2025 CD
-49-C2-31528 | di nguoc chieu 08-01-2024 CD | di nguoc chieu 16-09-2025 CD
-37-C1-23939 | khong mang bang lai 13-11-2025 CD | khong mang bang lai 09-12-2024 CD | do via he 18-04-2024 CD
-16-C2-37894 | khong co bien so xe 05-09-2025 CD
-37-D1-20424 | do via he 14-04-2025 CD
-16-B2-37719 | khong mang bang lai 16-12-2024 CD
-30-B1-21857 | van chay qua tai 26-02-2025 CD
-29-B2-18161 | doi tuyen tai noi duong bo bi cam 10-11-2024 CD
-47-C2-10850 | di tren via he 25-04-2025 CD | vuot toc do 06-12-2025 CD | do via he 14-10-2025 CD
-36-A1-34950 | vuot toc do 20-04-2024 CD
-36-C2-25049 | khong tuong tron 18-06-2024 CD
-49-A2-40989 | su dung dien thoai 07-05-2025 CD
-49-D2-40306 | su dung dien thoai 20-09-2024 CD
-37-A2-41682 | khong mang bang lai 13-11-2025 CD | vuot toc do 21-07-2025 CD | do via he 25-07-2024 CD
-16-A2-29903 | vuot den do 01-12-2025 CD
-15-C1-14754 | khong nhuong duong cho xe uu tien 10-03-2025 CD
-33-B1-13100 | chuyen huong khong xi nhan 31-07-2025 CD
-43-A2-15900 | vuot toc do 04-12-2024 CD | di nguoc chieu 04-10-2025 CD
-49-D1-34238 | dung do sai quy dinh 08-11-2024 CD
-43-A1-33102 | vuot toc do 17-07-2025 CD | khong mang bang lai 09-02-2025 CD
-41-D2-28032 | khong mang bang lai 01-10-2025 CD
-48-C1-42353 | di sai lan duong 25-09-2025 CD
-29-C1-38352 | di tren via he 01-07-2024 CD | di tren via he 25-05-2024 CD
-48-C1-14158 | su dung dien thoai 11-05-2025 CD
-48-B1-34494 | vuot den do 05-04-2025 CD
-72-D1-42147 | do via he 25-07-2025 CD
-15-B1-20427 | khong co giay phep lai xe 25-01-2025 CD
-36-C2-13042 | khong bat den sang ban dem 27-02-2024 CD
-60-B2-25358 | cho nguoi qua so quy dinh 20-11-2024 CD
-48-A2-15836 | khong mang bang lai 14-04-2025 CD | do via he 05-12-2025 CD
-48-B1-13094 | di nguoc chieu 05-10-2025 CD | di nguoc chieu 01-04-2024 CD | khong mang bang lai 21-02-2024 CD
-47-D1-36460 | khong mang bang lai 28-03-2025 CD | do via he 14-01-2025 CD
-52-D1-34954 | khong mang bang lai 25-06-2024 CD
-35-B2-24487 | khong mang bang lai 10-06-2025 CD | do via he 13-09-2024 CD | vuot toc do 09-11-2025 CD
-35-A2-13032 | vuot den do 07-04-2025 CD
-15-B2-41811 | di sai lan duong 28-09-2025 CD
-36-B2-32196 | khong co giay phep lai xe 18-10-2025 CD
-61-A2-28650 | khong nhuong duong cho xe uu tien 11-07-2024 CD
-48-A1-18479 | khong giu khoang cach an toan 17-04-2025 CD
-18-D2-38692 | vuot xe sai quy dinh 25-11-2024 CD
-72-B1-27135 | khong mang bang lai 07-07-2024 CD
-16-C2-25383 | khong co bien so xe 08-09-2025 CD
-52-C1-21675 | vuot toc do 23-12-2025 CD
-51-D2-30652 | van chay qua tai 28-02-2025 CD
-18-B1-23281 | doi tuyen tai noi duong bo bi cam 14-11-2024 CD
-61-D1-14434 | khong tuong tron 20-06-2024 CD
-37-D1-21792 | su dung dien thoai 08-05-2025 CD
-51-C1-26591 | di tren via he 12-10-2024 CD | di tren via he 03-10-2024 CD
-72-D2-33991 | vuot toc do 14-04-2024 CD | di tren via he 14-10-2025 CD
-41-B1-15174 | su dung dien thoai 24-09-2024 CD
-30-B2-25575 | di tren via he 15-09-2024 CD | vuot toc do 13-10-2025 CD
-60-B1-15174 | vuot den do 30-11-2025 CD
-16-B1-41605 | khong nhuong duong cho xe uu tien 12-03-2025 CD
-61-C1-23530 | do via he 16-02-2025 CD | vuot toc do 19-01-2024 CD
-33-A1-38707 | chuyen huong khong xi nhan 02-08-2025 CD
-41-A1-17023 | vuot toc do 03-12-2024 CD | di nguoc chieu 10-04-2025 CD
-18-B1-40265 | dung do sai quy dinh 12-11-2024 CD
-38-C1-31182 | khong mang bang lai 05-10-2025 CD
-41-D1-30614 | do via he 13-05-2025 CD
-18-B1-12224 | di sai lan duong 26-09-2025 CD
-32-B1-36971 | su dung dien thoai 14-05-2025 CD
-61-C2-24551 | khong mang bang lai 08-08-2024 CD | khong mang bang lai 17-04-2025 CD | vuot toc do 23-09-2025 CD
-51-B2-31082 | vuot den do 09-04-2025 CD
-41-A2-16762 | khong co giay phep lai xe 27-01-2025 CD
-52-C1-14327 | di tren via he 02-08-2025 CD | di nguoc chieu 09-11-2025 CD | vuot toc do 25-11-2024 CD
-35-C2-27185 | khong mang bang lai 10-10-2025 CD | vuot toc do 10-01-2024 CD
-72-B1-16209 | do via he 15-09-2025 CD
-17-A2-31764 | khong bat den sang ban dem 28-02-2024 CD
-43-C2-27338 | cho nguoi qua so quy dinh 24-11-2024 CD
-37-C2-13008 | khong mang bang lai 26-06-2024 CD | vuot toc do 16-09-2024 CD
-72-A1-13006 | vuot den do 11-04-2025 CD
-47-A2-40500 | do via he 26-09-2025 CD
-35-C2-18116 | di sai lan duong 29-09-2025 CD
-51-C1-14641 | di nguoc chieu 25-03-2024 CD | di nguoc chieu 06-11-2025 CD
-50-D1-26318 | khong co giay phep lai xe 16-10-2025 CD
-51-B1-21605 | khong nhuong duong cho xe uu tien 14-07-2024 CD
-72-D2-33466 | khong giu khoang cach an toan 20-04-2025 CD
-38-C2-10794 | vuot xe sai quy dinh 28-11-2024 CD
-48-B1-37074 | khong co bien so xe 22-09-2025 CD
-43-A2-38294 | van chay qua tai 01-03-2025 CD
-52-C2-11506 | doi tuyen tai noi duong bo bi cam 18-11-2024 CD
-38-B1-15571 | di nguoc chieu 19-07-2024 CD | di nguoc chieu 13-07-2025 CD | vuot toc do 27-04-2024 CD
-29-C1-31597 | khong tuong tron 24-06-2024 CD
-72-B1-42323 | di nguoc chieu 24-08-2024 CD
-52-C1-20812 | su dung dien thoai 16-05-2025 CD
-49-B2-37745 | su dung dien thoai 27-09-2024 CD
-60-B1-24460 | vuot den do 04-12-2025 CD
-37-A1-37375 | vuot toc do 03-03-2024 CD | khong mang bang lai 25-08-2024 CD
-48-A2-42357 | khong nhuong duong cho xe uu tien 14-03-2025 CD
-17-A2-35908 | chuyen huong khong xi nhan 05-08-2025 CD
-52-C1-32263 | do via he 22-11-2025 CD | di nguoc chieu 03-01-2025 CD
-52-C1-23899 | di tren via he 26-04-2024 CD | khong mang bang lai 14-01-2025 CD
-36-A1-11051 | dung do sai quy dinh 15-11-2024 CD
-37-B2-29399 | khong mang bang lai 29-09-2025 CD
-18-A2-33141 | di sai lan duong 01-10-2025 CD
-16-B2-21404 | do via he 06-11-2024 CD | khong mang bang lai 20-07-2025 CD | vuot toc do 16-03-2025 CD
-33-A2-31313 | su dung dien thoai 18-05-2025 CD
-50-A2-24865 | do via he 26-03-2025 CD | di nguoc chieu 18-12-2025 CD | do via he 18-09-2024 CD
-41-A1-26106 | vuot den do 12-04-2025 CD
-48-C2-20634 | khong co giay phep lai xe 29-01-2025 CD
-35-C1-13443 | khong bat den sang ban dem 03-03-2024 CD
-29-C2-35775 | cho nguoi qua so quy dinh 27-11-2024 CD
-16-C1-18985 | di tren via he 05-04-2024 CD
-41-C1-21586 | vuot den do 13-04-2025 CD
-17-A1-23438 | di sai lan duong 03-10-2025 CD
-37-D2-42684 | do via he 06-12-2025 CD | di nguoc chieu 07-12-2025 CD | khong mang bang lai 08-11-2025 CD
-36-D2-36326 | khong co giay phep lai xe 20-10-2025 CD
-29-A1-10087 | khong mang bang lai 14-12-2024 CD | di nguoc chieu 13-06-2025 CD | vuot toc do 14-07-2024 CD
-49-A1-30707 | di nguoc chieu 27-01-2024 CD | vuot toc do 05-11-2024 CD
-32-A1-37867 | khong nhuong duong cho xe uu tien 09-07-2024 CD
-15-D2-40059 | khong giu khoang cach an toan 25-04-2025 CD
-15-C2-36765 | vuot xe sai quy dinh 01-12-2024 CD
-38-B2-35260 | khong co bien so xe 26-09-2025 CD
-32-B2-41166 | van chay qua tai 05-03-2025 CD
-15-D2-22687 | doi tuyen tai noi duong bo bi cam 21-11-2024 CD
-33-C1-36577 | khong mang bang lai 07-01-2025 CD | do via he 20-04-2025 CD
-51-D1-13012 | khong tuong tron 27-06-2024 CD
-47-B1-17041 | di tren via he 21-08-2025 CD | vuot toc do 01-01-2024 CD | vuot toc do 01-11-2024 CD
-60-D1-16024 | su dung dien thoai 21-05-2025 CD
-15-C2-21300 | su dung dien thoai 22-09-2024 CD
-36-C2-38149 | vuot den do 07-12-2025 CD
-38-D2-18227 | khong nhuong duong cho xe uu tien 17-03-2025 CD
-60-D1-33243 | chuyen huong khong xi nhan 09-08-2025 CD
-60-B2-25684 | dung do sai quy dinh 18-11-2024 CD
-52-A1-36942 | khong mang bang lai 02-10-2025 CD
-61-A1-32320 | di sai lan duong 07-10-2025 CD
-50-A2-31830 | su dung dien thoai 23-05-2025 CD
-31-A2-20241 | do via he 07-05-2025 CD | di nguoc chieu 16-07-2025 CD
-43-B2-24996 | vuot den do 15-04-2025 CD
-60-C1-22917 | khong co giay phep lai xe 01-02-2025 CD
-41-B1-39760 | khong bat den sang ban dem 07-03-2024 CD
-51-D2-14247 | cho nguoi qua so quy dinh 28-11-2024 CD
-49-D1-24940 | vuot den do 16-04-2025 CD
-43-A2-21909 | khong mang bang lai 20-10-2024 CD
-15-D2-13844 | khong mang bang lai 14-11-2025 CD
-60-C2-24511 | khong co giay phep lai xe 19-10-2025 CD
-35-A2-19704 | khong nhuong duong cho xe uu tien 12-07-2024 CD
-32-B1-36118 | vuot toc do 02-12-2025 CD
-50-C1-22258 | khong mang bang lai 16-12-2024 CD | vuot toc do 21-04-2024 CD | khong mang bang lai 08-08-2025 CD
-36-B2-13182 | khong giu khoang cach an toan 28-04-2025 CD
-37-B1-32315 | vuot xe sai quy dinh 09-12-2024 CD
-51-C1-20637 | khong co bien so xe 03-10-2025 CD
-29-C1-15686 | van chay qua tai 08-03-2025 CD
-38-A2-28576 | doi tuyen tai noi duong bo bi cam 24-11-2024 CD
-48-D1-26580 | khong tuong tron 29-06-2024 CD
-29-B1-30402 | su dung dien thoai 26-05-2025 CD
-60-B2-22785 | su dung dien thoai 01-10-2024 CD
-17-C2-41284 | di tren via he 04-07-2025 CD | do via he 14-05-2025 CD | khong mang bang lai 27-08-2024 CD
-18-B2-17928 | vuot den do 11-12-2025 CD
-41-D2-36463 | khong nhuong duong cho xe uu tien 20-03-2025 CD
-41-B1-32040 | chuyen huong khong xi nhan 12-08-2025 CD
-35-A1-21101 | di tren via he 03-08-2024 CD | vuot toc do 24-05-2025 CD
-48-C1-37889 | dung do sai quy dinh 22-11-2024 CD
-17-B1-42127 | khong mang bang lai 06-10-2025 CD
-15-D2-26271 | di sai lan duong 10-10-2025 CD
-18-B1-42503 | do via he 08-07-2025 CD | di nguoc chieu 24-12-2025 CD
-18-D2-16389 | su dung dien thoai 30-05-2025 CD
-47-B1-11465 | vuot den do 18-04-2025 CD
-49-B1-15653 | khong co giay phep lai xe 03-02-2025 CD
-49-C1-16158 | khong bat den sang ban dem 10-03-2024 CD
-48-B1-35213 | vuot toc do 27-03-2024 CD | vuot toc do 08-03-2025 CD
-36-A1-36774 | vuot toc do 15-06-2024 CD
-47-B1-26858 | di nguoc chieu 07-05-2024 CD | do via he 15-12-2024 CD | do via he 04-07-2024 CD
-18-C2-18382 | khong mang bang lai 21-10-2024 CD
-16-B1-25499 | do via he 23-02-2024 CD | di tren via he 01-06-2025 CD
-41-A1-31183 | do via he 03-06-2025 CD
-16-D1-19329 | cho nguoi qua so quy dinh 01-12-2024 CD
-43-A1-38853 | vuot den do 20-04-2025 CD
-61-D2-18920 | di sai lan duong 13-10-2025 CD
-35-A1-28264 | khong co giay phep lai xe 23-10-2025 CD
-60-D2-28113 | khong nhuong duong cho xe uu tien 16-07-2024 CD
-61-D2-29364 | khong giu khoang cach an toan 30-04-2025 CD
-60-C1-19486 | vuot xe sai quy dinh 05-12-2024 CD
-72-D2-17877 | di tren via he 08-01-2024 CD
-47-D2-35476 | khong co bien so xe 29-09-2025 CD
-38-C2-42688 | di nguoc chieu 02-04-2024 CD
-49-B1-11358 | vuot toc do 25-08-2025 CD
-50-B1-30273 | van chay qua tai 10-03-2025 CD
-32-D2-26841 | doi tuyen tai noi duong bo bi cam 26-11-2024 CD
-50-D1-25506 | khong tuong tron 02-07-2024 CD
-32-C2-19898 | su dung dien thoai 27-05-2025 CD
-31-B1-27675 | su dung dien thoai 04-10-2024 CD
-36-D2-34435 | vuot den do 09-12-2025 CD
-50-D2-40201 | khong nhuong duong cho xe uu tien 24-03-2025 CD
-35-D1-29371 | chuyen huong khong xi nhan 15-08-2025 CD
-72-C1-29333 | dung do sai quy dinh 25-11-2024 CD
-61-A2-37575 | khong mang bang lai 08-10-2025 CD
-60-C1-15280 | di sai lan duong 16-10-2025 CD
-17-D2-19421 | su dung dien thoai 31-05-2025 CD
-15-A1-11299 | vuot den do 22-04-2025 CD
-50-D1-14514 | khong co giay phep lai xe 06-02-2025 CD
-41-A2-10254 | vuot toc do 08-05-2025 CD
-60-B1-22030 | khong mang bang lai 01-03-2025 CD
-48-B2-39682 | khong bat den sang ban dem 14-03-2024 CD
-50-A2-14752 | do via he 19-05-2024 CD
-17-D2-35493 | cho nguoi qua so quy dinh 05-12-2024 CD
-29-B1-36382 | vuot den do 23-04-2025 CD
-38-B2-24426 | do via he 08-06-2025 CD
-51-B1-39673 | di nguoc chieu 01-06-2025 CD | di nguoc chieu 24-10-2025 CD
-16-D2-15155 | di sai lan duong 19-10-2025 CD
-17-C1-23889 | khong co giay phep lai xe 25-10-2025 CD
-38-B1-17593 | do via he 25-11-2024 CD | di nguoc chieu 03-08-2024 CD | vuot toc do 02-08-2024 CD
-32-A2-26946 | khong nhuong duong cho xe uu tien 19-07-2024 CD
-38-B1-41803 | di nguoc chieu 01-09-2025 CD | di nguoc chieu 21-08-2025 CD
-52-C1-34940 | khong giu khoang cach an toan 01-05-2025 CD
-51-D1-13916 | di nguoc chieu 05-04-2024 CD | khong mang bang lai 11-08-2025 CD
-32-D2-26228 | vuot xe sai quy dinh 08-12-2024 CD
-16-B2-42116 | khong co bien so xe 30-09-2025 CD
-47-A2-21994 | van chay qua tai 13-03-2025 CD
-17-C2-25592 | di nguoc chieu 26-06-2025 CD | di nguoc chieu 08-05-2025 CD | khong mang bang lai 02-09-2025 CD
-31-A1-41582 | doi tuyen tai noi duong bo bi cam 28-11-2024 CD
-36-A2-32591 | khong tuong tron 05-07-2024 CD
-48-A1-18195 | su dung dien thoai 01-06-2025 CD
-72-A2-37638 | su dung dien thoai 08-10-2024 CD
-29-C2-15569 | vuot den do 15-12-2025 CD
-16-D2-38532 | khong nhuong duong cho xe uu tien 27-03-2025 CD
-38-C2-26773 | di tren via he 15-01-2024 CD
-43-A2-31570 | chuyen huong khong xi nhan 18-08-2025 CD
-43-C1-14573 | dung do sai quy dinh 29-11-2024 CD
-50-A1-15596 | khong mang bang lai 11-10-2025 CD
-60-D2-17788 | di sai lan duong 22-10-2025 CD
-32-C2-13755 | su dung dien thoai 02-06-2025 CD
-15-C1-13876 | vuot den do 25-04-2025 CD
-49-B1-23990 | khong co giay phep lai xe 09-02-2025 CD
-37-D2-10576 | khong mang bang lai 08-09-2025 CD | vuot toc do 27-11-2024 CD
-50-B2-16136 | khong bat den sang ban dem 17-03-2024 CD
-33-A1-42517 | do via he 14-07-2025 CD | di nguoc chieu 19-04-2025 CD
-41-D1-41718 | cho nguoi qua so quy dinh 07-12-2024 CD
-49-D1-32405 | vuot den do 27-04-2025 CD
-60-B2-23267 | di sai lan duong 25-10-2025 CD
-38-B2-10465 | khong co giay phep lai xe 27-10-2025 CD
-15-B1-29219 | khong nhuong duong cho xe uu tien 21-07-2024 CD
-15-C1-24061 | do via he 02-09-2025 CD
-60-B1-23012 | khong mang bang lai 19-11-2024 CD
-37-A2-37677 | khong giu khoang cach an toan 03-05-2025 CD
-16-D2-41933 | vuot xe sai quy dinh 11-12-2024 CD
-32-A1-34767 | khong co bien so xe 02-10-2025 CD
-16-B1-30055 | di tren via he 21-09-2024 CD
-49-D1-24607 | van chay qua tai 15-03-2025 CD
-61-D2-39378 | do via he 03-05-2025 CD
-33-D1-38459 | doi tuyen tai noi duong bo bi cam 30-11-2024 CD
-31-C1-36641 | khong tuong tron 09-07-2024 CD
-49-D1-23441 | su dung dien thoai 04-06-2025 CD
-60-C1-24470 | su dung dien thoai 11-10-2024 CD
-17-C2-22914 | vuot den do 18-12-2025 CD
-48-C2-23704 | khong nhuong duong cho xe uu tien 29-03-2025 CD
-41-C2-25002 | chuyen huong khong xi nhan 21-08-2025 CD
-51-A1-42327 | dung do sai quy dinh 01-12-2024 CD
-72-B1-41665 | vuot toc do 17-08-2025 CD | vuot toc do 19-05-2025 CD
-30-B2-17343 | khong mang bang lai 13-10-2025 CD
-31-B1-32500 | khong mang bang lai 05-09-2025 CD
-17-A1-33011 | di sai lan duong 28-10-2025 CD
-51-C1-31046 | su dung dien thoai 07-06-2025 CD
-52-C1-31315 | di tren via he 13-09-2025 CD | khong mang bang lai 25-05-2024 CD | khong mang bang lai 17-06-2025 CD
-52-A1-34383 | vuot den do 29-04-2025 CD
-37-B1-14711 | di nguoc chieu 28-08-2025 CD
-37-D2-15914 | khong co giay phep lai xe 12-02-2025 CD
-47-A1-40528 | khong mang bang lai 20-08-2025 CD | di nguoc chieu 02-10-2024 CD | khong mang bang lai 08-02-2025 CD
-52-D1-31597 | di tren via he 13-02-2024 CD
-31-C1-23941 | khong bat den sang ban dem 21-03-2024 CD
-72-C1-28741 | cho nguoi qua so quy dinh 10-12-2024 CD
-60-C2-24185 | vuot den do 30-04-2025 CD
-47-A1-19797 | di sai lan duong 01-11-2025 CD
-47-B2-17900 | khong mang bang lai 16-02-2024 CD
-30-D2-34403 | khong co giay phep lai xe 28-10-2025 CD
-29-B1-13012 | khong nhuong duong cho xe uu tien 24-07-2024 CD
-50-A2-31251 | khong giu khoang cach an toan 06-05-2025 CD
-18-D1-20112 | vuot xe sai quy dinh 14-12-2024 CD
-29-D2-36292 | di nguoc chieu 09-02-2024 CD | di tren via he 15-06-2024 CD | khong mang bang lai 18-07-2024 CD
-29-C1-42284 | di nguoc chieu 07-02-2024 CD | vuot toc do 05-07-2025 CD
-29-A2-10115 | khong co bien so xe 04-10-2025 CD
-38-C1-20481 | van chay qua tai 17-03-2025 CD
-50-B1-39066 | di nguoc chieu 08-10-2025 CD | di tren via he 22-04-2024 CD
-50-C2-10638 | doi tuyen tai noi duong bo bi cam 01-12-2024 CD
-38-D2-17866 | khong tuong tron 11-07-2024 CD
-33-D2-34820 | su dung dien thoai 09-06-2025 CD
-47-D1-26040 | su dung dien thoai 15-10-2024 CD
-50-C1-27129 | vuot den do 01-01-2025 CD
-72-B2-41186 | khong nhuong duong cho xe uu tien 31-03-2025 CD
-37-B1-21463 | chuyen huong khong xi nhan 24-08-2025 CD
-29-B2-30958 | di nguoc chieu 19-03-2025 CD
-72-B2-19099 | dung do sai quy dinh 03-12-2024 CD
-17-C1-28022 | di tren via he 19-02-2024 CD | do via he 25-03-2025 CD | di nguoc chieu 22-05-2024 CD
-47-D1-24983 | khong mang bang lai 22-10-2025 CD
-38-D2-26794 | di sai lan duong 04-11-2025 CD
-30-C2-38363 | su dung dien thoai 12-06-2025 CD
-15-B2-37426 | vuot den do 02-05-2025 CD
-48-C2-29749 | khong co giay phep lai xe 14-02-2025 CD
-38-C2-38652 | do via he 08-05-2024 CD | do via he 18-02-2025 CD | do via he 28-04-2024 CD
-49-B2-11613 | khong bat den sang ban dem 24-03-2024 CD
-30-A2-22592 | do via he 27-01-2025 CD | do via he 02-04-2025 CD | di tren via he 13-06-2024 CD
-61-D2-25222 | cho nguoi qua so quy dinh 09-12-2024 CD
-48-B1-30502 | vuot den do 03-05-2025 CD
-60-C1-39217 | di sai lan duong 29-10-2025 CD
-36-D2-18085 | khong co giay phep lai xe 31-10-2025 CD
-30-C2-30985 | khong nhuong duong cho xe uu tien 26-07-2024 CD
-36-D1-26595 | khong giu khoang cach an toan 08-05-2025 CD
-43-B1-26484 | vuot xe sai quy dinh 17-12-2024 CD
-31-D2-14233 | khong co bien so xe 06-10-2025 CD
-29-C1-20716 | van chay qua tai 20-03-2025 CD
-33-C1-25221 | doi tuyen tai noi duong bo bi cam 04-12-2024 CD
-51-A2-30263 | khong tuong tron 14-07-2024 CD
-37-C2-17445 | su dung dien thoai 10-06-2025 CD
-41-D1-31877 | su dung dien thoai 18-10-2024 CD
-35-C1-32963 | vuot den do 05-01-2025 CD
-43-D2-15824 | khong nhuong duong cho xe uu tien 01-04-2025 CD
-37-B2-35340 | chuyen huong khong xi nhan 27-08-2025 CD
-43-A1-42593 | dung do sai quy dinh 07-12-2024 CD
-17-C2-26976 | khong mang bang lai 25-10-2025 CD
-29-B1-18288 | di tren via he 04-02-2025 CD | vuot toc do 09-12-2025 CD
-36-C2-26033 | di sai lan duong 05-11-2025 CD
-15-D2-29398 | su dung dien thoai 13-06-2025 CD
-72-C1-13798 | vuot den do 04-05-2025 CD
-37-B1-27474 | khong mang bang lai 14-12-2024 CD
-16-B2-13202 | khong mang bang lai 04-09-2025 CD
-31-C2-20458 | khong co giay phep lai xe 19-02-2025 CD
-32-B1-40755 | khong bat den sang ban dem 26-03-2024 CD
-16-A1-41078 | cho nguoi qua so quy dinh 13-12-2024 CD
-37-A2-12840 | khong mang bang lai 12-07-2024 CD | di nguoc chieu 24-06-2024 CD | khong mang bang lai 16-09-2024 CD
-32-D1-37168 | vuot den do 06-05-2025 CD
-48-B2-18331 | di sai lan duong 08-11-2025 CD
-49-B2-34700 | vuot toc do 26-08-2024 CD | vuot toc do 07-04-2025 CD
-30-D2-40852 | khong co giay phep lai xe 01-11-2025 CD
-30-A1-23215 | khong nhuong duong cho xe uu tien 28-07-2024 CD
-61-B1-18356 | khong giu khoang cach an toan 11-05-2025 CD
-38-C2-28161 | vuot xe sai quy dinh 20-12-2024 CD
-37-D1-37718 | khong co bien so xe 08-11-2025 CD
-43-D2-40752 | van chay qua tai 23-03-2025 CD
-33-A1-18997 | doi tuyen tai noi duong bo bi cam 07-12-2024 CD
-49-A2-32433 | khong tuong tron 16-07-2024 CD
-29-C2-24533 | su dung dien thoai 15-06-2025 CD
-35-D2-21149 | su dung dien thoai 21-10-2024 CD
-50-D1-23034 | vuot den do 08-01-2025 CD
-35-C2-26774 | di nguoc chieu 07-06-2024 CD | khong mang bang lai 02-02-2024 CD | do via he 09-09-2024 CD
-49-C1-37367 | khong nhuong duong cho xe uu tien 05-04-2025 CD
-52-C1-40773 | do via he 09-11-2025 CD | do via he 09-10-2024 CD | di nguoc chieu 05-11-2025 CD
-31-A2-31690 | chuyen huong khong xi nhan 30-08-2025 CD
-30-D2-27818 | dung do sai quy dinh 10-12-2024 CD
-35-C2-24623 | di tren via he 07-10-2025 CD
-41-A1-21084 | vuot toc do 22-11-2025 CD | vuot toc do 03-02-2025 CD | vuot toc do 25-08-2025 CD
-18-D2-21694 | khong mang bang lai 15-10-2025 CD
-16-D2-13779 | khong mang bang lai 15-10-2024 CD
-50-A2-22419 | di sai lan duong 11-11-2025 CD
-32-B1-22648 | do via he 08-02-2024 CD | di nguoc chieu 02-08-2024 CD
-38-D2-27240 | su dung dien thoai 17-06-2025 CD
-61-B2-21990 | vuot toc do 20-06-2025 CD | di tren via he 09-10-2024 CD
-29-C2-20076 | di nguoc chieu 27-07-2025 CD
-18-C1-37300 | khong mang bang lai 22-05-2024 CD
-36-D1-20810 | vuot den do 08-05-2025 CD
-50-B2-23381 | khong co giay phep lai xe 17-02-2025 CD
-50-A2-14493 | khong bat den sang ban dem 28-03-2024 CD
-52-C2-34834 | cho nguoi qua so quy dinh 15-12-2024 CD
-15-B2-11100 | vuot toc do 05-03-2025 CD
-52-D1-42747 | vuot den do 10-05-2025 CD
-60-B2-38096 | di sai lan duong 14-11-2025 CD
-50-D1-26674 | khong co giay phep lai xe 03-11-2025 CD
-16-D1-13519 | di tren via he 18-01-2024 CD | khong mang bang lai 04-08-2025 CD
-33-C1-33697 | khong nhuong duong cho xe uu tien 30-07-2024 CD
-72-B1-42253 | khong giu khoang cach an toan 15-05-2025 CD
-37-B2-13539 | vuot xe sai quy dinh 22-12-2024 CD
-15-D1-29629 | vuot toc do 17-03-2024 CD | vuot toc do 12-08-2024 CD | do via he 07-10-2024 CD
-38-C2-30382 | di tren via he 15-06-2025 CD | di tren via he 01-07-2025 CD | do via he 04-06-2024 CD
-60-D1-11526 | khong co bien so xe 10-11-2025 CD
-17-A2-41470 | van chay qua tai 25-03-2025 CD
-48-C1-40090 | doi tuyen tai noi duong bo bi cam 09-12-2024 CD
-47-D1-24779 | khong tuong tron 19-07-2024 CD
-50-B2-17407 | su dung dien thoai 20-06-2025 CD
-29-B1-29914 | su dung dien thoai 24-10-2024 CD
-41-B2-20160 | di tren via he 17-12-2025 CD | do via he 22-02-2024 CD
-31-B1-20767 | vuot den do 12-01-2025 CD
-37-A1-23099 | khong nhuong duong cho xe uu tien 08-04-2025 CD
-47-D2-26308 | chuyen huong khong xi nhan 01-09-2025 CD
-48-B1-12062 | di nguoc chieu 23-02-2025 CD | di nguoc chieu 12-10-2024 CD
-60-D1-42123 | dung do sai quy dinh 13-12-2024 CD
-51-B1-29033 | do via he 01-01-2025 CD | di tren via he 23-06-2025 CD | khong mang bang lai 02-03-2024 CD
-16-C2-38592 | do via he 07-07-2025 CD
-51-D1-17571 | khong mang bang lai 27-10-2025 CD
-47-C1-35244 | di sai lan duong 17-11-2025 CD
-15-B2-28565 | di tren via he 17-02-2025 CD | di tren via he 17-12-2024 CD | di nguoc chieu 15-03-2024 CD
-31-C2-18666 | su dung dien thoai 23-06-2025 CD
-16-B2-34345 | vuot den do 12-05-2025 CD
-60-C1-36514 | khong co giay phep lai xe 20-02-2025 CD
-50-B1-10734 | khong bat den sang ban dem 31-03-2024 CD
-60-A1-12404 | cho nguoi qua so quy dinh 18-12-2024 CD
-33-D2-36978 | di nguoc chieu 16-09-2025 CD | khong mang bang lai 23-09-2024 CD
-52-D1-23183 | di nguoc chieu 02-06-2024 CD
-15-D2-29806 | vuot den do 13-05-2025 CD
-16-C2-19572 | di sai lan duong 20-11-2025 CD
-51-C2-29017 | khong mang bang lai 10-12-2024 CD
-29-C2-33968 | khong co giay phep lai xe 11-11-2025 CD
-33-C1-31355 | khong nhuong duong cho xe uu tien 02-08-2024 CD
-37-D1-26205 | vuot toc do 28-10-2024 CD | do via he 11-02-2024 CD | di nguoc chieu 16-06-2024 CD
-33-C2-35409 | khong giu khoang cach an toan 18-05-2025 CD
-31-A1-29755 | vuot toc do 28-03-2025 CD | vuot toc do 17-11-2024 CD
-36-C1-14318 | vuot xe sai quy dinh 26-12-2024 CD
-36-B1-19173 | di tren via he 28-06-2024 CD | vuot toc do 25-05-2025 CD | khong mang bang lai 15-06-2024 CD
-16-B1-33819 | vuot toc do 25-12-2024 CD | vuot toc do 01-10-2025 CD | do via he 21-03-2024 CD
-31-B2-31060 | di nguoc chieu 12-06-2024 CD
-30-C2-11813 | khong co bien so xe 13-11-2025 CD
-72-B2-38868 | van chay qua tai 28-03-2025 CD
-35-A1-41766 | doi tuyen tai noi duong bo bi cam 12-12-2024 CD
-49-B1-21532 | khong tuong tron 22-07-2024 CD
-37-C2-35649 | su dung dien thoai 19-06-2025 CD
-17-D1-26663 | di tren via he 07-02-2025 CD | do via he 24-07-2024 CD
-47-D2-36234 | di nguoc chieu 18-07-2025 CD
-61-B1-26551 | khong mang bang lai 25-10-2024 CD
-38-B2-13961 | do via he 02-09-2025 CD | di tren via he 21-03-2025 CD
-41-D1-18116 | su dung dien thoai 27-10-2024 CD
-29-A2-26832 | khong mang bang lai 04-04-2024 CD | do via he 21-11-2024 CD | khong mang bang lai 28-10-2024 CD
-43-B1-15901 | di nguoc chieu 25-03-2025 CD | vuot toc do 18-05-2024 CD | di tren via he 06-03-2025 CD
-35-C1-18288 | di tren via he 22-03-2024 CD | di nguoc chieu 10-03-2024 CD
-35-A1-40698 | vuot den do 14-01-2025 CD
-49-A1-23102 | khong nhuong duong cho xe uu tien 11-04-2025 CD
-52-D2-19728 | chuyen huong khong xi nhan 04-09-2025 CD
-16-C2-36618 | do via he 20-04-2024 CD | do via he 17-09-2025 CD
-72-B2-32078 | dung do sai quy dinh 16-12-2024 CD
-31-B1-41575 | khong mang bang lai 17-10-2025 CD
-50-D1-22688 | di sai lan duong 24-11-2025 CD
-18-A2-26059 | su dung dien thoai 25-06-2025 CD
-72-C2-19841 | vuot den do 15-05-2025 CD
-52-B1-20467 | khong co giay phep lai xe 23-02-2025 CD
-30-D1-31849 | khong bat den sang ban dem 05-04-2024 CD
-16-C2-13583 | di nguoc chieu 21-02-2025 CD | khong mang bang lai 14-10-2025 CD | vuot toc do 09-08-2024 CD
-36-C2-36526 | di nguoc chieu 05-08-2024 CD | di tren via he 25-02-2025 CD | vuot toc do 14-12-2024 CD
-72-C2-42434 | cho nguoi qua so quy dinh 21-12-2024 CD
-60-B1-22595 | vuot toc do 25-03-2025 CD | di nguoc chieu 07-03-2025 CD
-29-D1-10267 | vuot den do 17-05-2025 CD
-35-C1-17732 | di sai lan duong 27-11-2025 CD
-48-D2-34657 | khong co giay phep lai xe 05-11-2025 CD
-50-D1-41895 | khong nhuong duong cho xe uu tien 04-08-2024 CD
-72-C2-35355 | khong giu khoang cach an toan 22-05-2025 CD
-49-B2-27866 | vuot xe sai quy dinh 29-12-2024 CD
-17-B1-11563 | khong co bien so xe 15-11-2025 CD
-50-D2-35510 | van chay qua tai 30-03-2025 CD
-51-A2-36624 | khong mang bang lai 07-12-2024 CD | do via he 23-08-2024 CD | khong mang bang lai 28-08-2024 CD
-41-D2-40289 | di tren via he 07-02-2024 CD | di nguoc chieu 04-05-2024 CD
-18-B2-32104 | khong mang bang lai 20-07-2024 CD
-43-B2-34881 | doi tuyen tai noi duong bo bi cam 14-12-2024 CD
-60-C2-24657 | khong mang bang lai 02-06-2024 CD | di tren via he 27-05-2024 CD
-49-B2-36153 | vuot toc do 05-01-2025 CD | do via he 08-10-2024 CD | di tren via he 28-07-2025 CD
-30-B2-40830 | khong mang bang lai 19-07-2025 CD | vuot toc do 18-12-2025 CD
-49-B1-25183 | khong tuong tron 25-07-2024 CD
-52-A1-26377 | vuot toc do 21-02-2025 CD | vuot toc do 03-04-2024 CD
-29-C1-42761 | di tren via he 20-07-2024 CD | vuot toc do 01-08-2025 CD | do via he 06-10-2025 CD
-47-B1-36733 | khong mang bang lai 16-10-2025 CD
-51-A2-13033 | su dung dien thoai 28-06-2025 CD
-41-D1-26294 | su dung dien thoai 30-10-2024 CD
-41-D1-41665 | vuot den do 16-01-2025 CD
-51-C2-18944 | di nguoc chieu 19-04-2025 CD | di tren via he 01-12-2025 CD
-36-A1-32767 | khong nhuong duong cho xe uu tien 14-04-2025 CD
-61-B2-24730 | chuyen huong khong xi nhan 07-09-2025 CD
-50-D1-41483 | dung do sai quy dinh 19-12-2024 CD
-18-D1-41656 | khong mang bang lai 18-10-2025 CD
-29-C1-25729 | di sai lan duong 02-12-2025 CD
-48-C2-40967 | su dung dien thoai 01-07-2025 CD
-15-D2-40572 | vuot den do 20-05-2025 CD
-47-A1-25304 | khong co giay phep lai xe 26-02-2025 CD
-72-D1-18582 | khong bat den sang ban dem 09-04-2024 CD
-37-D1-38363 | vuot toc do 11-02-2025 CD
-29-D2-14171 | vuot toc do 17-06-2024 CD
-30-A2-38823 | cho nguoi qua so quy dinh 23-12-2024 CD
-33-B1-10793 | vuot den do 22-05-2025 CD
-31-A1-15337 | di sai lan duong 03-12-2025 CD
-33-A1-30259 | khong co giay phep lai xe 16-11-2025 CD
-60-C2-10489 | khong mang bang lai 08-09-2024 CD
-48-D2-16714 | khong nhuong duong cho xe uu tien 07-08-2024 CD
-16-D2-13003 | khong giu khoang cach an toan 26-05-2025 CD
-50-A1-20212 | vuot xe sai quy dinh 02-01-2025 CD
-41-D1-18472 | khong co bien so xe 19-11-2025 CD
-61-A1-23963 | van chay qua tai 01-04-2025 CD
-33-D1-28817 | doi tuyen tai noi duong bo bi cam 17-12-2024 CD
-15-D2-10084 | khong tuong tron 28-07-2024 CD
-38-A1-25840 | su dung dien thoai 03-07-2025 CD
-33-B2-11146 | khong mang bang lai 05-12-2024 CD
-35-A1-27457 | su dung dien thoai 03-11-2024 CD
-50-A2-28428 | vuot den do 11-01-2025 CD
-29-B1-20377 | khong nhuong duong cho xe uu tien 16-04-2025 CD
-37-B2-20439 | chuyen huong khong xi nhan 11-09-2025 CD
-47-C2-25702 | di tren via he 17-03-2024 CD
-49-B1-36555 | di nguoc chieu 06-05-2024 CD
-48-D2-32215 | vuot toc do 17-01-2025 CD
-15-A2-39383 | dung do sai quy dinh 21-12-2024 CD
-52-D1-42422 | khong mang bang lai 24-10-2025 CD
-48-C2-16343 | di sai lan duong 06-12-2025 CD
-31-C2-34958 | su dung dien thoai 04-07-2025 CD
-60-D2-19487 | khong mang bang lai 06-07-2025 CD | di nguoc chieu 20-07-2025 CD
-50-C1-20718 | vuot den do 24-05-2025 CD
-50-B1-21585 | khong co giay phep lai xe 28-02-2025 CD
-17-A2-18275 | khong bat den sang ban dem 12-04-2024 CD
-31-D2-20751 | cho nguoi qua so quy dinh 26-12-2024 CD
-15-D2-31482 | vuot den do 26-05-2025 CD
-29-D1-15708 | di tren via he 23-12-2025 CD | vuot toc do 11-12-2024 CD | vuot toc do 02-01-2024 CD
-61-B2-35731 | di sai lan duong 08-12-2025 CD
-38-B2-13788 | khong co giay phep lai xe 22-11-2025 CD
-18-D1-42534 | do via he 18-09-2024 CD | khong mang bang lai 12-12-2025 CD | vuot toc do 21-08-2025 CD
-36-B1-38045 | do via he 09-03-2025 CD
-18-D1-10432 | khong nhuong duong cho xe uu tien 09-08-2024 CD
-17-C1-35156 | khong giu khoang cach an toan 29-05-2025 CD
-48-A2-10324 | vuot xe sai quy dinh 04-01-2025 CD
-49-B2-13430 | khong co bien so xe 24-11-2025 CD
-37-A1-27643 | di nguoc chieu 03-10-2024 CD
-47-C1-31946 | do via he 05-05-2024 CD | do via he 19-05-2025 CD
-18-C2-32280 | van chay qua tai 02-04-2025 CD
-48-B1-12300 | di tren via he 06-04-2024 CD | di tren via he 24-10-2025 CD
-37-B1-14741 | doi tuyen tai noi duong bo bi cam 18-12-2024 CD
-29-B1-15745 | khong tuong tron 30-07-2024 CD
-52-D1-23542 | su dung dien thoai 05-07-2025 CD
-72-A1-34610 | su dung dien thoai 06-11-2024 CD
-18-B1-31685 | di tren via he 18-06-2025 CD | khong mang bang lai 19-12-2024 CD
-35-B2-34433 | vuot den do 18-01-2025 CD
-35-C2-18876 | khong nhuong duong cho xe uu tien 19-04-2025 CD
-37-A2-25213 | do via he 02-10-2025 CD | di nguoc chieu 26-07-2024 CD | di nguoc chieu 07-08-2024 CD
-47-C1-35449 | khong mang bang lai 08-10-2024 CD | vuot toc do 19-03-2025 CD
-16-C2-13898 | vuot toc do 11-10-2025 CD | di nguoc chieu 13-05-2024 CD | vuot toc do 10-07-2025 CD
-36-C2-27777 | di tren via he 18-06-24024 CD
-49-D1-39947 | di nguoc chieu 04-09-2025 CD | khong mang bang lai 18-06-2025 CD | di nguoc chieu 10-05-2025 CD
-32-A2-31632 | chuyen huong khong xi nhan 14-09-2025 CD
-29-D1-23459 | vuot toc do 24-11-2025 CD | khong mang bang lai 23-11-2025 CD | vuot toc do 13-03-2024 CD
-50-B2-28857 | do via he 04-06-2025 CD | vuot toc do 10-05-2024 CD
-60-B2-30375 | khong bat den sang ban dem 18-02-2024 CD
-43-D1-08894
+52-B1-16472 M | di tren via he 04-04-2025 CD | khong mang bang lai 16-08-2025 CD
+18-B1-19437 M | su dung dien thoai 15-03-2024 CD
+37-C2-25644 M | khong mang bang lai 20-08-2024 CD | do via he 15-07-2024 CD | di nguoc chieu 20-02-2025 CD
+47-C1-14719 M | do via he 11-06-2025 CD | vuot toc do 14-12-2024 CD | vuot toc do 07-02-2024 CD
+51-A1-11247 M | vuot toc do 07-08-2024 CD
+29-A2-36709 M | su dung dien thoai 22-09-2024 CD
+52-B1-26756 M | chuyen huong khong xi nhan 10-11-2025 CD
+18-A2-16944 M | khong mang bang lai 13-09-2024 CD
+52-D1-33813 M | dung do sai quy dinh 30-05-2025 CD
+37-B2-38730 M | vuot den do 14-07-2024 CD
+72-C1-39522 M | khong bat den sang ban dem 05-01-2025 CD
+72-B1-12652 M | cho nguoi qua so quy dinh 18-10-2024 CD
+50-D2-17336 M | di nguoc chieu 22-04-2024 CD | di nguoc chieu 24-06-2024 CD | di tren via he 17-01-2025 CD
+48-A1-34279 M | vuot den do 03-08-2025 CD
+29-B1-41804 M | khong co giay phep lai xe 25-12-2024 CD
+37-D1-30887 M | di sai lan duong 09-04-2025 CD
+52-B2-17582 M | vuot toc do 23-06-2024 CD | di nguoc chieu 28-03-2024 CD
+38-A2-16530 M | khong nhuong duong cho xe uu tien 11-02-2025 CD
+33-C2-28316 M | khong co giay phep lai xe 19-09-2025 CD
+50-A1-42435 M | khong nhuong duong cho xe uu tien 06-06-2024 CD
+60-B1-12873 M | khong giu khoang cach an toan 27-03-2025 CD
+31-A2-19764 M | vuot xe sai quy dinh 15-11-2024 CD
+29-C1-40934 M | khong co bien so xe 08-08-2025 CD
+61-D1-21797 M | van chay qua tai 21-01-2025 CD
+60-C2-36571 M | doi tuyen tai noi duong bo bi cam 02-10-2024 CD
+41-A2-34299 M | di nguoc chieu 04-04-2025 CD | khong mang bang lai 08-03-2025 CD | do via he 06-03-2024 CD
+16-D2-21728 M | di tren via he 17-01-2024 CD | vuot toc do 19-08-2024 CD
+41-B2-38172 M | khong mang bang lai 14-06-2024 CD
+51-B1-40987 M | vuot xe sai quy dinh 13-07-2025 CD
+30-C1-31190 M | vuot toc do 13-11-2025 DD | khong co giay phep lai xe 18-11-2025 CD
+35-C1-24086 M | khong tuong tron 24-05-2024 CD
+30-A2-10762 M | di nguoc chieu 17-02-2025 CD
+60-D1-18129 M | khong co giay phep lai xe 30-09-2024 CD
+49-A1-25983 M | di tren via he 12-04-2025 CD | di tren via he 22-05-2024 CD | do via he 07-02-2025 CD
+38-C2-25574 M | di nguoc chieu 26-12-2024 CD | do via he 23-09-2024 CD
+52-B2-23322 M | di tren via he 25-05-2025 CD
+29-B2-34977 M | khong mang bang lai 04-11-2024 CD
+29-A2-22029 M | di tren via he 19-08-2024 CD | do via he 01-07-2024 CD
+32-B1-39764 M | su dung dien thoai 10-10-2025 CD
+30-B2-34387 M | vuot den do 22-12-2024 CD
+49-D1-39954 M | khong mang bang lai 27-09-2024 CD
+37-A1-31642 M | di sai lan duong 15-08-2025 CD
+60-A1-32672 M | su dung dien thoai 03-04-2024 CD
+31-C1-25518 M | vuot den do 28-07-2025 CD
+29-B1-32162 M | khong co giay phep lai xe 11-01-2025 CD
+72-C2-13941 M | vuot toc do 09-02-2025 CD | di nguoc chieu 12-11-2024 CD
+72-A2-16439 M | di nguoc chieu 04-08-2024 CD | do via he 05-07-2024 CD | di nguoc chieu 14-10-2025 CD
+52-C2-16116 M | vuot toc do 19-12-2025 CD | di tren via he 13-12-2025 CD | di nguoc chieu 27-07-2025 CD
+41-A1-33394 M | khong nhuong duong cho xe uu tien 20-06-2025 CD
+50-A2-15774 M | vuot toc do 25-08-2025 CD
+43-D2-10924 M | vuot toc do 15-05-2024 CD | di tren via he 26-08-2025 CD
+47-C2-31502 M | chuyen huong khong xi nhan 07-09-2024 CD
+72-D1-38942 M | dung do sai quy dinh 14-03-2025 CD
+38-A2-35543 M | di nguoc chieu 10-08-2024 CD
+29-B1-15165 M | vuot den do 25-10-2025 CD
+47-B1-42694 M | khong bat den sang ban dem 01-02-2024 CD
+50-D2-21684 M | cho nguoi qua so quy dinh 18-11-2024 CD
+72-A1-23978 M | vuot den do 05-04-2025 CD
+72-B1-24840 M | khong co giay phep lai xe 30-12-2024 CD
+30-A1-29586 M | di sai lan duong 11-07-2025 CD
+15-A2-41507 M | khong co giay phep lai xe 23-09-2025 CD
+29-A2-11435 M | khong nhuong duong cho xe uu tien 08-06-2024 CD
+29-B1-25303 M | khong giu khoang cach an toan 17-03-2025 CD
+17-B2-41486 M | di nguoc chieu 11-11-2024 CD | do via he 08-12-2024 CD | di nguoc chieu 03-03-2024 CD
+52-B2-40188 M | vuot xe sai quy dinh 19-10-2024 CD
+49-A2-17611 M | khong co bien so xe 12-08-2025 CD
+31-D1-21747 M | van chay qua tai 26-01-2025 CD
+15-C2-22416 M | do via he 05-09-2025 CD
+72-D2-41908 M | di nguoc chieu 17-12-2025 CD
+31-A2-41840 M | doi tuyen tai noi duong bo bi cam 04-10-2024 CD
+72-A1-35691 M | khong tuong tron 21-05-2024 CD
+43-C1-25708 M | di nguoc chieu 23-01-2025 CD | di tren via he 21-04-2025 CD
+30-D1-29595 M | vuot xe sai quy dinh 15-07-2025 CD
+33-A1-10735 M | di nguoc chieu 13-03-2024 CD | di tren via he 11-02-2024 CD | khong mang bang lai 24-08-2024 CD
+60-B1-40046 M | su dung dien thoai 09-04-2025 CD
+30-B1-32882 M | do via he 13-04-2024 CD | di tren via he 17-10-2025 CD | khong mang bang lai 19-06-2025 CD
+60-C1-15774 M | di tren via he 09-06-2025 CD | do via he 21-11-2025 CD
+16-C1-33308 M | su dung dien thoai 28-08-2024 CD
+72-D1-35935 M | di tren via he 18-09-2025 CD | di nguoc chieu 12-04-2025 CD
+29-D2-20231 M | vuot den do 03-11-2024 CD
+50-A1-10528 M | khong nhuong duong cho xe uu tien 16-02-2025 CD
+47-D2-13583 M | chuyen huong khong xi nhan 24-07-2025 CD
+52-B2-21951 M | dung do sai quy dinh 11-10-2024 CD
+43-D1-33239 M | khong mang bang lai 05-09-2025 CD
+33-D1-11189 M | di sai lan duong 20-08-2025 CD
+43-C2-31818 M | khong mang bang lai 06-07-2024 CD | di nguoc chieu 01-06-2025 CD | khong mang bang lai 27-04-2024 CD
+35-A2-31279 M | su dung dien thoai 13-01-2025 CD
+50-B2-26392 M | vuot den do 07-03-2025 CD
+31-A2-22820 M | khong co giay phep lai xe 22-12-2024 CD
+15-A2-11259 M | vuot toc do 09-09-2024 CD
+41-C1-38156 M | vuot den do 18-11-2025 CD
+35-D2-42654 M | khong bat den sang ban dem 02-02-2024 CD
+49-B1-17745 M | khong mang bang lai 27-03-2024 CD | khong mang bang lai 09-09-2025 CD
+47-B1-10149 M | cho nguoi qua so quy dinh 26-10-2024 CD
+36-B1-13314 M | vuot den do 14-04-2025 CD
+41-D1-39763 M | di sai lan duong 08-08-2025 CD
+47-D2-32386 M | khong mang bang lai 17-05-2024 CD | do via he 10-10-2024 CD
+52-C2-24974 M | khong co giay phep lai xe 30-09-2025 CD
+36-B2-26969 M | khong nhuong duong cho xe uu tien 11-06-2024 CD
+38-D1-42074 M | di nguoc chieu 01-03-2024 CD
+37-B2-30724 M | khong giu khoang cach an toan 23-03-2025 CD
+36-B2-23253 M | vuot toc do 08-08-2024 CD | di tren via he 10-01-2025 CD
+17-D2-12385 M | khong mang bang lai 09-05-2024 CD
+16-D1-11461 M | vuot xe sai quy dinh 16-10-2024 CD
+48-B2-26289 M | khong co bien so xe 05-08-2025 CD
+36-B1-30485 M | van chay qua tai 28-01-2025 CD
+30-A2-23284 M | vuot toc do 23-11-2025 CD
+29-D1-10964 M | doi tuyen tai noi duong bo bi cam 08-10-2024 CD
+18-A2-30879 M | khong tuong tron 17-05-2024 CD
+51-D1-27738 M | do via he 11-01-2024 CD | do via he 23-10-2024 CD
+15-C1-11088 M | do via he 27-12-2024 CD | vuot toc do 27-11-2025 CD
+72-D1-24844 M | su dung dien thoai 07-04-2025 CD
+15-C1-23640 M | su dung dien thoai 20-08-2024 CD
+36-B2-12986 M | vuot den do 12-11-2024 CD
+30-B1-27960 M | di tren via he 09-04-2024 CD | di nguoc chieu 12-01-2024 CD | di tren via he 21-05-2024 CD
+41-A2-24277 M | khong nhuong duong cho xe uu tien 25-02-2025 CD
+37-D2-42598 M | chuyen huong khong xi nhan 03-07-2025 CD
+35-D1-35647 M | khong mang bang lai 16-12-2024 CD | di tren via he 16-06-2025 CD | khong mang bang lai 12-03-2025 CD
+38-C1-31252 M | do via he 07-02-2025 CD | di nguoc chieu 19-11-2025 CD
+33-D2-40450 M | dung do sai quy dinh 15-10-2024 CD
+51-B1-17213 M | khong mang bang lai 08-09-2025 CD
+72-C1-40431 M | di sai lan duong 22-08-2025 CD
+52-C2-24431 M | su dung dien thoai 11-01-2025 CD
+61-A1-28625 M | khong mang bang lai 22-02-2025 CD | di tren via he 24-07-2025 CD
+43-C2-32688 M | vuot den do 06-03-2025 CD
+36-C2-30465 M | khong co giay phep lai xe 29-12-2024 CD
+16-C2-29660 M | di nguoc chieu 12-04-2024 CD | di tren via he 03-04-2024 CD
+17-A2-31446 M | di tren via he 12-08-2024 CD | di nguoc chieu 08-07-2024 CD | vuot toc do 06-04-2025 CD
+41-A2-12033 M | di nguoc chieu 01-07-2025 CD | di nguoc chieu 03-02-2024 CD | di nguoc chieu 25-07-2024 CD
+29-C1-19447 M | vuot den do 17-11-2025 CD
+17-A2-36353 M | khong nhuong duong cho xe uu tien 14-02-2025 CD
+38-A2-14455 M | chuyen huong khong xi nhan 27-07-2025 CD
+36-B2-11778 M | vuot toc do 14-04-2024 CD | di nguoc chieu 13-09-2024 CD
+72-D1-35177 M | dung do sai quy dinh 10-10-2024 CD
+49-A1-18164 M | di nguoc chieu 04-06-2024 CD | di nguoc chieu 18-10-2025 CD
+36-B1-25717 M | di nguoc chieu 20-05-2024 CD
+31-C2-26381 M | di tren via he 08-04-2025 CD | vuot toc do 28-04-2024 CD | vuot toc do 20-12-2024 CD
+49-C2-42255 M | di tren via he 22-09-2024 CD | vuot toc do 17-12-2024 CD | do via he 25-07-2025 CD
+33-D1-33952 M | do via he 23-07-2025 CD | khong mang bang lai 08-03-2025 CD
+43-B2-17541 M | vuot toc do 17-08-2025 CD | vuot toc do 22-06-2024 CD | vuot toc do 14-03-2025 CD
+50-C2-18253 M | khong co giay phep lai xe 01-10-2025 CD
+72-A2-36755 M | khong nhuong duong cho xe uu tien 13-06-2024 CD
+30-B1-32448 M | khong giu khoang cach an toan 25-03-2025 CD
+36-D1-35910 M | vuot xe sai quy dinh 18-10-2024 CD
+15-C1-19089 M | di tren via he 27-02-2024 CD | do via he 18-01-2025 CD
+72-B1-14501 M | di nguoc chieu 25-07-2024 CD
+16-B2-12525 M | khong co bien so xe 09-08-2025 CD
+30-A2-14483 M | van chay qua tai 30-01-2025 CD
+48-D1-22505 M | doi tuyen tai noi duong bo bi cam 12-10-2024 CD
+72-A2-16236 M | khong tuong tron 23-05-2024 CD
+16-A2-19284 M | khong mang bang lai 21-05-2025 CD
+29-A1-18724 M | su dung dien thoai 10-04-2025 CD
+60-D1-20078 M | su dung dien thoai 24-08-2024 CD
+36-A1-14976 M | di nguoc chieu 09-09-2025 CD
+60-C1-25328 M | vuot den do 28-10-2025 CD
+72-B1-37911 M | do via he 12-08-2024 CD | do via he 14-02-2025 CD
+29-D1-31654 M | khong mang bang lai 07-11-2025 CD | khong mang bang lai 14-05-2025 CD | di tren via he 17-04-2024 CD
+72-A2-14528 M | do via he 23-03-2025 CD
+36-C2-31765 M | khong mang bang lai 18-01-2024 CD
+37-D1-34541 M | di nguoc chieu 19-07-2024 CD | khong mang bang lai 23-01-2024 CD | di tren via he 22-01-2024 CD
+52-B2-18487 M | di nguoc chieu 09-05-2024 CD
+47-B1-37444 M | khong nhuong duong cho xe uu tien 18-02-2025 CD
+51-B1-41829 M | di tren via he 18-05-2024 CD | di nguoc chieu 26-11-2025 CD
+41-A1-20980 M | chuyen huong khong xi nhan 05-07-2025 CD
+49-B2-14953 M | dung do sai quy dinh 16-10-2024 CD
+18-D1-11989 M | do via he 19-01-2024 CD | di nguoc chieu 27-04-2025 CD | vuot toc do 23-04-2024 CD
+35-A1-36378 M | di nguoc chieu 24-08-2025 CD | khong mang bang lai 20-03-2024 CD | di tren via he 02-05-2025 CD
+32-D1-24535 M | khong mang bang lai 11-09-2025 CD
+33-D2-41680 M | di tren via he 27-08-2024 CD
+47-C1-21617 M | di sai lan duong 24-08-2025 CD
+38-D1-28473 M | su dung dien thoai 12-04-2025 CD
+33-C1-41743 M | vuot den do 09-03-2025 CD
+32-A1-18440 M | di tren via he 22-06-2025 CD | khong mang bang lai 11-03-2025 CD | di nguoc chieu 18-07-2024 CD
+35-B2-40182 M | khong co giay phep lai xe 31-12-2024 CD
+31-C1-38159 M | di tren via he 17-03-2025 CD | do via he 23-04-2024 CD
+35-C1-20203 M | vuot den do 21-11-2024 CD
+33-C2-22225 M | khong bat den sang ban dem 06-02-2024 CD
+29-A2-35786 M | cho nguoi qua so quy dinh 30-10-2024 CD
+30-A2-35655 M | vuot den do 10-03-2025 CD
+36-B2-38449 M | di sai lan duong 26-08-2025 CD
+16-C2-38400 M | khong co giay phep lai xe 04-10-2025 CD
+72-D2-18377 M | di tren via he 09-11-2024 CD
+72-B1-30303 M | di nguoc chieu 02-11-2024 CD | vuot toc do 23-07-2025 CD
+41-D1-21270 M | khong nhuong duong cho xe uu tien 15-06-2024 CD
+35-D1-16763 M | khong mang bang lai 08-04-2024 CD | di nguoc chieu 04-03-2024 CD | khong mang bang lai 17-07-2025 CD
+29-C2-34493 M | khong giu khoang cach an toan 27-03-2025 CD
+32-B1-11335 M | vuot xe sai quy dinh 20-10-2024 CD
+61-B2-14661 M | di tren via he 18-07-2024 CD | di nguoc chieu 19-04-2025 CD | vuot toc do 12-03-2025 CD
+29-B1-38708 M | khong co bien so xe 11-08-2025 CD
+50-A2-39436 M | van chay qua tai 01-02-2025 CD
+52-D2-14961 M | doi tuyen tai noi duong bo bi cam 14-10-2024 CD
+18-A2-24474 M | khong tuong tron 25-05-2024 CD
+50-B2-23581 M | su dung dien thoai 13-04-2025 CD
+36-D2-13865 M | su dung dien thoai 28-08-2024 CD
+16-D2-31919 M | vuot den do 05-11-2024 CD
+32-C1-30084 M | di tren via he 07-11-2025 CD
+51-C1-27559 M | khong nhuong duong cho xe uu tien 19-02-2025 CD
+43-C1-35104 M | vuot toc do 03-02-2024 CD | di tren via he 24-01-2025 CD | di nguoc chieu 01-09-2024 CD
+15-A1-31132 M | chuyen huong khong xi nhan 08-07-2025 CD
+17-C2-19625 M | dung do sai quy dinh 17-10-2024 CD
+43-B2-24791 M | di tren via he 17-10-2024 CD | di nguoc chieu 21-04-2025 CD | di tren via he 12-07-2025 CD
+31-D2-29718 M | khong mang bang lai 12-09-2025 CD
+31-D2-13460 M | di sai lan duong 23-08-2025 CD
+43-A1-40876 M | su dung dien thoai 14-04-2025 CD
+31-A2-31221 M | vuot den do 11-03-2025 CD
+16-A2-31426 M | khong co giay phep lai xe 02-01-2025 CD
+37-C1-31384 M | di nguoc chieu 12-03-2025 CD | khong mang bang lai 17-08-2025 CD
+48-A1-10812 M | vuot den do 07-11-2024 CD
+37-D1-14877 M | vuot toc do 25-09-2024 CD
+72-C2-36483 M | khong bat den sang ban dem 08-02-2024 CD
+38-D1-34242 M | khong mang bang lai 02-12-2025 CD | vuot toc do 19-05-2025 CD | di nguoc chieu 22-09-2025 CD
+36-B2-40961 M | cho nguoi qua so quy dinh 01-11-2024 CD
+41-C2-33948 M | vuot den do 12-03-2025 CD
+29-C2-41147 M | di sai lan duong 27-08-2025 CD
+33-B2-40613 M | vuot toc do 11-11-2024 CD
+32-C1-14773 M | khong co giay phep lai xe 06-10-2025 CD
+51-A2-29706 M | khong nhuong duong cho xe uu tien 18-06-2024 CD
+38-B2-26062 M | di nguoc chieu 01-10-2025 CD | di nguoc chieu 06-06-2024 CD | do via he 01-02-2024 CD
+51-A2-30744 M | khong giu khoang cach an toan 29-03-2025 CD
+47-A2-18901 M | vuot xe sai quy dinh 23-10-2024 CD
+31-C2-39053 M | do via he 02-12-2025 CD
+38-C2-35663 M | khong co bien so xe 15-08-2025 CD
+15-A1-28974 M | di tren via he 15-08-2025 CD | vuot toc do 05-05-2025 CD | khong mang bang lai 02-10-2025 CD
+50-C2-24021 M | van chay qua tai 05-02-2025 CD
+38-B2-35699 M | doi tuyen tai noi duong bo bi cam 16-10-2024 CD
+31-B1-10492 M | khong tuong tron 28-05-2024 CD
+35-C1-18377 M | su dung dien thoai 16-04-2025 CD
+33-A2-22682 M | vuot toc do 01-12-2024 CD
+31-A2-19553 M | su dung dien thoai 01-09-2024 CD
+49-A2-14898 M | vuot den do 10-11-2024 CD
+32-B1-40351 M | khong nhuong duong cho xe uu tien 22-02-2025 CD
+38-A2-37427 M | di tren via he 05-05-2025 CD | vuot toc do 02-05-2024 CD | di tren via he 18-10-2024 CD
+29-B2-13708 M | vuot toc do 02-09-2024 CD | khong mang bang lai 07-01-2024 CD
+52-C1-12710 M | chuyen huong khong xi nhan 11-07-2025 CD
+30-D2-27147 M | dung do sai quy dinh 20-10-2024 CD
+52-C2-33575 M | khong mang bang lai 15-09-2025 CD
+60-C2-15167 M | di sai lan duong 30-08-2025 CD
+35-D2-12401 M | su dung dien thoai 17-04-2025 CD
+17-C2-13151 M | di nguoc chieu 24-04-2024 CD
+60-D2-14639 M | do via he 16-11-2025 CD | di tren via he 07-01-2024 CD | khong mang bang lai 02-05-2025 CD
+43-C1-20639 M | vuot den do 13-03-2025 CD
+17-C1-24226 M | khong co giay phep lai xe 04-01-2025 CD
+30-A2-34230 M | khong bat den sang ban dem 09-02-2024 CD
+48-D2-14531 M | cho nguoi qua so quy dinh 05-11-2024 CD
+41-D2-42033 M | vuot den do 14-03-2025 CD
+29-A2-18728 M | di sai lan duong 31-08-2025 CD
+18-C2-18617 M | khong co giay phep lai xe 08-10-2025 CD
+31-B1-15092 M | khong nhuong duong cho xe uu tien 20-06-2024 CD
+47-D2-35871 M | di nguoc chieu 14-04-2024 CD | vuot toc do 12-12-2024 CD | di tren via he 14-08-2025 CD
+47-C2-17995 M | khong giu khoang cach an toan 31-03-2025 CD
+41-A2-34299 M | vuot xe sai quy dinh 26-10-2024 CD
+61-C1-26359 M | khong co bien so xe 18-08-2025 CD
+15-D1-18306 M | van chay qua tai 07-02-2025 CD
+43-B1-12558 M | doi tuyen tai noi duong bo bi cam 18-10-2024 CD
+61-C1-21815 M | khong tuong tron 30-05-2024 CD
+72-D1-21864 M | su dung dien thoai 18-04-2025 CD
+37-D2-16115 M | su dung dien thoai 03-09-2024 CD
+49-B1-22990 M | vuot den do 13-11-2024 CD
+18-C1-36857 M | khong nhuong duong cho xe uu tien 24-02-2025 CD
+51-A1-33224 M | chuyen huong khong xi nhan 12-07-2025 CD
+15-B2-41286 M | di tren via he 28-11-2024 CD | di nguoc chieu 02-05-2024 CD
+52-C2-33212 M | vuot toc do 18-02-2025 CD | vuot toc do 10-07-2025 CD
+38-D2-16463 M | dung do sai quy dinh 23-10-2024 CD
+52-C1-40725 M | khong mang bang lai 18-09-2025 CD
+61-B1-30139 M | do via he 27-01-2024 CD | khong mang bang lai 18-11-2025 CD
+33-B2-10044 M | di nguoc chieu 02-02-2024 CD | di tren via he 27-06-2025 CD
+16-A1-29782 M | di sai lan duong 01-09-2025 CD
+30-A1-11733 M | su dung dien thoai 19-04-2025 CD
+61-A1-25231 M | vuot den do 15-03-2025 CD
+72-C2-30655 M | khong co giay phep lai xe 07-01-2025 CD
+31-A1-12968 M | di tren via he 13-02-2025 CD
+18-D1-35239 M | khong bat den sang ban dem 11-02-2024 CD
+52-C2-21775 M | cho nguoi qua so quy dinh 08-11-2024 CD
+52-D2-25675 M | vuot den do 16-03-2025 CD
+33-D1-25309 M | di sai lan duong 04-09-2025 CD
+31-C1-15594 M | khong co giay phep lai xe 11-10-2025 CD
+17-A1-36889 M | khong nhuong duong cho xe uu tien 23-06-2024 CD
+51-B1-38120 M | khong giu khoang cach an toan 02-04-2025 CD
+17-C1-19149 M | vuot xe sai quy dinh 29-10-2024 CD
+29-D2-12286 M | khong co bien so xe 21-08-2025 CD
+38-D1-27248 M | van chay qua tai 11-02-2025 CD
+37-B2-16560 M | doi tuyen tai noi duong bo bi cam 21-10-2024 CD
+32-A2-24972 M | khong tuong tron 01-06-2024 CD
+43-A1-27334 M | su dung dien thoai 20-04-2025 CD
+49-B1-10432 M | su dung dien thoai 06-09-2024 CD
+51-A2-27045 M | vuot den do 16-11-2024 CD
+32-D1-31510 M | khong nhuong duong cho xe uu tien 27-02-2025 CD
+52-B1-11616 M | di nguoc chieu 19-07-2025 CD | di tren via he 08-12-2024 CD | di nguoc chieu 27-07-2024 CD
+51-C2-10052 M | chuyen huong khong xi nhan 15-07-2025 CD
+52-A2-14343 M | dung do sai quy dinh 26-10-2024 CD
+47-A2-15129 M | khong mang bang lai 21-09-2025 CD
+35-D2-14980 M | di sai lan duong 07-09-2025 CD
+15-A2-18407 M | su dung dien thoai 21-04-2025 CD
+29-B1-40441 M | vuot den do 18-03-2025 CD
+48-C1-18279 M | di nguoc chieu 14-02-2024 CD | do via he 20-07-2024 CD
+36-A2-27078 M | khong co giay phep lai xe 09-01-2025 CD
+16-A1-20893 M | khong bat den sang ban dem 13-02-2024 CD
+32-D2-18326 M | di nguoc chieu 18-05-2025 CD | vuot toc do 18-02-2024 CD | do via he 11-12-2025 CD
+33-A2-22789 M | cho nguoi qua so quy dinh 12-11-2024 CD
+38-B1-25705 M | vuot den do 19-03-2025 CD
+60-C2-31775 M | vuot toc do 03-07-2025 CD | di tren via he 28-05-2024 CD | di tren via he 16-12-2025 CD
+50-B1-30059 M | di sai lan duong 11-09-2025 CD
+17-A1-14701 M | khong mang bang lai 03-06-2025 CD
+61-B1-40565 M | di tren via he 26-01-2024 CD | do via he 03-08-2025 CD
+43-D1-16776 M | khong co giay phep lai xe 13-10-2025 CD
+48-C1-41058 M | khong mang bang lai 10-10-2025 CD
+16-A2-11514 M | khong nhuong duong cho xe uu tien 25-06-2024 CD
+31-B1-22467 M | do via he 22-09-2025 CD | do via he 21-12-2024 CD | vuot toc do 04-11-2024 CD
+36-C1-42134 M | di tren via he 12-03-2025 CD | di tren via he 08-10-2025 CD | vuot toc do 26-08-2025 CD
+35-A2-38691 M | khong mang bang lai 03-08-2024 CD
+61-C1-33909 M | khong giu khoang cach an toan 05-04-2025 CD
+60-C1-31433 M | vuot xe sai quy dinh 31-10-2024 CD
+47-C2-41486 M | khong co bien so xe 24-08-2025 CD
+43-B2-35416 M | di nguoc chieu 07-08-2025 CD
+32-A1-17784 M | van chay qua tai 14-02-2025 CD
+72-A1-19683 M | doi tuyen tai noi duong bo bi cam 27-10-2024 CD
+29-A2-17001 M | khong tuong tron 04-06-2024 CD
+36-A1-33240 M | su dung dien thoai 22-04-2025 CD
+51-A2-35488 M | su dung dien thoai 09-09-2024 CD
+37-A1-36269 M | vuot den do 18-11-2025 CD
+60-A1-42578 M | khong nhuong duong cho xe uu tien 28-02-2025 CD
+31-A1-32290 M | di nguoc chieu 07-08-2024 CD | do via he 19-09-2024 CD | vuot toc do 20-12-2024 CD
+49-A2-19031 M | di nguoc chieu 28-03-2024 CD
+49-D1-22777 M | chuyen huong khong xi nhan 18-07-2025 CD
+60-A1-24227 M | dung do sai quy dinh 28-10-2024 CD
+31-B1-26386 M | khong mang bang lai 25-09-2025 CD
+60-D1-17417 M | di nguoc chieu 28-05-2025 CD | di nguoc chieu 13-11-2025 CD
+51-A2-21706 M | do via he 15-03-2024 CD | di nguoc chieu 07-05-2024 CD
+36-B1-19249 M | di sai lan duong 14-09-2025 CD
+49-D1-14415 M | vuot toc do 10-05-2025 CD
+17-B2-19829 M | vuot toc do 09-02-2024 CD | do via he 15-08-2025 CD
+30-C2-29890 M | su dung dien thoai 23-04-2025 CD
+36-D1-22073 M | di nguoc chieu 25-09-2025 CD
+31-A2-32630 M | vuot den do 20-03-2025 CD
+49-B1-33767 M | khong co giay phep lai xe 11-01-2025 CD
+31-D2-22829 M | khong bat den sang ban dem 15-02-2024 CD
+29-C2-36036 M | cho nguoi qua so quy dinh 10-11-2024 CD
+48-C2-21421 M | vuot toc do 13-01-2024 CD | di tren via he 27-06-2025 CD | vuot toc do 13-02-2024 CD
+36-C2-12192 M | vuot den do 17-03-2025 CD
+43-D1-17902 M | di sai lan duong 05-09-2025 CD
+41-C2-16869 M | khong co giay phep lai xe 15-10-2025 CD
+31-C1-21496 M | vuot toc do 02-06-2024 CD | di nguoc chieu 26-10-2025 CD | di nguoc chieu 28-11-2025 CD
+61-D2-13497 M | khong nhuong duong cho xe uu tien 28-06-2024 CD
+60-D1-14106 M | khong giu khoang cach an toan 08-04-2025 CD
+37-B1-16660 M | vuot xe sai quy dinh 02-11-2024 CD
+48-B1-10766 M | di tren via he 14-10-2024 CD | do via he 07-11-2024 CD | vuot toc do 10-07-2024 CD
+33-B2-36096 M | khong mang bang lai 09-05-2024 CD | vuot toc do 02-12-2024 CD
+32-D2-22053 M | khong co bien so xe 26-08-2025 CD
+17-B1-10274 M | di nguoc chieu 03-07-2024 CD | vuot toc do 04-06-2025 CD
+52-D1-38420 M | van chay qua tai 17-02-2025 CD
+31-C2-17351 M | vuot toc do 15-04-2025 CD
+38-A2-24161 M | doi tuyen tai noi duong bo bi cam 29-10-2024 CD
+18-B1-13415 M | khong tuong tron 07-06-2024 CD
+31-C1-31272 M | su dung dien thoai 25-04-2025 CD
+52-D2-16293 M | su dung dien thoai 12-09-2024 CD
+37-C1-36096 M | vuot den do 21-11-2025 CD
+31-D1-27514 M | khong nhuong duong cho xe uu tien 01-03-2025 CD
+51-C1-14553 M | chuyen huong khong xi nhan 21-07-2025 CD
+18-C1-19187 M | khong mang bang lai 27-11-2025 CD
+49-A1-24020 M | dung do sai quy dinh 30-10-2024 CD
+72-A2-40661 M | khong mang bang lai 23-09-2025 CD
+61-B2-25514 M | di sai lan duong 15-09-2025 CD
+36-C2-27648 M | su dung dien thoai 26-04-2025 CD
+33-C2-18944 M | khong mang bang lai 19-06-2024 CD | vuot toc do 19-07-2025 CD | do via he 19-05-2024 CD
+32-A1-34904 M | khong mang bang lai 15-10-2025 CD
+36-A2-14740 M | vuot den do 22-03-2025 CD
+72-C2-25853 M | khong co giay phep lai xe 14-01-2025 CD
+60-B2-28313 M | khong bat den sang ban dem 18-02-2024 CD
+38-B2-16813 M | vuot toc do 13-09-2024 CD | di nguoc chieu 16-08-2025 CD | di nguoc chieu 20-09-2025 CD
+48-D2-18735 M | di nguoc chieu 03-09-2024 CD
+32-D2-25580 M | do via he 23-01-2024 CD
+36-B2-28735 M | cho nguoi qua so quy dinh 14-11-2024 CD
+72-C1-30577 M | khong mang bang lai 22-10-2024 CD | di tren via he 10-08-2025 CD
+15-B2-26400 M | khong mang bang lai 02-02-2025 CD
+60-D2-20679 M | vuot den do 24-03-2025 CD
+15-D1-28935 M | do via he 13-08-2025 CD | khong mang bang lai 22-05-2025 CD | khong mang bang lai 01-12-2024 CD
+43-D2-12100 M | di sai lan duong 09-09-2025 CD
+37-D2-13544 M | khong co giay phep lai xe 17-10-2025 CD
+37-A2-37836 M | khong nhuong duong cho xe uu tien 30-06-2024 CD
+16-D2-33741 M | vuot toc do 13-05-2024 CD
+52-A2-38079 M | khong mang bang lai 19-02-2024 CD | vuot toc do 05-01-2025 CD | di tren via he 17-01-2025 CD
+61-A2-15842 M | khong giu khoang cach an toan 11-04-2025 CD
+72-A2-31576 M | vuot toc do 12-07-2024 CD | vuot toc do 05-11-2025 CD | di nguoc chieu 19-08-2024 CD
+33-A2-17040 M | vuot xe sai quy dinh 05-11-2024 CD
+49-B2-18570 M | khong co bien so xe 28-08-2025 CD
+18-D1-18077 M | van chay qua tai 19-02-2025 CD
+15-A2-19780 M | doi tuyen tai noi duong bo bi cam 31-10-2024 CD
+16-D1-38722 M | khong mang bang lai 12-10-2025 CD
+17-C2-29704 M | khong tuong tron 10-06-2024 CD
+37-D2-12241 M | su dung dien thoai 27-04-2025 CD
+37-B2-26855 M | su dung dien thoai 15-09-2024 CD
+32-D1-21697 M | di tren via he 10-10-2025 CD | vuot toc do 04-07-2025 CD | vuot toc do 13-11-2024 CD
+72-D1-36060 M | vuot toc do 08-09-2024 CD | vuot toc do 05-10-2024 CD
+47-B1-41563 M | vuot den do 24-11-2025 CD
+43-D1-17782 M | do via he 16-06-2025 CD | vuot toc do 06-04-2025 CD
+41-D2-27761 M | vuot toc do 07-06-2025 CD | vuot toc do 10-10-2025 CD
+36-C1-24942 M | khong nhuong duong cho xe uu tien 03-03-2025 CD-2025 CD | khong mang bang lai 23-11-2025 CD | vuot toc do 13-03-2024 CD
+60-B2-30375 M | khong bat den sang
+35-B1-26725 M | dung do sai quy dinh 21-10-2024 CD
+29-D1-23459 M | vuot toc do 24-11-2025 CD | khong mang bang lai 23-11-2025 CD | vuot toc do 13-03-2024 CD
+60-B2-30375 M | khong bat den sang ban dem 18-02-2024 CD
+43-A-36251 C | vuot den do 10-11-1998 CD

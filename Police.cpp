@@ -1190,6 +1190,8 @@ void Police::themxeMoi(vehicleshash* hashtableXe) {
 void capNhatFileBienSo(Xe* xe) {
     QString bienSo = xe->getbienSo();
 
+    QString loaiXe = (xe->getLS() == "Motor") ? "M" : "C";
+
     QFile fileIn(finalbienSo);
     if (!fileIn.open(QIODevice::ReadOnly | QIODevice::Text)) {
         qDebug() << "Không thể mở file biển số để đọc";
@@ -1204,22 +1206,17 @@ void capNhatFileBienSo(Xe* xe) {
         QString line = in.readLine();
 
         if (line.startsWith(bienSo) && !updated) {
-            QString newLine = bienSo;
+
+            QString newLine = bienSo + " " + loaiXe;
 
             Node<Pair>* currentLoi = xe->dsLoi.begin();
             if (currentLoi != nullptr) {
                 newLine += " |";
                 while (currentLoi != nullptr) {
                     newLine += " " + currentLoi->getdata().key + " " + currentLoi->getdata().value + " ";
-                    if (currentLoi->getdata().State) {
-                        newLine += "DD";
-                    } else {
-                        newLine += "CD";
-                    }
+                    newLine += (currentLoi->getdata().State ? "DD" : "CD");
                     currentLoi = currentLoi->getnext();
-                    if (currentLoi != nullptr) {
-                        newLine += " |";
-                    }
+                    if (currentLoi != nullptr) newLine += " |";
                 }
             }
 
@@ -1231,7 +1228,7 @@ void capNhatFileBienSo(Xe* xe) {
     fileIn.close();
 
     if (!updated) {
-        lines.append(bienSo);
+        lines.append(bienSo + " " + loaiXe);
     }
 
     QFile fileOut(finalbienSo);
@@ -1246,6 +1243,7 @@ void capNhatFileBienSo(Xe* xe) {
     }
     fileOut.close();
 }
+
 
 void capNhatFileCCCD(const QString& cccd, const QString& bienSo) {
     QFile fileIn(finalCCCD);
