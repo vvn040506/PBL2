@@ -139,7 +139,7 @@ void Xe::themLoi(const QString& loiVP, const QString& ngayVP){
     int tienPhat = 0;
 
     for(Node<Violation>* x = danhSachMucPhat.begin(); x != danhSachMucPhat.end(); x = x->getnext()){
-        if(loiVP.toStdString() == x->getdata().getLoiViPham()){
+        if(loiVP == x->getdata().getLoiViPham()){
             x->getdata().setState(false);
             tienPhat = x->getdata().getMucPhat();
         }

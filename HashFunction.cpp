@@ -205,6 +205,7 @@ Xe* vehicleshash::find(const QString& a){
         current = current->getnext();
     }
     return nullptr;
+    qDebug() << "Khong tim thay xe";
 }
 
 void vehicleshash::thongke(){

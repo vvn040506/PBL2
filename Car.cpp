@@ -34,8 +34,8 @@ QString Car::truyxuatLoi() {
     qDebug() << "\n========================================";
     qDebug() << "       TRUY VAN LOI VI PHAM O TO       ";
     qDebug() << "========================================";
-    qDebug() << "Bien so:" << bienSo;
-    qDebug() << "Loai xe: O to (Car)";
+    qDebug() << "Bien so: " << this->getbienSo();
+    qDebug() << "Loai xe: " << this->getLS();
     QLocale vietnamese(QLocale::Vietnamese, QLocale::Vietnam);
     QString result;
 

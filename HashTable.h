@@ -5,7 +5,6 @@
 #include <QString>
 #include <stdexcept>
 
-// Forward declaration
 class Person;
 
 template <typename T>
@@ -90,7 +89,6 @@ void HashTable<T>::show(const QString& key){
     }
 }
 
-// Non-template functions declaration
 void searchByCCCD(const QString& cccd, HashTable<Person>& ds);
 Person& getByCCCD(const QString& cccd, HashTable<Person>& ds);
 

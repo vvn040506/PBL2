@@ -34,7 +34,7 @@ public:
     Xe& operator=(const Xe& other);
     virtual void display();
     virtual QString truyxuatLoi();
-    virtual QString truyxuatLoi_TomTat(Mylist<Violation>& masterViolationList);
+    QString truyxuatLoi_TomTat(Mylist<Violation>& masterViolationList);
     long long tinhTongTienPhatChuaDong(Mylist<Violation>& masterViolationList);
 
     void setThanhPho(const QString& tp);

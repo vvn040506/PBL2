@@ -31,6 +31,7 @@
 #include <QToolButton>
 
 HashTable<Pair>* Police::dsPolice = new HashTable<Pair>(1000);
+extern vehicleshash* hashtableXe;
 extern HashTable<Person>* hashtableNguoi;
 extern QString Link;
 extern QString finalMaVung;
@@ -47,7 +48,7 @@ QString Police::getID() { return id_police; }
 
 void Police::addPoliceWork(const QString& id_police, const QString& bienso, const QString& ngay) {
     if (dsPolice != nullptr) {
-        dsPolice->insert(id_police, Pair(bienso, ngay,false));
+        dsPolice->insert(id_police, Pair(bienso, ngay, false));
     }
 }
 
@@ -389,6 +390,9 @@ void Police::themloiXe(vehicleshash* Hash) {
         }
 
         currentXe->themLoi(tenLoi, ngayVP);
+        Person &p = getByCCCD(currentXe->getID(), *hashtableNguoi);
+        Xe *newXe = p.getXe()->find(currentXe->getbienSo());
+        newXe->themLoi(tenLoi, ngayVP);
         capNhatFileBienSo(currentXe);
 
         QMessageBox::information(&dialog, "THÀNH CÔNG",
@@ -742,6 +746,9 @@ void Police::xoaloiXe(vehicleshash* hashtableXe) {
 
         if (reply == QMessageBox::Yes) {
             currentXe->dongPhat(tenLoi, ngayVP);
+            Person &newP = getByCCCD(currentXe->getID(), *hashtableNguoi);
+            Xe *newXe = newP.getXe()->find(currentXe->getbienSo());
+            newXe->dongPhat(tenLoi, ngayVP);
             capNhatFileBienSo(currentXe);
 
             QMessageBox::information(&dialog, "Thành công", "✅ Đã cập nhật trạng thái lỗi thành công!");
@@ -817,10 +824,10 @@ void Police::themxeMoi(vehicleshash* hashtableXe) {
     titleLabel->setStyleSheet(
         "QLabel {"
         "color: white;"
-        "font-size: 20px;" // Giảm kích thước
+        "font-size: 20px;"
         "font-weight: bold;"
         "background: rgba(255,255,255,0.15);"
-        "padding: 15px;" // Giảm padding
+        "padding: 15px;"
         "border-radius: 8px;"
         "border: 1px solid rgba(255,255,255,0.3);"
         "text-align: center;"
@@ -832,10 +839,10 @@ void Police::themxeMoi(vehicleshash* hashtableXe) {
     formTitleLabel->setStyleSheet(
         "QLabel {"
         "color: white;"
-        "font-size: 16px;" // Giảm kích thước
+        "font-size: 16px;"
         "font-weight: bold;"
         "background: rgba(255,255,255,0.1);"
-        "padding: 12px;" // Giảm padding
+        "padding: 12px;"
         "border-radius: 6px;"
         "text-align: center;"
         "}"
@@ -848,7 +855,7 @@ void Police::themxeMoi(vehicleshash* hashtableXe) {
         "background: rgba(255,255,255,0.9);"
         "border-radius: 8px;"
         "border: 2px solid rgba(255,255,255,0.5);"
-        "padding: 15px;" // Giảm padding
+        "padding: 15px;"
         "}"
         );
     QVBoxLayout *typeLayout = new QVBoxLayout(typeFrame);
@@ -1144,7 +1151,7 @@ void Police::themxeMoi(vehicleshash* hashtableXe) {
             qDebug() << "Da them thanh cong cccd " << xe->getID() << "cho xe co bien so" << xe->getbienSo();
             hashtableXe->insertToHash(xe);
 
-            themXeVaoPerson(cccd, bienSo, ten, sdt, diaChi, selectedLoaiXe);
+            themXeVaoPerson(cccd, bienSo, ten, sdt, diaChi, selectedLoaiXe, xe);
             capNhatFileBienSo(xe);
 
             QString successMsg = QString(
@@ -1301,11 +1308,10 @@ Xe* taoXeMoi(const QString& bienSo, int loai) {
 }
 
 void themXeVaoPerson(const QString& cccd, const QString& bienSo, const QString& ten,
-                     const QString& sdt, const QString& diachi, int loai) {
+                     const QString& sdt, const QString& diachi, int loai, Xe* xe) {
     try {
         Person &p = getByCCCD(cccd, *hashtableNguoi);
-        Xe* xeCopy = taoXeMoi(bienSo, loai);
-        p.getXe()->insertToHash(xeCopy);
+        p.getXe()->insertToHash(xe);
 
         capNhatFileCCCD(cccd, bienSo);
         QMessageBox::information(nullptr, "Thành công",
@@ -1313,8 +1319,7 @@ void themXeVaoPerson(const QString& cccd, const QString& bienSo, const QString& 
 
     } catch (...) {
         Person newPerson(cccd, ten, sdt, diachi);
-        Xe* xeCopy = taoXeMoi(bienSo, loai);
-        newPerson.getXe()->insertToHash(xeCopy);
+        newPerson.getXe()->insertToHash(xe);
         hashtableNguoi->insert(cccd, newPerson);
 
         QFile cccdFile(finalCCCD);
@@ -1328,6 +1333,8 @@ void themXeVaoPerson(const QString& cccd, const QString& bienSo, const QString& 
         }
     }
 }
+
+
 
 bool Police::dangNhap(const QString& i,const QString& p){
 

@@ -1,0 +1,24 @@
+1 di nguoc chieu 8000000
+2 di tren via he 6000000
+3 vuot toc do 6000000
+4 vuot den do 4000000
+5 do via he 6000000
+6 khong mang bang lai 400000
+7 do po 16000000
+8 di sai lan duong 3000000
+9 khong that day an toan 800000
+10 su dung dien thoai 2000000
+11 dung do sai quy dinh 800000
+12 khong co giay phep lai xe 8000000
+13 cham alcohol 30000000
+14 khong nhuong duong cho xe uu tien 10000000
+15 khong giu khoang cach an toan 800000
+16 chuyen huong khong xi nhan 800000
+17 qua toc do duoi 20km/h 4000000
+18 qua toc do tren 35km/h 12000000
+19 khong co bien bao hieu 800000
+20 van chay qua tai 16000000
+21 khong co bao hiem 800000
+22 vuot xe sai quy dinh 5000000
+23 doi tuyen tai noi duong bo bi cam 3000000
+24 khong tuong tron 800000

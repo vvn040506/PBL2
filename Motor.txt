@@ -1,0 +1,17 @@
+1 di nguoc chieu 4000000
+2 di tren via he 4000000
+3 vuot toc do 2000000
+4 vuot den do 1200000
+5 do via he 4000000
+6 khong mang bang lai 200000
+7 do po 5000000
+8 di sai lan duong 400000
+9 khong doi mu bao hiem 400000
+10 su dung dien thoai 1000000
+11 chay xe bang mot banh 8000000
+12 khong co giay phep lai xe 800000
+13 cham alcohol 8000000
+14 khong bat den sang ban dem 200000
+15 chuyen huong khong xi nhan 400000
+16 cho nguoi qua so quy dinh 400000
+17 khong co bien so xe 800000

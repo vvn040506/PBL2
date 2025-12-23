@@ -30,21 +30,12 @@ QDebug operator<<(QDebug debug, Motor& motor) {
     return debug;
 }
 
-// QString Motor::truyxuatLoi() {
-//     qDebug() << "\n========================================";
-//     qDebug() << "       TRUY VAN LOI VI PHAM Motor       ";
-//     qDebug() << "========================================";
-//     qDebug() << "Bien so:" << bienSo;
-//     qDebug() << "Loai xe: Motor";
-//     return Xe::truyxuatLoi();
-// }
-
 QString Motor::truyxuatLoi() {
     qDebug() << "\n========================================";
     qDebug() << "       TRUY VAN LOI VI PHAM Motor       ";
     qDebug() << "========================================";
-    qDebug() << "Bien so:" << bienSo;
-    qDebug() << "Loai xe: Motor";
+    qDebug() << "Bien so:" << this->getbienSo();
+    qDebug() << "Loai xe: " << this->getLS();
 
     QLocale vietnamese(QLocale::Vietnamese, QLocale::Vietnam);
     QString result;

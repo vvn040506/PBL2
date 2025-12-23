@@ -50,7 +50,6 @@ public:
     static void phanTichBienSo(const QString& bienSo, Xe& xe);
     static void docFileDanhSach(const QString& filename, HashTable<Person>& dsNguoi);
     void truyvanCCCD(HashTable<Person>* hash);
-    // virtual void menu();
 };
 
 #endif // PERSON_H

@@ -20,7 +20,7 @@ public slots:
     void addStatusMessage(const QString &message, bool isSuccess = true);
     void updateProgress(int value);
     void showContinueButton();
-    void onReadDataChoiceClicked(bool readData);  // BỔ SUNG
+    void onReadDataChoiceClicked(bool readData);
 
 private:
     void setupUI();

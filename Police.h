@@ -26,7 +26,6 @@ public:
     static void addPoliceWork(const QString& id_police, const QString& bienso, const QString& ngay);
     static Mylist<Pair> getPoliceWork(const QString& id);
 
-    // void menu() override;
     void themloiXe(vehicleshash* Hash);
     void xoaloiXe(vehicleshash* Hash);
     void themxeMoi(vehicleshash* Hash);
@@ -34,7 +33,7 @@ public:
 };
 
 void themXeVaoPerson(const QString& cccd, const QString& bienSo, const QString& ten,
-                     const QString& sdt, const QString& diachi, int loai);
+                     const QString& sdt, const QString& diachi, int loai,Xe *xe);
 Xe* taoXeMoi(const QString& bienSo, int loai);
 void capNhatFileBienSo(Xe* xe);
 void capNhatFileCCCD(const QString& cccd, const QString& bienSo);
